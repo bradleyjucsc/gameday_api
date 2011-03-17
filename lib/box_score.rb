@@ -34,7 +34,7 @@ module Gameday
       @xml_data = GamedayFetcher.fetch_boxscore(gid)
       @xml_doc = REXML::Document.new(@xml_data)
       if @xml_doc.root
-        @game = Game.new(@gid)
+        @game = Game.fetch(@gid)
         @game.boxscore = self
         set_basic_info
         @linescore = LineScore.new

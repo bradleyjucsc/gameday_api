@@ -6,11 +6,11 @@ require 'event_log'
 require 'inning'
 require 'hitchart'
 require 'media'
-
+require 'resource'
 
 module Gameday
   # This class represents a single MLB game
-  class Game
+  class Game < Resource
   
     attr_accessor :gid, :home_team_name, :home_team_abbrev, :visit_team_name, :visit_team_abbrev, 
                   :year, :month, :day, :game_number, :visiting_team, :home_team
@@ -33,90 +33,68 @@ module Gameday
     attr_accessor :winning_pitcher, :losing_pitcher, :save_pitcher  # Instances of Player object
     attr_accessor :away_innings, :home_innings  # An arry of one element for each inning, the element is the home or away score
     attr_accessor :home_hits, :away_hits, :home_errors, :away_errors, :home_runs, :away_runs
-  
-    def initialize(gid)
-      @innings = []
+
+    def self.new_from_hash hash
+      g = super
+      g.gid = hash['id']
+
+      g
+    end
+
+
+    def self.fetch(gid)
+      g = Game.new
+      g.innings = []
       team = Team.new('')
       if gid
-        @gid = gid     
-        @xml_data = GamedayFetcher.fetch_game_xml(gid)
-        if @xml_data && @xml_data.size > 0
-          @xml_doc = REXML::Document.new(@xml_data)
-          @game_type = @xml_doc.root.attributes["type"]
-          @time = @xml_doc.root.attributes["local_game_time"]     
+        g.gid = gid     
+        xml_data = GamedayFetcher.fetch_game_xml(gid)
+        if xml_data && xml_data.size > 0
+          xml_doc = REXML::Document.new(xml_data)
+          g.game_type = xml_doc.root.attributes["type"]
+          g.time = xml_doc.root.attributes["local_game_time"]     
           info = GamedayUtil.parse_gameday_id('gid_'+gid)
-          @home_team_abbrev = info["home_team_abbrev"]
-          @visit_team_abbrev = info["visiting_team_abbrev"]
-          @visiting_team = Team.new(@visit_team_abbrev )
-          @home_team = Team.new(@home_team_abbrev )
-          @year = info["year"]
-          @month = info["month"]
-          @day = info["day"]
-          @game_number = info["game_number"]
-          if Team.teams[@home_team_abbrev]
-            @home_team_name = Team.teams[@home_team_abbrev][0]
+          g.home_team_abbrev = info["home_team_abbrev"]
+          g.visit_team_abbrev = info["visiting_team_abbrev"]
+          g.visiting_team = Team.new(g.visit_team_abbrev )
+          g.home_team = Team.new(g.home_team_abbrev )
+          g.year = info["year"]
+          g.month = info["month"]
+          g.day = info["day"]
+          g.game_number = info["game_number"]
+          if Team.teams[g.home_team_abbrev]
+            g.home_team_name = Team.teams[g.home_team_abbrev][0]
           else
-            @home_team_name = @home_team_abbrev
+            g.home_team_name = g.home_team_abbrev
           end
-          if Team.teams[@visit_team_abbrev]
-            @visit_team_name = Team.teams[@visit_team_abbrev][0]
+          if Team.teams[g.visit_team_abbrev]
+            g.visit_team_name = Team.teams[g.visit_team_abbrev][0]
           else
-            @visit_team_name = @visit_team_abbrev
+            g.visit_team_name = g.visit_team_abbrev
           end
         else
           raise ArgumentError, "Could not find game.xml"
         end
       end
+      g
     end
   
   
     # Setup a Game object from data read from the  master_scoreboard.xml file
-    def load_from_scoreboard(element)
-        @away_innings = []
-        @home_innings = []
-        @scoreboard_game_id = element.attributes['id']
-        @ampm = element.attributes['ampm']
-        @venue = element.attributes['venue']
-        @game_pk = element.attributes['game_pk']
-        @time = element.attributes['time']
-        @time_zone = element.attributes['time_zone']
-        @game_type = element.attributes['game_type']
-        @away_name_abbrev = element.attributes['away_name_abbrev']
-        @home_name_abbrev = element.attributes['home_name_abbrev']
-        @away_code = element.attributes['away_code']
-        @away_file_code = element.attributes['away_file_code']
-        @away_team_id = element.attributes['away_team_id']
-        @away_team_city = element.attributes['away_team_city']
-        @away_team_name = element.attributes['away_team_name']
-        @away_division = element.attributes['away_division']
-        @home_code = element.attributes['home_code']
-        @home_file_code = element.attributes['home_file_code']
-        @home_team_id = element.attributes['home_team_id']
-        @home_team_city = element.attributes['home_team_city']
-        @home_team_name = element.attributes['home_team_name']
-        @home_division = element.attributes['home_division']
-        @day = element.attributes['day']
-        @gameday_sw = element.attributes['gameday_sw']
-        @away_games_back = element.attributes['away_games_back']
-        @home_games_back = element.attributes['home_games_back']
-        @away_games_back_wildcard = element.attributes['away_games_back_wildcard']
-        @home_games_back_wildcard = element.attributes['home_games_back_wildcard']
-        @venue_w_chan_loc = element.attributes['venue_w_chan_loc']
-        @gameday = element.attributes['gameday']
-        @away_win = element.attributes['away_win']
-        @away_loss = element.attributes['away_loss']
-        @home_win = element.attributes['home_win']
-        @home_loss = element.attributes['home_loss']
-        @league = element.attributes['league']
-      
-        set_status(element)
-        set_innings(element)
-        set_totals(element)
-        set_pitchers(element)
-        set_homeruns(element)
-      end
-    
-    
+    def self.load_from_scoreboard element
+      g = new_from_xml
+
+      g.away_innings = []
+      g.home_innings = []
+
+      g.set_status(element)
+      g.set_innings(element)
+      g.set_totals(element)
+      g.set_pitchers(element)
+      g.set_homeruns(element)
+    end
+
+
       # Sets the game status from data in the master_scoreboard.xml file
       def set_status(element)
         element.elements.each("status") { |status|
@@ -219,7 +197,7 @@ module Gameday
               str = link.inner_html
               gid = str[5..str.length-2]
               begin
-                game = Game.new(gid)
+                game = Game.fetch(gid)
                 games.push game
               rescue
                 puts "Could not create game object for #{year}, #{month}, #{day} - #{gid}"

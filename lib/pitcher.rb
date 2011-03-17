@@ -69,7 +69,7 @@ module Gameday
   
     def get_game
       if !@game
-        @game = Game.new(@gid)
+        @game = Game.fetch(@gid)
       end
       @game
     end

@@ -67,7 +67,7 @@ module Gameday
   
 
     def import_for_game(gid)
-      game = Game.new(gid)
+      game = Game.fetch(gid)
       visitor_id = @db.find_or_create_team(game.visiting_team)
       home_id = @db.find_or_create_team(game.home_team)
       import_players_for_game(gid, visitor_id, home_id)
@@ -129,7 +129,7 @@ module Gameday
   
   
     def import_pitcher_lines_for_game(gid)
-      game = Game.new(gid)
+      game = Game.fetch(gid)
       pitchers = game.get_boxscore.pitchers
       pitchers.each do |h_or_a_pitchers|
         h_or_a_pitchers.each do |pitcher|
@@ -160,7 +160,7 @@ module Gameday
   
   
     def set_status_for_game(gid)
-      game = Game.new(gid)
+      game = Game.fetch(gid)
       @db.update_status_for_game(game)
     end
   

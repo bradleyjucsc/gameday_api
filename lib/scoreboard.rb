@@ -15,7 +15,7 @@ module Gameday
       @xml_doc = REXML::Document.new(@xml_data)
     
       @xml_doc.elements.each("games/game") { |element|
-        game = Game.new(element.attributes['gameday'])
+        game = Game.fetch(element.attributes['gameday'])
         game.load_from_scoreboard(element)
         @games << game
       }

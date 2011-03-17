@@ -137,7 +137,7 @@ module Gameday
       games_page = GamedayFetcher.fetch_games_page(year, month, day)
       gids = find_gid_for_date(year, month, day, games_page)
       if gids
-        results = gids.collect {|gid| Game.new(gid) }
+        results = gids.collect {|gid| Game.fetch(gid) }
       else 
         results = nil
       end

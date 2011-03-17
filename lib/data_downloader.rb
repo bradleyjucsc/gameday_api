@@ -54,7 +54,7 @@ module Gameday
   
   
     def download_inning_for_game(gid)
-      game = Game.new(gid)
+      game = Game.fetch(gid)
       inn_count = game.get_num_innings
       inn_path = get_gid_path(gid) + "/inning"
       (1..inn_count).each do |inn|
@@ -83,7 +83,7 @@ module Gameday
   
   
     def download_notification_for_game(gid)
-      game = Game.new(gid)
+      game = Game.fetch(gid)
       inn_count = game.get_num_innings
       notif_path = get_gid_path(gid) + "/notifications"
       (1..inn_count).each do |inn|
