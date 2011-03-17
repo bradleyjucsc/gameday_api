@@ -1,4 +1,8 @@
 module Gameday
+  ##
+  # A scoreboard for a given day contains an array of Game objects which have
+  # basic info about each game.  Who's playing, the time, the venue, etc.
+
   class Scoreboard < Resource
 
     attr_accessor :games  # An array of Game objects representing all of the games played on this date

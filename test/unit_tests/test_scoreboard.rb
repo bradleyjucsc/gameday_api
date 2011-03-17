@@ -7,5 +7,7 @@ class TestScoreboard < MiniTest::Unit::TestCase
     sb = Gameday::Scoreboard.fetch 1,2,3
 
     assert_equal 12, sb.games.size
+    assert sb.games.first.is_a?(Gameday::Game)
   end
+
 end
