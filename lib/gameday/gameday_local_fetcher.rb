@@ -1,6 +1,3 @@
-require 'gameday_path_builder'
-
-
 module Gameday
   # This class is responsible for retrieving gameday data files from the local file system.
   # It contains methods that read or open a connection to the XML files that have been saved 

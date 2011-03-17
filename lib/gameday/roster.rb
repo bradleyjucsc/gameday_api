@@ -1,7 +1,3 @@
-require 'player'
-require 'coach'
-
-
 module Gameday
   # This class represents a team's roster for a single game.
   # Both players and coaches can be read from the roster.

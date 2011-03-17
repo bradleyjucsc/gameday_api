@@ -1,6 +1,3 @@
-require 'player'
-
-
 module Gameday
   # This class represents a batting record for a single player for a single game
   # Note that this does NOT represent a single atbat of a player, but rather an appearance is a player's stats over an entire game.

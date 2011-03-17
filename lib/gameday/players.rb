@@ -1,6 +1,3 @@
-require 'roster'
-
-
 module Gameday
   # This class represents the players.xml file found on the gameday server for each MLB game.
   #  The players.xml file contains a listing of all players on the home and away teams for the specified game

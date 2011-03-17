@@ -1,6 +1,5 @@
 require 'rubygems'
-require 'mysql'
-
+# require 'mysql'
 
 module Gameday
   # This class is used to insert data into the pitchfx database

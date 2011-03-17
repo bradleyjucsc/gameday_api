@@ -1,12 +1,5 @@
-require 'team'
-require 'pitching_appearance'
-require 'batting_appearance'
-require 'gameday_fetcher'
-require 'line_score'
 require 'hpricot'
 require 'rexml/document'
-require 'gameday_util'
-
 
 module Gameday
   # Parses the MLB Gameday XML representation of a boxscore and returns data in easy to use

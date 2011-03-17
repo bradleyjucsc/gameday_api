@@ -1,6 +1,3 @@
-require 'gameday'
-
-
 module Gameday
   class GamedayPathBuilder
   

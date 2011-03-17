@@ -1,7 +1,3 @@
-require 'event'
-require 'gameday_fetcher'
-
-
 module Gameday
   # Parses the MLB Gameday eventLog.xml file
   class EventLog

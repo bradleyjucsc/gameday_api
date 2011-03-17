@@ -1,5 +1,3 @@
-require 'gameday_fetcher'
-
 module Gameday
   # This class represents a single MLB player from a single MLB game
   class Player

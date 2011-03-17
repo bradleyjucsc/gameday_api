@@ -1,5 +1,3 @@
-require 'hip'
-
 module Gameday
   class Hitchart
   

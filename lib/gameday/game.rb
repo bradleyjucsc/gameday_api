@@ -1,13 +1,3 @@
-require 'gameday_util'
-require 'team'
-require 'players'
-require 'game_status'
-require 'event_log'
-require 'inning'
-require 'hitchart'
-require 'media'
-require 'resource'
-
 module Gameday
   # This class represents a single MLB game
   class Game < Resource

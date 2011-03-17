@@ -1,8 +1,3 @@
-require 'gameday_fetcher'
-require 'media_highlight'
-require 'media_mobile'
-
-
 module Gameday
   class Media
   

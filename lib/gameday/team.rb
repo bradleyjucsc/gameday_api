@@ -1,9 +1,3 @@
-require 'gameday_util'
-require 'game'
-require 'gameday'
-require 'schedule'
-
-
 module Gameday
   # This class
   class Team

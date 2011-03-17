@@ -1,6 +1,3 @@
-require 'at_bat'
-require 'gameday_fetcher'
-
 
 module Gameday
   # This class represents a single inning of an MLB game

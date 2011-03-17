@@ -1,5 +1,5 @@
 require 'net/http'
-require 'md5'
+require 'digest/md5'
 
 module Gameday
   class CacheFetcher

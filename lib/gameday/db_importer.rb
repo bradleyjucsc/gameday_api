@@ -1,8 +1,4 @@
-require 'pitchfx_db_manager'
-require 'game'
 require 'date'
-
-
 
 module Gameday
   class DbImporter

@@ -1,5 +1,3 @@
-require 'gameday'
-
 module Gameday
   class GamedayUrlBuilder
   

@@ -1,4 +1,3 @@
-
 module Gameday
   # This class holds data that represents a single pitching appearance by a pitcher.
   class PitchingAppearance

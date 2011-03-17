@@ -1,5 +1,3 @@
-require 'gameday_fetcher'
-
 module Gameday
   class Scoreboard
   

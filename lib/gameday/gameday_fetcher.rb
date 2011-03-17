@@ -1,7 +1,3 @@
-require 'gameday_remote_fetcher'
-require 'gameday_local_fetcher'
-
-
 module Gameday
     # This class is responsible for retrieving the Gameday files.
   # It uses either a remote or a local fetcher to get the files from a

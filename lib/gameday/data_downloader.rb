@@ -1,9 +1,4 @@
-require 'game'
-require 'batter'
-require 'pitcher'
 require 'fileutils'
-
-
 
 module Gameday
   # This class is used to download data files from the MLB Gameday site to

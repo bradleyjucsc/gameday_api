@@ -1,6 +1,3 @@
-require 'schedule_game'
-
-
 module Gameday
   # This class is used to retrieve season schedule information and to query
   # for information related to the schedule.

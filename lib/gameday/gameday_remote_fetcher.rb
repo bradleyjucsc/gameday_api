@@ -1,5 +1,3 @@
-require 'gameday_url_builder'
-
 module Gameday
   class GamedayRemoteFetcher
   

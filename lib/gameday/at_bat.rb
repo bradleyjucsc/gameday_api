@@ -1,4 +1,3 @@
-require 'pitch'
 
 module Gameday
   # This class represents a single atbat during a single game
