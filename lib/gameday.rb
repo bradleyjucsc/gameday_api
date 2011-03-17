@@ -2,6 +2,7 @@ require 'rubygems'
 require 'net/http'
 require 'hpricot'
 require 'erb'
+require 'json'
 
 require 'gameday/resource'
 

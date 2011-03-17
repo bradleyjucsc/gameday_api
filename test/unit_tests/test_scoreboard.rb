@@ -1,0 +1,11 @@
+require 'test/helper'
+
+class TestScoreboard < MiniTest::Unit::TestCase
+
+  def test_fetch
+    Gameday::GamedayFetcher.expects(:fetch_scoreboard_json).returns Fixture.local('scoreboard.json')
+    sb = Gameday::Scoreboard.fetch 1,2,3
+
+    assert_equal 12, sb.games.size
+  end
+end

@@ -1,7 +1,6 @@
 module Gameday
   class GamedayUrlBuilder
-  
-    def self.build_game_base_url(gid)
+      def self.build_game_base_url(gid)
       gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
       "#{Gameday::GD2_MLB_BASE}/mlb/year_" + gameday_info['year'] + "/month_" + gameday_info['month'] + "/day_" + gameday_info['day'] + "/gid_"+gid 
     end
@@ -22,6 +21,11 @@ module Gameday
     def self.build_scoreboard_url(year, month, day)
       set_date_vars(year, month, day)
       "#{Gameday::GD2_MLB_BASE}/mlb/year_" + @@year + "/month_" + @@month + "/day_" + @@day + "/master_scoreboard.xml"
+    end
+  
+  
+    def self.build_scoreboard_json_url(year, month, day)
+      "#{build_day_url(year, month, day)}/master_scoreboard.json"
     end
   
   

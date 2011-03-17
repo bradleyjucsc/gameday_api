@@ -28,6 +28,14 @@ module Gameday
     end
   
   
+    # Fetch the master scoreboard file
+    # Sample URL:  http://gd2.mlb.com/components/game/mlb/year_2008/month_04/day_07/master_scoreboard.json
+    def self.fetch_scoreboard_json year, month, day
+      url = GamedayUrlBuilder.build_scoreboard_json_url year, month, day
+      fetch(url)
+    end
+  
+  
     def self.fetch_day_highlights(year, month, day)
       url = GamedayUrlBuilder.build_day_highlights_url(year, month, day)
       fetch(url)

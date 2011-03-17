@@ -7,6 +7,8 @@ module Gameday
         meth = "#{k}=".to_sym
         res.send(meth, v) if res.respond_to? meth
       end
+
+      res
     end
 
     def self.new_from_xml element
