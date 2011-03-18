@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |gem|
     gem.name = "gameday_api"
     gem.summary = "An API for processing live MLB statistics."
-    gem.description = "An API for processing live MLB statistics."
+    gem.description = "An API for processing live MLB statistics from the gameday service."
     gem.email = "timothyf@gmail.com"
     gem.homepage = "http://github.com/timothyf/gameday_api"
     gem.authors = ["timothyf"]
