@@ -35,7 +35,6 @@ module Gameday
     def self.fetch(gid)
       g = Game.new
       g.innings = []
-      team = Team.new('')
       if gid
         g.gid = gid     
         xml_data = GamedayFetcher.fetch_game_xml(gid)
