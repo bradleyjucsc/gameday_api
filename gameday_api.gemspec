@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{gameday_api}
-  s.version = "0.2.1"
+  s.version = "0.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["timothyf"]
-  s.date = %q{2011-03-17}
-  s.description = %q{An API for processing live MLB statistics.}
+  s.date = %q{2011-03-19}
+  s.description = %q{An API for processing live MLB statistics from the gameday service.}
   s.email = %q{timothyf@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -833,6 +833,7 @@ Gem::Specification.new do |s|
     "lib/tmp/fd9e3b21c46c46cc3759ba107f28ea8b",
     "lib/tmp/feb54f2836941d8944dceca7c1f8f285",
     "lib/tmp/ff7683d9e15088dbfe9eed4d96c82e6c",
+    "pkg/gameday_api-0.1.0.gem",
     "pkg/gameday_api-0.2.0.gem",
     "sample_data/batters/115229.xml",
     "sample_data/batters/150035.xml",
@@ -897,13 +898,14 @@ Gem::Specification.new do |s|
     "test/unit_tests/test_pitcher.rb",
     "test/unit_tests/test_pitching_appearance.rb",
     "test/unit_tests/test_player.rb",
+    "test/unit_tests/test_resource.rb",
     "test/unit_tests/test_roster.rb",
     "test/unit_tests/test_scoreboard.rb",
     "test/unit_tests/test_team.rb"
   ]
   s.homepage = %q{http://github.com/timothyf/gameday_api}
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.5.0}
   s.summary = %q{An API for processing live MLB statistics.}
   s.test_files = [
     "test/helper.rb",
@@ -943,13 +945,13 @@ Gem::Specification.new do |s|
     "test/unit_tests/test_pitcher.rb",
     "test/unit_tests/test_pitching_appearance.rb",
     "test/unit_tests/test_player.rb",
+    "test/unit_tests/test_resource.rb",
     "test/unit_tests/test_roster.rb",
     "test/unit_tests/test_scoreboard.rb",
     "test/unit_tests/test_team.rb"
   ]
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
