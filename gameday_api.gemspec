@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{gameday_api}
-  s.version = "0.2.2"
+  s.version = "0.2.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["timothyf"]
-  s.date = %q{2011-03-19}
+  s.date = %q{2011-04-03}
   s.description = %q{An API for processing live MLB statistics from the gameday service.}
   s.email = %q{timothyf@gmail.com}
   s.extra_rdoc_files = [
@@ -833,8 +833,6 @@ Gem::Specification.new do |s|
     "lib/tmp/fd9e3b21c46c46cc3759ba107f28ea8b",
     "lib/tmp/feb54f2836941d8944dceca7c1f8f285",
     "lib/tmp/ff7683d9e15088dbfe9eed4d96c82e6c",
-    "pkg/gameday_api-0.1.0.gem",
-    "pkg/gameday_api-0.2.0.gem",
     "sample_data/batters/115229.xml",
     "sample_data/batters/150035.xml",
     "sample_data/batters/461834.xml",
