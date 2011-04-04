@@ -10,6 +10,9 @@ class TestGame < Test::Unit::TestCase
 
   end
   
+  def test_new_from_hash_set_id_correctly
+    assert_equal 'a_b_c', Gameday::Game.new_from_hash('id' => 'a/b-c').gid
+  end
   
   def test_initialize
     gid = '2008_04_07_atlmlb_colmlb_1'

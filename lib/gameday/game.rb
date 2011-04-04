@@ -2,7 +2,7 @@ module Gameday
   # This class represents a single MLB game
   class Game < Resource
   
-    attr_accessor :gid, :home_team_name, :home_team_abbrev, :visit_team_name, :visit_team_abbrev, 
+    attr_accessor :gid, :original_gid, :home_team_name, :home_team_abbrev, :visit_team_name, :visit_team_abbrev,
                   :year, :month, :day, :game_number, :visiting_team, :home_team
     attr_accessor :boxscore, :rosters, :eventlog, :media, :date
   
@@ -26,7 +26,8 @@ module Gameday
 
     def self.new_from_hash hash
       g = super
-      g.gid = hash['id']
+      g.gid = hash['id'].gsub('/', '_').gsub('-', '_') if hash['id']
+      g.original_gid = hash['id']
 
       g
     end
@@ -41,7 +42,7 @@ module Gameday
         if xml_data && xml_data.size > 0
           xml_doc = REXML::Document.new(xml_data)
           g.game_type = xml_doc.root.attributes["type"]
-          g.time = xml_doc.root.attributes["local_game_time"]     
+          g.time = xml_doc.root.attributes["local_game_time"]
           info = GamedayUtil.parse_gameday_id('gid_'+gid)
           g.home_team_abbrev = info["home_team_abbrev"]
           g.visit_team_abbrev = info["visiting_team_abbrev"]
@@ -84,61 +85,61 @@ module Gameday
     end
 
 
-      # Sets the game status from data in the master_scoreboard.xml file
-      def set_status(element)
-        element.elements.each("status") { |status|
-          @status = GameStatus.new
-          @status.status = status.attributes['status']
-          @status.ind = status.attributes['ind']
-          @status.reason = status.attributes['reason']
-          @status.inning = status.attributes['inning']
-          @status.top_inning = status.attributes['top_inning']
-          @status.b = status.attributes['b']
-          @status.s = status.attributes['s']
-          @status.o = status.attributes['o']
-        }
+    # Sets the game status from data in the master_scoreboard.xml file
+    def set_status(element)
+      element.elements.each("status") { |status|
+        @status = GameStatus.new
+        @status.status = status.attributes['status']
+        @status.ind = status.attributes['ind']
+        @status.reason = status.attributes['reason']
+        @status.inning = status.attributes['inning']
+        @status.top_inning = status.attributes['top_inning']
+        @status.b = status.attributes['b']
+        @status.s = status.attributes['s']
+        @status.o = status.attributes['o']
+      }
+    end
+  
+  
+    # Sets the away and home innings array containing scores by inning from data in the master_scoreboard.xml file
+    def set_innings(element)
+      element.elements.each("linescore/inning") { |element|
+         @away_innings << element.attributes['away']
+         @home_innings << element.attributes['home']
+      }
+    end
+  
+  
+    # Sets the Runs/Hits/Errors totals from data in the master_scoreboard.xml file
+    def set_totals(element)
+      element.elements.each("linescore/r") { |runs|
+         @away_runs = runs.attributes['away']
+         @home_runs = runs.attributes['home']
+      }
+      element.elements.each("linescore/h") { |hits|
+         @away_hits = hits.attributes['away']
+         @home_hits = hits.attributes['home']
+      }
+      element.elements.each("linescore/e") { |errs|
+         @away_errors = errs.attributes['away']
+         @home_errors = errs.attributes['home']
+      }
+    end
+  
+  
+    # Sets a list of players who had homeruns in this game from data in the master_scoreboard.xml file
+    def set_homeruns(element)
+      @homeruns = []
+      element.elements.each("home_runs/player") do |hr|
+        player = Player.new
+        player.last = hr.attributes['last']
+        player.first = hr.attributes['first']
+        player.hr = hr.attributes['hr']
+        player.std_hr = hr.attributes['std_hr']
+        player.team_code = hr.attributes['team_code']
+        @homeruns << player
       end
-    
-    
-      # Sets the away and home innings array containing scores by inning from data in the master_scoreboard.xml file
-      def set_innings(element)
-        element.elements.each("linescore/inning") { |element|
-           @away_innings << element.attributes['away']
-           @home_innings << element.attributes['home']
-        }
-      end
-    
-    
-      # Sets the Runs/Hits/Errors totals from data in the master_scoreboard.xml file
-      def set_totals(element)
-        element.elements.each("linescore/r") { |runs|
-           @away_runs = runs.attributes['away']
-           @home_runs = runs.attributes['home']
-        }
-        element.elements.each("linescore/h") { |hits|
-           @away_hits = hits.attributes['away']
-           @home_hits = hits.attributes['home']
-        }
-        element.elements.each("linescore/e") { |errs|
-           @away_errors = errs.attributes['away']
-           @home_errors = errs.attributes['home']
-        }
-      end
-    
-    
-      # Sets a list of players who had homeruns in this game from data in the master_scoreboard.xml file
-      def set_homeruns(element)
-        @homeruns = []
-        element.elements.each("home_runs/player") do |hr|
-          player = Player.new
-          player.last = hr.attributes['last']
-          player.first = hr.attributes['first']
-          player.hr = hr.attributes['hr']
-          player.std_hr = hr.attributes['std_hr']
-          player.team_code = hr.attributes['team_code']
-          @homeruns << player
-        end
-      end
+    end
     
     
     # Sets the pitchers of record (win, lose, save) from data in the master_scoreboard.xml file

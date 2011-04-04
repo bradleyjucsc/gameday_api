@@ -4,10 +4,10 @@ require 'yaml'
 module Gameday
   # This class provides a variety of utility methods that are used in other classes
   class GamedayUtil
-  
+
     @@fetcher = ''
-  
-  
+
+
     # Returns an instance of the configured fetcher, either remote or local
     def self.fetcher
       if @@fetcher == ''
@@ -19,13 +19,13 @@ module Gameday
         return GamedayRemoteFetcher
       end
     end
-  
-  
+
+
     def self.set_fetcher(fetcher)
       @@fetcher = fetcher
     end
-  
-  
+
+
     # Parses a string with the date format of YYYYMMDD into an array
     # with the following elements:
     #    [0] = year
@@ -35,10 +35,10 @@ module Gameday
       results = []
       results << date[0..3]
       results << date[4..5]
-      results << date[6..7] 
+      results << date[6..7]
     end
-  
-  
+
+
     # Converts a digit into a 2 character string, prepended with '0' if necessary
     def self.convert_digit_to_string(digit)
       if digit<10
@@ -47,7 +47,7 @@ module Gameday
         return digit.to_s
       end
     end
-  
+
     # Example gameday_gid = gid_2009_06_21_milmlb_detmlb_1
     def self.parse_gameday_id(gameday_gid)
       gameday_info = {}
@@ -61,16 +61,22 @@ module Gameday
     end
 
 
-  	# Read configuration from gameday_config.yml file to create
-  	# instance configuration variables.
-  	def self.read_config
-      settings = YAML::load_file(File.expand_path(File.dirname(__FILE__) + "/../gameday_config.yml"))
-      #settings = YAML::load_file(File.expand_path('gameday_config.yml'))
+    # Create instance configuration variables
+    # try to read configuration from, in order:
+    # 1) ./config/gameday.yml
+    # 2) ./config/gameday_config.yml
+    # 3) gameday_config.yml in this file's parent directory (lib/)
+    def self.read_config
+      filename = './config/gameday.yml'
+      filename = './config/gameday_config.yml' unless File.exist? filename
+      filename = File.expand_path(File.dirname(__FILE__) + "/../gameday_config.yml") unless File.exist? filename
+
+      settings = YAML::load_file filename
       set_proxy_info(settings)
       set_data_fetcher(settings)
-  	end
-  
-  
+    end
+
+
     def self.get_connection(url)
       self.read_config
       begin
@@ -84,8 +90,8 @@ module Gameday
         puts 'Could not open connection'
       end
     end
-  
-  
+
+
     def self.net_http
       self.read_config
       if !@@proxy_addr.empty?
@@ -94,20 +100,20 @@ module Gameday
         return Net::HTTP
       end
     end
-  
-  
+
+
     def self.read_file(filename)
       IO.readlines(filename,'').to_s
     end
-  
-  
+
+
     def self.save_file(filename, data)
       File.open(filename, 'w') {|f| f.write(data) }
     end
-  
-  
+
+
     def self.is_date_valid(month, date)
-      if (month == 4 && date == 31) ||  
+      if (month == 4 && date == 31) ||
          (month == 6 && date == 31) ||
          (month == 9 && date == 31)
          return false
@@ -117,10 +123,10 @@ module Gameday
       end
       return true
     end
-  
-  
+
+
     private
-  
+
     def self.set_proxy_info(settings)
       @@proxy_addr, @@proxy_port = '', ''
       if settings['proxy']
@@ -128,13 +134,13 @@ module Gameday
         @@proxy_port = settings['proxy']['port']
       end
     end
-  
-  
+
+
     # Sets either remote or local data fetcher for retrieving XML data
     def self.set_data_fetcher(settings)
       @@fetcher = settings['fetcher']
     end
-  
-  
+
+
   end
 end
