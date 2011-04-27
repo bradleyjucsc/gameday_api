@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{gameday_api}
-  s.version = "0.2.3"
+  s.version = "0.2.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["timothyf"]
-  s.date = %q{2011-04-03}
+  s.date = %q{2011-04-26}
   s.description = %q{An API for processing live MLB statistics from the gameday service.}
   s.email = %q{timothyf@gmail.com}
   s.extra_rdoc_files = [
