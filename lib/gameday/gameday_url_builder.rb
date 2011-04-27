@@ -58,6 +58,11 @@ module Gameday
     end
 
 
+    def self.build_linescore_json_url(year, month, day, gid)
+      "#{game_url(year, month, day, gid)}/linescore.json"
+    end
+
+
     def self.build_players_url(year, month, day, gid)
       "#{game_url(year, month, day, gid)}/players.xml"
     end

@@ -1,15 +1,15 @@
 module Gameday
   # This class represents a single MLB game
   class Game < Resource
-  
+
     attr_accessor :gid, :original_gid, :home_team_name, :home_team_abbrev, :visit_team_name, :visit_team_abbrev,
                   :year, :month, :day, :game_number, :visiting_team, :home_team
     attr_accessor :boxscore, :rosters, :eventlog, :media, :date
-  
+
     attr_accessor :innings #array of Inning objects, from innings files
-  
+
     attr_accessor :players # data from the players.xml file
-  
+
     # additional attributes from master_scoreboard.xml
     attr_accessor :scoreboard_game_id, :ampm, :venue, :game_pk, :time, :time_zone, :game_type
     attr_accessor :away_name_abbrev, :home_name_abbrev, :away_code, :away_file_code, :away_team_id
@@ -17,7 +17,7 @@ module Gameday
     attr_accessor :home_code, :home_file_code, :home_team_id, :home_team_city, :home_team_name, :home_division
     attr_accessor :day, :gameday_sw, :away_games_back, :home_games_back, :away_games_back_wildcard, :home_games_back_wildcard
     attr_accessor :venue_w_chan_loc, :gameday, :away_win, :away_loss, :home_win, :home_loss, :league
-  
+
     attr_accessor :status  # An instance of GameStatus object
     attr_accessor :homeruns # an array of players with homeruns in the game
     attr_accessor :winning_pitcher, :losing_pitcher, :save_pitcher  # Instances of Player object
@@ -37,7 +37,7 @@ module Gameday
       g = Game.new
       g.innings = []
       if gid
-        g.gid = gid     
+        g.gid = gid
         xml_data = GamedayFetcher.fetch_game_xml(gid)
         if xml_data && xml_data.size > 0
           xml_doc = REXML::Document.new(xml_data)
@@ -68,8 +68,8 @@ module Gameday
       end
       g
     end
-  
-  
+
+
     # Setup a Game object from data read from the  master_scoreboard.xml file
     def self.load_from_scoreboard element
       g = new_from_xml
@@ -99,8 +99,8 @@ module Gameday
         @status.o = status.attributes['o']
       }
     end
-  
-  
+
+
     # Sets the away and home innings array containing scores by inning from data in the master_scoreboard.xml file
     def set_innings(element)
       element.elements.each("linescore/inning") { |element|
@@ -108,8 +108,8 @@ module Gameday
          @home_innings << element.attributes['home']
       }
     end
-  
-  
+
+
     # Sets the Runs/Hits/Errors totals from data in the master_scoreboard.xml file
     def set_totals(element)
       element.elements.each("linescore/r") { |runs|
@@ -125,8 +125,8 @@ module Gameday
          @home_errors = errs.attributes['home']
       }
     end
-  
-  
+
+
     # Sets a list of players who had homeruns in this game from data in the master_scoreboard.xml file
     def set_homeruns(element)
       @homeruns = []
@@ -140,8 +140,8 @@ module Gameday
         @homeruns << player
       end
     end
-    
-    
+
+
     # Sets the pitchers of record (win, lose, save) from data in the master_scoreboard.xml file
     def set_pitchers(element)
       element.elements.each("winning_pitcher") do |wp|
@@ -159,27 +159,27 @@ module Gameday
         @save_pitcher.saves = sp.attributes['saves']
       end
     end
-  
-  
+
+
     def self.find_by_month(year, month)
       games = []
       start_date = Date.new(year.to_i, month.to_i) # first day of month
       end_date = (start_date >> 1)-1 # last day of month
-      ((start_date)..(end_date)).each do |dt| 
+      ((start_date)..(end_date)).each do |dt|
         games += find_by_date(year, month, dt.day.to_s)
       end
       games
     end
-  
-  
+
+
     # Returns an array of Game objects for each game for the specified day
     def self.find_by_date(year, month, day)
-      begin 
+      begin
         games = []
         games_page = GamedayFetcher.fetch_games_page(year, month, day)
         if games_page
-          @hp = Hpricot(games_page) 
-          a = @hp.at('ul')  
+          @hp = Hpricot(games_page)
+          a = @hp.at('ul')
           (a/"a").each do |link|
             # look at each link inside of a ul tag
             if link.inner_html.include?('gid')
@@ -202,8 +202,8 @@ module Gameday
         puts "No games data found for #{year}, #{month}, #{day}."
       end
     end
-  
-  
+
+
     # Returns a 2 element array containing the home and visiting rosters for this game
     #    [0] array of all visitor players
     #    [1] array of all home players
@@ -215,8 +215,8 @@ module Gameday
       end
       @rosters
     end
-  
-  
+
+
     def get_eventlog
       if !@eventlog
         @eventlog = EventLog.new
@@ -224,8 +224,8 @@ module Gameday
       end
       @eventlog
     end
-  
-  
+
+
     # Returns a BoxScore object representing the boxscore for this game
     def get_boxscore
       if !@boxscore
@@ -235,8 +235,8 @@ module Gameday
       end
       @boxscore
     end
-  
-  
+
+
     # Saves an HTML version of the boxscore for the game
     def dump_boxscore
       if self.gid
@@ -246,24 +246,24 @@ module Gameday
         puts "No data for input specified"
       end
     end
-  
-  
+
+
     # Returns a string containing the linescore in the following printed format:
     #   Away 1 3 1
     #   Home 5 8 0
     def print_linescore
-    	bs = get_boxscore
-    	output = ''
-    	if bs.linescore 
-      	output += self.visit_team_name + ' ' + bs.linescore.away_team_runs + ' ' + bs.linescore.away_team_hits + ' ' + bs.linescore.away_team_errors + "\n"
-      	output += self.home_team_name + ' ' + bs.linescore.home_team_runs + ' ' + bs.linescore.home_team_hits + ' ' + bs.linescore.home_team_errors
+      bs = get_boxscore
+      output = ''
+      if bs.linescore
+        output += self.visit_team_name + ' ' + bs.linescore.away_team_runs + ' ' + bs.linescore.away_team_hits + ' ' + bs.linescore.away_team_errors + "\n"
+        output += self.home_team_name + ' ' + bs.linescore.home_team_runs + ' ' + bs.linescore.home_team_hits + ' ' + bs.linescore.home_team_errors
       else
-      	output += 'No linescore available for ' + @visit_team_name + ' vs. ' + @home_team_name
+        output += 'No linescore available for ' + @visit_team_name + ' vs. ' + @home_team_name
       end
       output
     end
-  
-  
+
+
     # Returns an array of the starting pitchers for the game
     #    [0] = visiting team pitcher
     #    [1] = home team pitcher
@@ -272,8 +272,8 @@ module Gameday
       results << get_pitchers('away')[0]
       results << get_pitchers('home')[0]
     end
-  
-  
+
+
     # Returns an array of the closing pitchers for the game
     #    [0] = visiting team pitcher
     #    [1] = home team pitcher
@@ -284,8 +284,8 @@ module Gameday
       results << away_pitchers[(away_pitchers.size) - 1]
       results << home_pitchers[(home_pitchers.size) -1]
     end
-  
-  
+
+
     # Returns an array of all pitchers for either the home team or the away team.
     # The values in the returned array are PitchingAppearance instances
     def get_pitchers(home_or_away)
@@ -300,8 +300,8 @@ module Gameday
         puts "No data for input specified"
       end
     end
-  
-  
+
+
     # Returns an array of pitches from this game for the pitcher identified by pid
     def get_pitches(pid)
       results = []
@@ -313,8 +313,8 @@ module Gameday
       end
       results.flatten
     end
-  
-  
+
+
     # Returns an array of either home or away batters for this game
     # home_or_away must be a string with value 'home' or 'away'
     # The values in the returned array are BattingAppearance instances
@@ -322,7 +322,7 @@ module Gameday
       if self.gid
         bs = get_boxscore
         if home_or_away == 'away'
-        	bs.batters[0]
+          bs.batters[0]
         else
           bs.batters[1]
         end
@@ -330,8 +330,8 @@ module Gameday
         puts "No data for input specified"
       end
     end
-  
-  
+
+
     # Returns the starting lineups for this game in an array with 2 elements
     # results[0] = visitors
     # results[1] = home
@@ -340,8 +340,8 @@ module Gameday
       results << get_batters('away')
       results << get_batters('home')
     end
-  
-  
+
+
     # Returns the pitchers for this game in an array with 2 elements
     # results[0] = visitors
     # results[1] = home
@@ -350,8 +350,8 @@ module Gameday
       results << get_pitchers('away')
       results << get_pitchers('home')
     end
-  
-  
+
+
     # Returns the team abreviation of the winning team
     def get_winner
       ls = get_boxscore.linescore
@@ -361,8 +361,8 @@ module Gameday
         return visit_team_abbrev
       end
     end
-  
-  
+
+
     # Returns a 2 element array holding the game score
     #    [0] visiting team runs
     #    [1] home team runs
@@ -373,25 +373,25 @@ module Gameday
       results << ls.home_team_runs
       results
     end
-  
-  
+
+
     # Returns a string holding the game attendance value
     def get_attendance
       game_info = get_boxscore.game_info
       # parse game_info to get attendance
       game_info[game_info.length-12..game_info.length-7]
     end
-  
-  
+
+
     def get_media
       if !@media
         @media = Media.new
-        @media.load_from_id(@gid) 
+        @media.load_from_id(@gid)
       end
       @media
     end
-  
-  
+
+
     # Returns an array of Inning objects that represent each inning of the game
     def get_innings
       if @innings.length == 0
@@ -404,8 +404,8 @@ module Gameday
       end
       @innings
     end
-  
-  
+
+
     # Returns an array of AtBat objects that represent each atbat of the game
     def get_atbats
       atbats = []
@@ -420,8 +420,8 @@ module Gameday
       end
       atbats
     end
-  
-  
+
+
     def get_hitchart
       if !@hitchart
         @hitchart = Hitchart.new
@@ -429,8 +429,8 @@ module Gameday
       end
       @hitchart
     end
-  
-  
+
+
     # Returns the number of innings for this game
     def get_num_innings
       bs = get_boxscore
@@ -440,8 +440,8 @@ module Gameday
         return 0
       end
     end
-  
-  
+
+
     # Returns a hash of umpires for this game
     #
     #   { 'hp' => 'john doe',
@@ -456,44 +456,44 @@ module Gameday
       end
       @players.umpires
     end
-  
-  
+
+
     def get_date
       bs = get_boxscore
       bs.date
     end
-  
-  
+
+
     def get_temp
       bs = get_boxscore
       bs.temp
     end
-  
-  
+
+
     def get_wind_speed
       bs = get_boxscore
       bs.wind_speed
     end
-  
-  
+
+
     def get_wind_dir
-      bs = get_boxscore 
+      bs = get_boxscore
       bs.wind_dir
     end
-  
-  
+
+
     def get_home_runs
       bs = get_boxscore
       bs.home_runs
     end
-   
-   
+
+
     def get_away_runs
       bs = get_boxscore
       bs.away_runs
     end
-  
-  
+
+
   end
 
 end

@@ -149,6 +149,13 @@ module Gameday
     end
   
   
+    # Fetch the linescore.json file
+    # Sample URL:  http://gd2.mlb.com/components/game/mlb/year_2008/month_04/day_07/gid_2008_04_07_atlmlb_colmlb_1/linescore.json
+    def self.fetch_linescore_json(gid)
+      GamedayUtil.fetcher.fetch_linescore_json(gid)
+    end
+  
+  
     # Fetch the miniscoreboard.xml file
     # Sample URL:  http://gd2.mlb.com/components/game/mlb/year_2008/month_04/day_07/gid_2008_04_07_atlmlb_colmlb_1/miniscoreboard.xml
     def self.fetch_miniscoreboard(gid)
