@@ -9,7 +9,7 @@ module Gameday
   
   
     def self.build_game_base_path(gid)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       "#{FILE_BASE_PATH}/year_" + gameday_info['year'] + "/month_" + gameday_info['month'] + "/day_" + gameday_info['day'] + "/gid_"+gid 
     end
   
@@ -119,10 +119,10 @@ module Gameday
     private
   
     def self.set_date_vars(year, month, day)
-      @@year = GamedayUtil.convert_digit_to_string(year.to_i)
-      @@month = GamedayUtil.convert_digit_to_string(month.to_i)
+      @@year = Helpers.convert_digit_to_string(year.to_i)
+      @@month = Helpers.convert_digit_to_string(month.to_i)
       if day
-        @@day = GamedayUtil.convert_digit_to_string(day.to_i)
+        @@day = Helpers.convert_digit_to_string(day.to_i)
       end
     end
   

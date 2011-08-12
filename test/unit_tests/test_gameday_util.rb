@@ -8,7 +8,7 @@ class TestGamedayUtil < Test::Unit::TestCase
   
   def test_parse_date_string
     date = '20100401'
-    result = Gameday::GamedayUtil.parse_date_string(date)
+    result = Gameday::Helpers.parse_date_string(date)
     assert_not_nil result
     assert_equal '2010', result[0]
     assert_equal '04', result[1]
@@ -17,20 +17,20 @@ class TestGamedayUtil < Test::Unit::TestCase
   
   
   def test_convert_digit_to_string
-    result = Gameday::GamedayUtil.convert_digit_to_string(8)
+    result = Gameday::Helpers.convert_digit_to_string(8)
     assert_equal '08', result
     
-    result = Gameday::GamedayUtil.convert_digit_to_string(0)
+    result = Gameday::Helpers.convert_digit_to_string(0)
     assert_equal '00', result
     
-    result = Gameday::GamedayUtil.convert_digit_to_string(12)
+    result = Gameday::Helpers.convert_digit_to_string(12)
     assert_equal '12', result
   end
   
   
   def test_parse_gameday_id
     gid = 'gid_2008_04_07_atlmlb_colmlb_1'
-    gd_info = Gameday::GamedayUtil.parse_gameday_id(gid)
+    gd_info = Gameday::Helpers.parse_gameday_id(gid)
     assert_not_nil gd_info
     assert_equal '2008', gd_info["year"]
     assert_equal '04', gd_info["month"]
@@ -62,17 +62,17 @@ class TestGamedayUtil < Test::Unit::TestCase
   def test_save_file
     filename = 'test_file.dat'
     data = 'Test Data'
-    Gameday::GamedayUtil.save_file(filename, data)
+    Gameday::Helpers.save_file(filename, data)
   end
   
   
   def test_is_date_valid
-    assert !Gameday::GamedayUtil.is_date_valid(4, 31)
-    assert !Gameday::GamedayUtil.is_date_valid(6, 31)
-    assert !Gameday::GamedayUtil.is_date_valid(9, 31)
-    assert !Gameday::GamedayUtil.is_date_valid(04, 1)
-    assert !Gameday::GamedayUtil.is_date_valid(04, 4)
-    assert Gameday::GamedayUtil.is_date_valid(04, 5)
+    assert !Gameday::Helpers.is_date_valid(4, 31)
+    assert !Gameday::Helpers.is_date_valid(6, 31)
+    assert !Gameday::Helpers.is_date_valid(9, 31)
+    assert !Gameday::Helpers.is_date_valid(04, 1)
+    assert !Gameday::Helpers.is_date_valid(04, 4)
+    assert Gameday::Helpers.is_date_valid(04, 5)
   end
   
   

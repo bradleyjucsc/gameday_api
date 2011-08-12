@@ -1,9 +1,9 @@
 module Gameday
   class Hip
-  
+
     attr_accessor :des, :x, :y, :batter_id, :pitcher_id, :type, :team, :inning
-  
-  
+
+
     def initialize(element)
       @des = element.attributes["des"]
       @des = element.attributes["x"]
@@ -14,7 +14,7 @@ module Gameday
       @des = element.attributes["team"]
       @des = element.attributes["inning"]
     end
-  
-  
+
+
   end
 end

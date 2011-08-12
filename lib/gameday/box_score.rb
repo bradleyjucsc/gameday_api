@@ -53,7 +53,7 @@ module Gameday
     # Converts the boxscore into a formatted HTML representation.
     # Relies on the boxscore.html.erb template for describing the layout
     def to_html(template_filename)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       template = ERB.new File.new(File.expand_path(File.dirname(__FILE__) + "/" + template_filename)).read, nil, "%"  
       return template.result(binding)
     end

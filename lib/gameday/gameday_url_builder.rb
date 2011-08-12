@@ -1,7 +1,7 @@
 module Gameday
   class GamedayUrlBuilder
     def self.build_game_base_url(gid)
-      gid_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gid_info = Helpers.parse_gameday_id('gid_' + gid)
       y, m, d = gid_info['year'], gid_info['month'], gid_info['day']
 
       "#{build_day_url(y, m, d)}/gid_#{gid}"
@@ -106,10 +106,10 @@ module Gameday
     end
 
     def self.set_date_vars(year, month, day)
-      @@year = GamedayUtil.convert_digit_to_string(year.to_i)
-      @@month = GamedayUtil.convert_digit_to_string(month.to_i)
+      @@year = Helpers.convert_digit_to_string(year.to_i)
+      @@month = Helpers.convert_digit_to_string(month.to_i)
       if day
-        @@day = GamedayUtil.convert_digit_to_string(day.to_i)
+        @@day = Helpers.convert_digit_to_string(day.to_i)
       end
     end
   end

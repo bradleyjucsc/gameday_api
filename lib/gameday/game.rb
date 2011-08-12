@@ -43,7 +43,7 @@ module Gameday
           xml_doc = REXML::Document.new(xml_data)
           g.game_type = xml_doc.root.attributes["type"]
           g.time = xml_doc.root.attributes["local_game_time"]
-          info = GamedayUtil.parse_gameday_id('gid_'+gid)
+          info = Helpers.parse_gameday_id('gid_'+gid)
           g.home_team_abbrev = info["home_team_abbrev"]
           g.visit_team_abbrev = info["visiting_team_abbrev"]
           g.visiting_team = Team.new(g.visit_team_abbrev )

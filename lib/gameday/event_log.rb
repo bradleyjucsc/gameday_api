@@ -91,7 +91,7 @@ module Gameday
     # Converts the eventlog into a formatted HTML representation.
     # Relies on the eventlog.html.erb template for describing the layout
     def to_html(template_filename)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       template = ERB.new File.new(File.expand_path(File.dirname(__FILE__) + "/" + template_filename)).read, nil, "%"  
       return template.result(binding)
     end

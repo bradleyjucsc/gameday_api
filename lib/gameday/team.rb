@@ -75,7 +75,7 @@ module Gameday
     # teams[1] = home
     def self.get_teams_for_gid(gid)
       teams = []
-      info = GamedayUtil.parse_gameday_id('gid_'+gid)
+      info = Helpers.parse_gameday_id('gid_'+gid)
       home_team_abbrev = info["home_team_abbrev"]
       visit_team_abbrev = info["visiting_team_abbrev"]
       teams << Team.new(visit_team_abbrev)
@@ -90,12 +90,12 @@ module Gameday
         results = []
         (START_MONTH..END_MONTH).each do |month|
           puts "Month: " + month.to_s
-          month_s = GamedayUtil.convert_digit_to_string(month)
+          month_s = Helpers.convert_digit_to_string(month)
           (1..31).each do |date|
-            if !GamedayUtil.is_date_valid(month, date)
+            if !Helpers.is_date_valid(month, date)
               next
             end
-            date_s = GamedayUtil.convert_digit_to_string(date)
+            date_s = Helpers.convert_digit_to_string(date)
             games = games_for_date(year, month_s, date_s)
             if games
               # make sure game was not postponed
@@ -277,12 +277,12 @@ module Gameday
     def get_opening_day_game(year)
       schedule = Schedule.new(year)
       oday = schedule.get_opening_day
-      oday_array = GamedayUtil.parse_date_string(oday)
+      oday_array = Helpers.parse_date_string(oday)
       games = games_for_date(oday_array[0], oday_array[1], oday_array[2])
       if games[0] == nil
         games = games_for_date(oday_array[0], 
                                oday_array[1], 
-                               GamedayUtil.convert_digit_to_string(oday_array[2].to_i + 1))
+                               Helpers.convert_digit_to_string(oday_array[2].to_i + 1))
       end
       return games[0]
     end

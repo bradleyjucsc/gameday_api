@@ -64,7 +64,7 @@ module Gameday
   
     # Returns the number of at bats over the entire season for this player
     def at_bats_count
-      gameday_info = GamedayUtil.parse_gameday_id(@gid)
+      gameday_info = Helpers.parse_gameday_id(@gid)
       appearances = get_all_appearances(gameday_info["year"])
       count = appearances.inject(0) {|sum, a| sum + a.ab.to_i }    
     end

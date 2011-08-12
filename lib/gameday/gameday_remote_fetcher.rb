@@ -61,7 +61,7 @@ module Gameday
     # Fetches the boxscore.xml file and returns its contents
     # Sample URL: http://gd2.mlb.com/components/game/mlb/year_2009/month_05/day_08/gid_2009_05_08_detmlb_clemlb_1/boxscore.xml
     def self.fetch_boxscore(gid)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_boxscore_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid)
       fetch(url)
     end
@@ -78,7 +78,7 @@ module Gameday
     # Fetches the eventLog.xml file and returns its contents
     # Sample URL: http://gd2.mlb.com/components/game/mlb/year_2008/month_04/day_07/gid_2008_04_07_flomlb_wasmlb_1/eventLog.xml
     def self.fetch_eventlog(gid)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_eventlog_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid)
       fetch(url)
     end
@@ -86,14 +86,14 @@ module Gameday
 
     # Fetches the game.xml file and returns its contents
     def self.fetch_game_xml(gid)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_game_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid)
       fetch(url)
     end
 
 
     def self.fetch_game_events(gid)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_game_events_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid)
       fetch(url)
     end
@@ -101,7 +101,7 @@ module Gameday
 
     # Fetches the gamecenter.xml file and returns its contents
     def self.fetch_gamecenter_xml(gid)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_gamecenter_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid)
       fetch(url)
     end
@@ -118,7 +118,7 @@ module Gameday
     # Fetch the linescore.xml file
     # Sample URL:  http://gd2.mlb.com/components/game/mlb/year_2008/month_04/day_07/gid_2008_04_07_atlmlb_colmlb_1/linescore.xml
     def self.fetch_linescore(gid)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_linescore_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid)
       fetch(url)
     end
@@ -127,7 +127,7 @@ module Gameday
     # Fetch the linescore.json file
     # Sample URL:  http://gd2.mlb.com/components/game/mlb/year_2008/month_04/day_07/gid_2008_04_07_atlmlb_colmlb_1/linescore.json
     def self.fetch_linescore_json(gid)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_linescore_json_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid)
       fetch(url)
     end
@@ -143,7 +143,7 @@ module Gameday
 
     # Fetches the players.xml file and returns its contents
     def self.fetch_players(gid)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_players_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid)
       fetch(url)
       #fetcher = CacheFetcher.new()
@@ -161,7 +161,7 @@ module Gameday
 
     # Fetches the batters/(pid).xml file
     def self.fetch_batter(gid, pid)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_batter_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid, pid)
       fetch(url)
     end
@@ -169,14 +169,14 @@ module Gameday
 
     # Fetches the pitchers/(pid).xml file
     def self.fetch_pitcher(gid, pid)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_pitcher_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid, pid)
       fetch(url)
     end
 
     #     inning/inning_X.xml
     def self.fetch_inningx(gid, inning_num)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_inningx_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid, inning_num)
       fetch(url)
     end
@@ -184,7 +184,7 @@ module Gameday
 
   #     inning/inning_Score.xml
     def self.fetch_inning_scores(gid)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_inning_scores_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid)
       fetch(url)
     end
@@ -192,7 +192,7 @@ module Gameday
 
   #     inning/inning_hit.xml
     def self.fetch_inning_hit(gid)
-      gameday_info = GamedayUtil.parse_gameday_id('gid_' + gid)
+      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_inning_hit_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid)
       fetch(url)
     end
