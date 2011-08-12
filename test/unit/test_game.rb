@@ -1,7 +1,4 @@
-$: << File.expand_path(File.dirname(__FILE__) + "/../../lib")
-
-require 'test/unit'
-require 'gameday'
+require 'test_helper'
 
 class TestGame < Test::Unit::TestCase
   
@@ -40,9 +37,10 @@ class TestGame < Test::Unit::TestCase
   
   
   def test_find_by_month
+    Gameday::Game.expects(:find_by_date).times(30).returns(['fake_game'])
     games = Gameday::Game.find_by_month('2009', '9')
     assert_not_nil games
-    assert_equal 416, games.length
+    assert_equal 30, games.length
   end
   
   

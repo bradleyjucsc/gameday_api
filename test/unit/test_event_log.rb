@@ -1,7 +1,4 @@
-$: << File.expand_path(File.dirname(__FILE__) + "/../../lib")
-
-require 'test/unit'
-require 'event_log'
+require 'test_helper'
 
 class TestEventLog < Test::Unit::TestCase
   

@@ -1,8 +1,7 @@
-$: << File.expand_path(File.dirname(__FILE__) + "/../../lib")
+$: << File.expand_path(File.dirname(__FILE__))
 
-require 'gameday_util'
+require 'test_helper'
 
-require 'test/unit'
 require 'test_gameday_util'
 require 'test_gameday_url_builder'
 require 'test_team'

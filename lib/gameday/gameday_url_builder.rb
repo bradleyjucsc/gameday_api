@@ -4,7 +4,7 @@ module Gameday
       gid_info = Helpers.parse_gameday_id('gid_' + gid)
       y, m, d = gid_info['year'], gid_info['month'], gid_info['day']
 
-      "#{build_day_url(y, m, d)}/gid_#{gid}"
+      "#{build_day_url(y, m, d)}gid_#{gid}"
     end
 
 
@@ -14,22 +14,22 @@ module Gameday
 
 
     def self.build_epg_url(year, month, day)
-      "#{build_day_url(year, month, day)}/epg.xml"
+      "#{build_day_url(year, month, day)}epg.xml"
     end
 
 
     def self.build_scoreboard_url(year, month, day)
-      "#{build_day_url(year, month, day)}/master_scoreboard.xml"
+      "#{build_day_url(year, month, day)}master_scoreboard.xml"
     end
 
 
     def self.build_scoreboard_json_url(year, month, day)
-      "#{build_day_url(year, month, day)}/master_scoreboard.json"
+      "#{build_day_url(year, month, day)}master_scoreboard.json"
     end
 
 
     def self.build_day_highlights_url(year, month, day)
-      "#{build_day_url(year, month, day)}/media/highlights.xml"
+      "#{build_day_url(year, month, day)}media/highlights.xml"
     end
 
 
@@ -95,14 +95,14 @@ module Gameday
 
     def self.build_day_url(year, month, day)
       set_date_vars(year, month, day)
-      "#{Gameday::GD2_MLB_BASE}/mlb/year_#{@@year}/month_#{@@month}/day_#{@@day}"
+      "#{Gameday::GD2_MLB_BASE}/mlb/year_#{@@year}/month_#{@@month}/day_#{@@day}/"
     end
 
 
     private
 
     def self.game_url year, month, day, gid
-      "#{build_day_url(year, month, day)}/gid_#{gid}"
+      "#{build_day_url(year, month, day)}gid_#{gid}"
     end
 
     def self.set_date_vars(year, month, day)

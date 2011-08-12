@@ -44,21 +44,6 @@ module Gameday
     end
   
   
-    # Saves an HTML version of the boxscore
-    def dump_to_file
-      Helpers.save_file("boxscore.html", to_html('boxscore.html.erb'))
-    end
-  
-  
-    # Converts the boxscore into a formatted HTML representation.
-    # Relies on the boxscore.html.erb template for describing the layout
-    def to_html(template_filename)
-      gameday_info = Helpers.parse_gameday_id('gid_' + gid)
-      template = ERB.new File.new(File.expand_path(File.dirname(__FILE__) + "/" + template_filename)).read, nil, "%"  
-      return template.result(binding)
-    end
-  
-  
     # Returns a 2 element array of leadoff hitters for this game.
     #     [0] = visitor's leadoff hitter
     #     [1] = home's leadoff hitter

@@ -1,11 +1,8 @@
-$: << File.expand_path(File.dirname(__FILE__) + "/../../lib")
-
-require 'test/unit'
-require 'box_score'
+require 'test_helper'
 
 class TestBoxScore < Test::Unit::TestCase
-  
-  
+
+
   def setup
   end
 
@@ -39,28 +36,18 @@ class TestBoxScore < Test::Unit::TestCase
     assert_nil bs.temp
     assert_nil bs.wind_speed
     assert_nil bs.wind_dir
-    
+
     assert_equal 612, bs.home_batting_text.length
     assert_equal 698, bs.away_batting_text.length
-    
+
     assert_equal 'Detroit', bs.cities[0]
     assert_equal 'Minnesota', bs.cities[1]
-    
+
     assert_equal 2, bs.pitchers.length
     assert_equal 2, bs.batters.length
   end
-  
-  
-  def test_to_html
-    bs = Gameday::BoxScore.new
-    bs.load_from_id('2009_09_20_detmlb_minmlb_1')
-    html = bs.to_html('boxscore.html.erb')
-    assert_not_nil html
-    puts 'length = ' + html.length.to_s
-    #assert_equal 14916, html.length
-  end
-  
-  
+
+
   def test_get_leadoff_hitters
     bs = Gameday::BoxScore.new
     bs.load_from_id('2009_09_20_detmlb_minmlb_1')
@@ -69,8 +56,8 @@ class TestBoxScore < Test::Unit::TestCase
     assert_equal 'Granderson', hitters[0].batter_name
     assert_equal 'Span', hitters[1].batter_name
   end
-  
-  
+
+
   def test_get_cleanup_hitters
     bs = Gameday::BoxScore.new
     bs.load_from_id('2009_09_20_detmlb_minmlb_1')
@@ -79,10 +66,10 @@ class TestBoxScore < Test::Unit::TestCase
     assert_equal 'Cabrera, M', hitters[0].batter_name
     assert_equal 'Kubel', hitters[1].batter_name
   end
-  
-  
+
+
   def test_find_hitters
-    
+
   end
 
 

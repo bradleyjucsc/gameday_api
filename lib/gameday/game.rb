@@ -177,6 +177,7 @@ module Gameday
       begin
         games = []
         games_page = GamedayFetcher.fetch_games_page(year, month, day)
+
         if games_page
           @hp = Hpricot(games_page)
           a = @hp.at('ul')
@@ -234,17 +235,6 @@ module Gameday
         @boxscore = box
       end
       @boxscore
-    end
-
-
-    # Saves an HTML version of the boxscore for the game
-    def dump_boxscore
-      if self.gid
-        bs = get_boxscore
-        Helpers.save_file("boxscore.html", bs.to_html('boxscore.html.erb'))
-      else
-        puts "No data for input specified"
-      end
     end
 
 

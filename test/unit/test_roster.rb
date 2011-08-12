@@ -1,7 +1,4 @@
-$: << File.expand_path(File.dirname(__FILE__) + "/../../lib")
-
-require 'test/unit'
-require 'roster'
+require 'test_helper'
 
 class TestRoster < Test::Unit::TestCase
   
