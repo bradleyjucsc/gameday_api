@@ -5,27 +5,6 @@ module Gameday
   # This class provides a variety of utility methods that are used in other classes
   class GamedayUtil
 
-    @@fetcher = ''
-
-
-    # Returns an instance of the configured fetcher, either remote or local
-    def self.fetcher
-      if @@fetcher == ''
-        read_config
-      end
-      if @@fetcher == 'local'
-        return GamedayLocalFetcher
-      else
-        return GamedayRemoteFetcher
-      end
-    end
-
-
-    def self.set_fetcher(fetcher)
-      @@fetcher = fetcher
-    end
-
-
     # Create instance configuration variables
     # try to read configuration from, in order:
     # 1) ./config/gameday.yml
@@ -38,7 +17,6 @@ module Gameday
 
       settings = YAML::load_file filename
       set_proxy_info(settings)
-      set_data_fetcher(settings)
     end
 
 
@@ -76,13 +54,6 @@ module Gameday
         @@proxy_port = settings['proxy']['port']
       end
     end
-
-
-    # Sets either remote or local data fetcher for retrieving XML data
-    def self.set_data_fetcher(settings)
-      @@fetcher = settings['fetcher']
-    end
-
 
   end
 end

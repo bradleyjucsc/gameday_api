@@ -146,8 +146,6 @@ module Gameday
       gameday_info = Helpers.parse_gameday_id('gid_' + gid)
       url = GamedayUrlBuilder.build_players_url(gameday_info['year'] , gameday_info['month'], gameday_info['day'] , gid)
       fetch(url)
-      #fetcher = CacheFetcher.new()
-      #return fetcher.fetch(url)
     end
 
 
