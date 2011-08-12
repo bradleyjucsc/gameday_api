@@ -46,7 +46,7 @@ module Gameday
   
     # Saves an HTML version of the boxscore
     def dump_to_file
-      GamedayUtil.save_file("boxscore.html", to_html('boxscore.html.erb'))
+      Helpers.save_file("boxscore.html", to_html('boxscore.html.erb'))
     end
   
   

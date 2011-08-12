@@ -241,7 +241,7 @@ module Gameday
     def dump_boxscore
       if self.gid
         bs = get_boxscore
-        GamedayUtil.save_file("boxscore.html", bs.to_html('boxscore.html.erb'))
+        Helpers.save_file("boxscore.html", bs.to_html('boxscore.html.erb'))
       else
         puts "No data for input specified"
       end

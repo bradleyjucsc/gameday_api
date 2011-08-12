@@ -83,7 +83,7 @@ module Gameday
   
     # NOT IMPLEMENTED YET
     def dump_to_file
-      GamedayUtil.save_file("eventlog.html", self.to_html('eventlog.html.erb'))
+      Helpers.save_file("eventlog.html", self.to_html('eventlog.html.erb'))
     end
   
   
