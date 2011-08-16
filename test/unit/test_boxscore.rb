@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TestBoxScore < Test::Unit::TestCase
+class TestBoxScore < MiniTest::Unit::TestCase
 
 
   def setup
@@ -13,8 +13,8 @@ class TestBoxScore < Test::Unit::TestCase
       bs.load_from_id(GAME_ID)
       assert_equal GAME_ID, bs.gid
       assert_equal 11223, bs.xml_data.length
-      assert_not_nil bs.linescore
-      assert_not_nil bs.game_info
+      assert bs.linescore
+      assert bs.game_info
       assert_equal '2009/09/20/detmlb-minmlb-1', bs.game_id
       assert_equal '246422', bs.game_pk
       assert_equal 'mlb', bs.home_sport_code

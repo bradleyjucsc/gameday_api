@@ -1,14 +1,14 @@
 require 'test_helper'
 
-class TestMedia < Test::Unit::TestCase
+class TestMedia < MiniTest::Unit::TestCase
   
   
   def test_load_from_id
     mock_http CASSETTE do
       media = Gameday::Media.new
       media.load_from_id(GAME_ID)
-      assert_not_nil media.highlights
-      assert_not_nil media.mobile
+      assert media.highlights
+      assert media.mobile
       assert_equal 6, media.highlights.length
       assert_equal "Punto's RBI single", media.highlights[0].headline
       assert_equal "00:00:37", media.highlights[0].duration

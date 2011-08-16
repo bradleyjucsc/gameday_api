@@ -1,21 +1,21 @@
 require 'test_helper'
 
-class TestEventLog < Test::Unit::TestCase
+class TestEventLog < MiniTest::Unit::TestCase
 
 
   def test_load_from_id
     mock_http CASSETTE do
       log = Gameday::EventLog.new
       log.load_from_id(GAME_ID)
-      assert_not_nil log.gid
+      assert log.gid
       assert_equal GAME_ID, log.gid
-      assert_not_nil log.away_team
-      assert_not_nil log.home_team
+      assert log.away_team
+      assert log.home_team
       assert_equal 'Detroit', log.away_team
       assert_equal 'Minnesota', log.home_team
-      assert_not_nil log.away_events
-      assert_not_nil log.home_events
-      assert_not_nil log.max_inning
+      assert log.away_events
+      assert log.home_events
+      assert log.max_inning
       assert_equal 51, log.away_events.length
       assert_equal 45, log.home_events.length
       assert_equal '12', log.away_events[0].number

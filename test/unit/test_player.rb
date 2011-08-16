@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TestPlayer < Test::Unit::TestCase
+class TestPlayer < MiniTest::Unit::TestCase
 
   CASSETTE = 'player'
 
@@ -43,7 +43,7 @@ class TestPlayer < Test::Unit::TestCase
       player.load_from_id(GAME_ID, '434158')
     end
     team = player.get_team
-    assert_not_nil team
+    assert team
     assert_equal 'Detroit', team.city
     assert_equal 'Tigers', team.name
   end

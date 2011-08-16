@@ -1,12 +1,12 @@
 require 'test_helper'
 
-class TestGamedayUtil < Test::Unit::TestCase
+class TestGamedayUtil < MiniTest::Unit::TestCase
   
   
   def test_parse_date_string
     date = '20100401'
     result = Gameday::Helpers.parse_date_string(date)
-    assert_not_nil result
+    assert result
     assert_equal '2010', result[0]
     assert_equal '04', result[1]
     assert_equal '01' , result[2]
@@ -28,7 +28,7 @@ class TestGamedayUtil < Test::Unit::TestCase
   def test_parse_gameday_id
     gid = 'gid_2008_04_07_atlmlb_colmlb_1'
     gd_info = Gameday::Helpers.parse_gameday_id(gid)
-    assert_not_nil gd_info
+    assert gd_info
     assert_equal '2008', gd_info["year"]
     assert_equal '04', gd_info["month"]
     assert_equal '07', gd_info["day"]
@@ -46,13 +46,13 @@ class TestGamedayUtil < Test::Unit::TestCase
   def test_get_connection
     url = 'http://www.google.com'
     con = Gameday::GamedayUtil.get_connection(url)
-    assert_not_nil con
+    assert con
   end
   
   
   def test_net_http
     result = Gameday::GamedayUtil.net_http
-    assert_not_nil result
+    assert result
   end
   
   

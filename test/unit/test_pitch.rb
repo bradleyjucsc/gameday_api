@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TestPitch < Test::Unit::TestCase
+class TestPitch < MiniTest::Unit::TestCase
   
   
   def test_init

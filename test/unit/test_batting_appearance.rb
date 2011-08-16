@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TestBattingAppearance < Test::Unit::TestCase
+class TestBattingAppearance < MiniTest::Unit::TestCase
   
   
   def test_init

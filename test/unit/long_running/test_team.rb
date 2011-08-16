@@ -3,7 +3,7 @@ $: << File.expand_path(File.dirname(__FILE__) + "/../../../lib")
 require 'test/unit'
 require 'team'
 
-class TestTeam < Test::Unit::TestCase
+class TestTeam < MiniTest::Unit::TestCase
   
   
   def setup

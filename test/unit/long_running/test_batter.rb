@@ -3,7 +3,7 @@ $: << File.expand_path(File.dirname(__FILE__) + "/../../../lib")
 require 'test/unit'
 require 'batter'
 
-class TestBatter < Test::Unit::TestCase
+class TestBatter < MiniTest::Unit::TestCase
   
   
   def setup
@@ -22,7 +22,7 @@ class TestBatter < Test::Unit::TestCase
   
   def get_multihit_appearances_test
     appearances = @batter.get_multihit_appearances('2009')
-    assert_not_nil appearances
+    assert appearances
     assert appearances.length == 40
   end
   

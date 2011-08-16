@@ -3,7 +3,7 @@ $: << File.expand_path(File.dirname(__FILE__) + "/../../../lib")
 require 'test/unit'
 require 'player'
 
-class TestPlayer < Test::Unit::TestCase
+class TestPlayer < MiniTest::Unit::TestCase
   
 
   def setup
@@ -21,7 +21,7 @@ class TestPlayer < Test::Unit::TestCase
   
   def get_all_appearances_test
     appearances = @player.get_all_appearances('2009')
-    assert_not_nil appearances
+    assert appearances
     assert appearances.length == 160
   end
 

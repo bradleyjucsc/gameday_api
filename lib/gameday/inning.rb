@@ -21,8 +21,8 @@ module Gameday
           set_top_ab
           set_bottom_ab
         end
-      rescue
-        puts "Could not load inning file for #{gid}, inning #{inning.to_s}"
+      rescue => e
+        puts "Could not load inning file for #{gid}, inning #{inning.to_s}\n#{e}"
       end
     end
   

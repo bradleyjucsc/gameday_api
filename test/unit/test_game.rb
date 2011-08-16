@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TestGame < Test::Unit::TestCase
+class TestGame < MiniTest::Unit::TestCase
 
   def test_new_from_hash_set_id_correctly
     assert_equal 'a_b_c', Gameday::Game.new_from_hash('id' => 'a/b-c').gid
@@ -11,7 +11,7 @@ class TestGame < Test::Unit::TestCase
 
     mock_http CASSETTE do
       game = Gameday::Game.fetch(gid)
-      assert_not_nil game
+      assert game
       assert_equal '2008_04_07_atlmlb_colmlb_1', game.gid
       assert_equal 'col', game.home_team_abbrev
       assert_equal 'atl', game.visit_team_abbrev
@@ -31,7 +31,7 @@ class TestGame < Test::Unit::TestCase
     mock_http CASSETTE do
       games = Gameday::Game.find_by_date('2009', '9', '20')
 
-      assert_not_nil games
+      assert games
       assert_equal 15, games.length
     end
   end
@@ -40,7 +40,7 @@ class TestGame < Test::Unit::TestCase
   def test_find_by_month
     Gameday::Game.expects(:find_by_date).times(30).returns(['fake_game'])
     games = Gameday::Game.find_by_month('2009', '9')
-    assert_not_nil games
+    assert games
     assert_equal 30, games.length
   end
 
@@ -62,7 +62,7 @@ class TestGame < Test::Unit::TestCase
     mock_http CASSETTE do
       game = Gameday::Game.fetch(GAME_ID)
       eventlog = game.get_eventlog
-      assert_not_nil eventlog
+      assert eventlog
       assert_equal 'Minnesota', eventlog.home_team
       assert_equal 'Detroit', eventlog.away_team
     end
@@ -73,7 +73,7 @@ class TestGame < Test::Unit::TestCase
     mock_http CASSETTE do
       game = Gameday::Game.fetch(GAME_ID)
       bs = game.get_boxscore
-      assert_not_nil bs
+      assert bs
       assert_equal 'Detroit Tigers', bs.away_fname
       assert_equal 'Minnesota Twins', bs.home_fname
     end
@@ -84,7 +84,7 @@ class TestGame < Test::Unit::TestCase
     mock_http CASSETTE do
       game = Gameday::Game.fetch(GAME_ID)
       ls = game.print_linescore
-      assert_not_nil ls
+      assert ls
       assert ls.length > 0
     end
   end
@@ -209,9 +209,9 @@ class TestGame < Test::Unit::TestCase
     mock_http CASSETTE do
       game = Gameday::Game.fetch(GAME_ID)
       media = game.get_media
-      assert_not_nil media
-      assert_not_nil media.highlights
-      assert_not_nil media.mobile
+      assert media
+      assert media.highlights
+      assert media.mobile
     end
   end
 
@@ -237,7 +237,7 @@ class TestGame < Test::Unit::TestCase
 
     mock_http CASSETTE do
       atbats = game.get_atbats
-      assert_not_nil atbats
+      assert atbats
       assert_equal 81, atbats.length
     end
   end
@@ -247,7 +247,7 @@ class TestGame < Test::Unit::TestCase
     mock_http CASSETTE do
       game = Gameday::Game.fetch(GAME_ID)
       hitchart = game.get_hitchart
-      assert_not_nil hitchart
+      assert hitchart
       assert_equal 57, hitchart.hips.length
     end
   end

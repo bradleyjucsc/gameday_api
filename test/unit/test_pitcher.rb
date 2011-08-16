@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TestPitcher < Test::Unit::TestCase
+class TestPitcher < MiniTest::Unit::TestCase
 
 
   def test_load_from_id
@@ -59,7 +59,7 @@ class TestPitcher < Test::Unit::TestCase
   def test_get_all_ids_for_game
     mock_http CASSETTE do
       ids = Gameday::Pitcher.get_all_ids_for_game(GAME_ID)
-      assert_not_nil ids
+      assert ids
       assert_equal 41, ids.length
       assert_equal "118158", ids[0]
       assert_equal "132220", ids[1]

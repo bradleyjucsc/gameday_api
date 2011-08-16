@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TestTeam < Test::Unit::TestCase
+class TestTeam < MiniTest::Unit::TestCase
 
 
   def setup
@@ -33,7 +33,7 @@ class TestTeam < Test::Unit::TestCase
 
   def test_teams
     teams = Gameday::Team.teams
-    assert_not_nil teams
+    assert teams
     assert_equal 33, teams.length
     assert_equal Hash, teams.class
     assert_equal ['Anaheim','Angels','American'], teams["ana"]
@@ -70,7 +70,7 @@ class TestTeam < Test::Unit::TestCase
   def test_get_opening_day_game
     mock_http CASSETTE do
       game = @team.get_opening_day_game('2009')
-      assert_not_nil game
+      assert game
     end
   end
 
@@ -78,7 +78,7 @@ class TestTeam < Test::Unit::TestCase
   def test_opening_day_roster
     mock_http CASSETTE do
       roster = @team.opening_day_roster('2009')
-      assert_not_nil roster
+      assert roster
     end
   end
 
