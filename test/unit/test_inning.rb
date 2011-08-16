@@ -1,12 +1,12 @@
 require 'test_helper'
 
 class TestInning < Test::Unit::TestCase
-  
-  
+
+
   def test_load_from_id
     inning = Gameday::Inning.new
-    inning.load_from_id(get_gid, 3)
-    assert_equal get_gid, inning.gid
+    inning.load_from_id(GAME_ID, 3)
+    assert_equal GAME_ID, inning.gid
     assert_equal '3', inning.num
     assert_equal 'det', inning.away_team
     assert_equal 'min', inning.home_team
@@ -19,13 +19,6 @@ class TestInning < Test::Unit::TestCase
     assert_equal 'S', inning.top_atbats[0].pitches[0].type
     assert_equal '90.13', inning.top_atbats[0].pitches[0].x
   end
-  
-  
-  private 
-  
-  def get_gid
-    '2009_09_20_detmlb_minmlb_1'
-  end
-  
-  
+
+
 end

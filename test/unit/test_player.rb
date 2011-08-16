@@ -1,13 +1,15 @@
 require 'test_helper'
 
 class TestPlayer < Test::Unit::TestCase
-  
-  
+
+  CASSETTE = 'player'
+
   def test_load_from_id
     player = Gameday::Player.new
-    player.load_from_id('2009_09_20_detmlb_minmlb_1', '434158')
-    
-    assert_equal '2009_09_20_detmlb_minmlb_1', player.gid
+    mock_http CASSETTE do
+      player.load_from_id(GAME_ID, '434158')
+    end
+    assert_equal GAME_ID, player.gid
     assert_equal '434158', player.pid
     assert_equal 'Curtis', player.first
     assert_equal 'Granderson', player.last
@@ -24,7 +26,7 @@ class TestPlayer < Test::Unit::TestCase
     assert_equal nil, player.wins
     assert_equal nil, player.losses
     assert_equal nil, player.era
-      
+
     assert_equal 'det', player.team_abbrev
     assert_equal 'batter', player.type
     assert_equal '6-1', player.height
@@ -37,12 +39,14 @@ class TestPlayer < Test::Unit::TestCase
 
   def test_get_team
     player = Gameday::Player.new
-    player.load_from_id('2009_09_20_detmlb_minmlb_1', '434158')
+    mock_http CASSETTE do
+      player.load_from_id(GAME_ID, '434158')
+    end
     team = player.get_team
     assert_not_nil team
     assert_equal 'Detroit', team.city
     assert_equal 'Tigers', team.name
   end
-  
+
 
 end

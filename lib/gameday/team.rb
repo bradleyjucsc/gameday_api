@@ -1,12 +1,12 @@
 module Gameday
   # This class
   class Team
-  
+
     START_MONTH = 4  # April
     END_MONTH = 10   # October
-  
+
     attr_accessor :abrev, :city, :name, :league, :games
-  
+
     # Setup team names, abbreviations, and league
     def initialize(abrev)
       if (abrev && abrev != '')
@@ -28,7 +28,7 @@ module Gameday
           @league = ''
       end
     end
-  
+
       @@abrevs = {}
       @@abrevs['ana'] = ['Anaheim','Angels','American']
       @@abrevs['bos'] = ['Boston','Red Sox','American']
@@ -63,13 +63,13 @@ module Gameday
       @@abrevs['tex'] = ['Texas','Rangers','American']
       @@abrevs['tor'] = ['Toronto','Blue Jays','American']
       @@abrevs['was'] = ['Washington','Nationals','National']
-  
-  
+
+
     def self.teams
       @@abrevs
     end
-  
-  
+
+
     # Returns a 2 element array specifying the two teams associated with the game id (gid) passed in.
     # teams[0] = visitor
     # teams[1] = home
@@ -81,8 +81,8 @@ module Gameday
       teams << Team.new(visit_team_abbrev)
       teams << Team.new(home_team_abbrev)
     end
-  
-  
+
+
     # Returns an array of all games for this team for the specified season
     def all_games(year)
       if !@games
@@ -110,35 +110,35 @@ module Gameday
       end
       @games
     end
-  
-  
+
+
     # Returns an array of all home games for this team for the specified season
     def all_home_games(year)
       games = all_games(year)
       results = games.select {|g| g.home_team_abbrev == @abrev }
     end
-  
-  
+
+
     # Returns an array of all away games for this team for the specified season
     def all_away_games(year)
       games = all_games(year)
       results = games.select {|g| g.visit_team_abbrev == @abrev }
     end
-  
-  
+
+
     # Returns an array of the team's game objects for the date passed in.
     def games_for_date(year, month, day)
       games_page = GamedayFetcher.fetch_games_page(year, month, day)
       gids = find_gid_for_date(year, month, day, games_page)
       if gids
         results = gids.collect {|gid| Game.fetch(gid) }
-      else 
+      else
         results = nil
       end
       results
     end
-  
-  
+
+
     # Returns an array of BattingAppearance containing the leadoff hitters for each game of the specified season.
     def get_leadoff_hitters_by_year(year)
       results = []
@@ -154,17 +154,17 @@ module Gameday
       end
       results
     end
-  
-  
-    # Returns an array of BattingAppearance of all hitters who have led off at least one game during the specified season 
+
+
+    # Returns an array of BattingAppearance of all hitters who have led off at least one game during the specified season
     def get_leadoff_hitters_unique(year)
       hitters = get_leadoff_hitters_by_year(year)
       h = {}
       hitters.each {|hitter| h[hitter.batter_name]=hitter}
       h.values
     end
-  
-  
+
+
     # Returns an array containing the cleanup hitters for each game of the specified season.
     # The cleanup hitter is the 4th hitter in the batting order
     def get_cleanup_hitters_by_year(year)
@@ -181,17 +181,17 @@ module Gameday
       end
       results
     end
-  
-  
-    # Returns an array of all hitters who have hit in the cleanup spot (4) at least one game during the specified season 
+
+
+    # Returns an array of all hitters who have hit in the cleanup spot (4) at least one game during the specified season
     def get_cleanup_hitters_unique(year)
       hitters = get_cleanup_hitters_by_year(year)
       h = {}
       hitters.each {|hitter| h[hitter.batter_name]=hitter}
       h.values
     end
-  
-  
+
+
     def get_start_pitcher_appearances_by_year(year)
       pitchers = []
       games = all_games(year)
@@ -205,8 +205,8 @@ module Gameday
       end
       pitchers
     end
-  
-  
+
+
     # Returns an array of all pitchers who have started at least one game during the specified season
     def get_starters_unique(year)
       pitchers = get_start_pitcher_appearances_by_year(year)
@@ -214,8 +214,8 @@ module Gameday
       pitchers.each {|pitcher| h[pitcher.pitcher_name]=pitcher}
       h.values
     end
-  
-  
+
+
     def get_close_pitcher_appearances_by_year(year)
       pitchers = []
       games = all_games(year)
@@ -229,8 +229,8 @@ module Gameday
       end
       pitchers
     end
-  
-  
+
+
     # Returns an array of all pitchers who have closed at least one game during the specified season
     def get_closers_unique(year)
       pitchers = get_close_pitcher_appearances_by_year(year)
@@ -238,8 +238,8 @@ module Gameday
       pitchers.each {|pitcher| h[pitcher.pitcher_name]=pitcher}
       h.values
     end
-  
-  
+
+
     # Returns a count of the number of quality starts for this team for the specified year.
     def quality_starts_count(year)
       count = 0
@@ -258,20 +258,20 @@ module Gameday
       end
       count
     end
-  
-  
+
+
     # Returns an array of all players who have played at least one game for this team during the specified season.
     def players_for_season(year)
-    
+
     end
-  
-  
+
+
     # Returns an array of all the games for this team for the year and month specified
     def get_games_for_month(year, month)
-    
+
     end
-  
-  
+
+
     # Returns a game object representing the opening day game for this team for
     # the season passed in.
     def get_opening_day_game(year)
@@ -280,14 +280,14 @@ module Gameday
       oday_array = Helpers.parse_date_string(oday)
       games = games_for_date(oday_array[0], oday_array[1], oday_array[2])
       if games[0] == nil
-        games = games_for_date(oday_array[0], 
-                               oday_array[1], 
+        games = games_for_date(oday_array[0],
+                               oday_array[1],
                                Helpers.convert_digit_to_string(oday_array[2].to_i + 1))
       end
       return games[0]
     end
-  
-  
+
+
     # Returns a Roster object representing the opening day roster for this team
     # for the specified year.
     def opening_day_roster(year)
@@ -298,19 +298,19 @@ module Gameday
 
 
     private
-  
+
     # Returns an array of the game ids associated with the given date and team
     # because of double-headers it is possible for one team to play more than one game
     # on a single date.
     # Each game listing looks like this:
     #    <li><a href="gid_2009_09_15_kcamlb_detmlb_1/">gid_2009_09_15_kcamlb_detmlb_1/</a></li>
     def find_gid_for_date(year, month, day, games_page)
-      begin 
+      begin
         results = []
         if games_page
           # look for game listings
-          @hp = Hpricot(games_page) 
-          a = @hp.at('ul')  
+          @hp = Hpricot(games_page)
+          a = @hp.at('ul')
           (a/"a").each do |link|
             # game listings include the 'gid' characters
             if link.inner_html.include?('gid') && link.inner_html.include?(@abrev)
@@ -326,7 +326,7 @@ module Gameday
         puts "Exception in find_gid_for_date: No games data found for #{year}, #{month}, #{day}, #{@abrev}."
       end
     end
-  
-  
+
+
   end
 end

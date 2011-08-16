@@ -28,7 +28,7 @@ module Gameday
 
     def get_sked_filename(year)
       #'schedules/' + year.to_s + 'SKED.TXT'
-      File.expand_path(File.dirname(__FILE__) + '/schedules/' + year.to_s + 'SKED.TXT')
+      File.expand_path(File.dirname(__FILE__) + '/../schedules/' + year.to_s + 'SKED.TXT')
     end
   
   
