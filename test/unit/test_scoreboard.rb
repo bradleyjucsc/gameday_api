@@ -1,4 +1,4 @@
-require 'test/helper'
+require 'test_helper'
 
 class TestScoreboard < MiniTest::Unit::TestCase
 

@@ -1,11 +1,14 @@
 $: << File.expand_path(File.dirname(__FILE__) + "/../lib/")
 
+require 'minitest/unit'
 require 'test/unit'
 require 'mocha'
 require 'fakeweb'
 require 'vcr'
 
 require 'gameday'
+
+MiniTest::Unit.autorun
 
 GAME_ID  = '2009_09_20_detmlb_minmlb_1'
 CASSETTE = 'gameday'
@@ -22,3 +25,9 @@ def mock_http name, record = :new_episodes
     yield
   end
 end  
+
+class Fixture
+  def self.local filename
+    File.read(File.dirname(__FILE__) + "/fixtures/#{filename}")
+  end
+end
