@@ -45,8 +45,9 @@ class TestGamedayUtil < MiniTest::Unit::TestCase
   
   def test_get_connection
     url = 'http://www.google.com'
+    Gameday::GamedayUtil.expects(:open).with(url).returns('Hello')
     con = Gameday::GamedayUtil.get_connection(url)
-    assert con
+    assert_equal 'Hello', con
   end
   
   

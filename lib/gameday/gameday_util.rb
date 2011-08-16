@@ -29,8 +29,8 @@ module Gameday
           connection = open(url)
         end
         connection
-      rescue
-        puts 'Could not open connection'
+      rescue => e
+        puts "Could not open connection:\n#{e}"
       end
     end
 
