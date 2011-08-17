@@ -31,8 +31,7 @@ module Gameday
   
     def set_top_ab
       @xml_doc.elements.each("inning/top/atbat") { |element| 
-        atbat = AtBat.new
-        atbat.init(element, @gid, @num)
+        atbat = AtBat.new_from_xml element, @gid, @num
         @top_atbats.push atbat
       }
     end
@@ -40,8 +39,7 @@ module Gameday
   
     def set_bottom_ab
       @xml_doc.elements.each("inning/bottom/atbat") { |element| 
-        atbat = AtBat.new
-        atbat.init(element, @gid, @num)
+        atbat = AtBat.new_from_xml element, @gid, @num
         @bottom_atbats.push atbat
       }
     end

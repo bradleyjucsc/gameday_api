@@ -40,11 +40,6 @@ module Gameday
     end
 
 
-    def self.save_file(filename, data)
-      File.open(filename, 'w') {|f| f.write(data) }
-    end
-
-
     def self.is_date_valid(month, date)
       if (month == 4 && date == 31) ||
          (month == 6 && date == 31) ||

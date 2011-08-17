@@ -233,9 +233,6 @@ class TestGame < MiniTest::Unit::TestCase
     game = nil
     mock_http do
       game = Gameday::Game.fetch(GAME_ID)
-    end
-
-    mock_http do
       atbats = game.get_atbats
       assert atbats
       assert_equal 81, atbats.length

@@ -15,7 +15,7 @@ module Gameday
     end
 
     def self.new_from_xml element
-      return unless element && element.attributes === Hash
+      return unless element && element.attributes.is_a?(Hash)
 
       new_from_hash element.attributes
     end

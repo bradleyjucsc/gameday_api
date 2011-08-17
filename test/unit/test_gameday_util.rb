@@ -57,13 +57,6 @@ class TestGamedayUtil < MiniTest::Unit::TestCase
   end
   
   
-  def test_save_file
-    filename = 'test_file.dat'
-    data = 'Test Data'
-    Gameday::Helpers.save_file(filename, data)
-  end
-  
-  
   def test_is_date_valid
     assert !Gameday::Helpers.is_date_valid(4, 31)
     assert !Gameday::Helpers.is_date_valid(6, 31)

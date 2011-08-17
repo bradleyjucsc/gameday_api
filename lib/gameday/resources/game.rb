@@ -297,7 +297,7 @@ module Gameday
       results = []
       atbats = get_atbats
       atbats.each do |ab|
-        if ab.pitcher_id == pid
+        if ab.pitcher == pid
           results << ab.pitches
         end
       end

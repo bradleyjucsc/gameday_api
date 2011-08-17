@@ -46,7 +46,7 @@ module Gameday
       results = []
       abs = get_game.get_atbats
       abs.each do |ab|
-        if ab.pitcher_id == @pid
+        if ab.pitcher == @pid
           results << ab
         end
       end
