@@ -1,16 +1,13 @@
 module Gameday
-  class Event
-  
+  class Event < Resource
+
     attr_accessor :number, :inning, :description, :team
-  
-    def load(element, home_or_away)
-    	@xml_doc = element
-    	@team = home_or_away
-      @number = element.attributes["number"]
-      @inning = element.attributes["inning"]
-      @description = element.attributes["description"]
+
+    def self.new_from_xml element, home_or_away
+      event = super element
+      event.team = home_or_away
+
+      event
     end
-  
-  
   end
 end

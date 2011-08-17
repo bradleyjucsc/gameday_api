@@ -35,15 +35,13 @@ module Gameday
       @max_inning = 0
       # set away team events
       @xml_doc.elements.each("game/team[@home_team='false']/event") { |element|
-        event = Event.new
-        event.load(element, 'away')
+        event = Event.new_from_xml element, 'away'
         @max_inning = event.inning.to_i unless event.inning.to_i < @max_inning
         @away_events.push event
       }
       # set home team events
       @xml_doc.elements.each("game/team[@home_team='true']/event") { |element|
-        event = Event.new
-        event.load(element, 'home')
+        event = Event.new_from_xml element, 'home'
         @home_events.push event
       }
     end
