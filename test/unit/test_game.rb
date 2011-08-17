@@ -9,7 +9,7 @@ class TestGame < MiniTest::Unit::TestCase
   def test_initialize
     gid = '2008_04_07_atlmlb_colmlb_1'
 
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(gid)
       assert game
       assert_equal '2008_04_07_atlmlb_colmlb_1', game.gid
@@ -28,7 +28,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_find_by_date
-    mock_http CASSETTE do
+    mock_http do
       games = Gameday::Game.find_by_date('2009', '8', '20')
 
       assert games
@@ -47,7 +47,7 @@ class TestGame < MiniTest::Unit::TestCase
 
   def test_get_rosters
 
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       rosters = game.get_rosters
       assert_equal 'Detroit Tigers', rosters[0].team_name
@@ -59,7 +59,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_eventlog
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       eventlog = game.get_eventlog
       assert eventlog
@@ -70,7 +70,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_boxscore
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       bs = game.get_boxscore
       assert bs
@@ -81,7 +81,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_print_linescocre
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       ls = game.print_linescore
       assert ls
@@ -91,7 +91,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_starting_pitchers
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       sp = game.get_starting_pitchers
       assert_equal 2, sp.length
@@ -102,7 +102,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_closing_pitchers
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       cp = game.get_closing_pitchers
       assert_equal 2, cp.length
@@ -113,7 +113,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_pitchers
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       pitchers = game.get_pitchers('home')
       assert_equal 6, pitchers.length
@@ -124,7 +124,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_pitches
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch GAME_ID
       pitches = game.get_pitches('407845')
       assert_equal 16, pitches.length
@@ -134,7 +134,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_batters
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       batters = game.get_batters('home')
       assert_equal 16, batters.length
@@ -147,7 +147,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_lineups
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       lineups = game.get_lineups
       assert_equal 2, lineups.length
@@ -160,7 +160,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_pitching
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       pitching = game.get_pitching
       assert_equal 2, pitching.length
@@ -171,7 +171,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_winner
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       winner = game.get_winner
       assert_equal 'det', winner
@@ -183,7 +183,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_score
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       score = game.get_score
       assert_equal '6', score[0]
@@ -193,7 +193,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_attendance
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       attend = game.get_attendance
       assert_equal '36,335', attend
@@ -206,7 +206,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_media
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       media = game.get_media
       assert media
@@ -217,7 +217,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_innings
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       innings = game.get_innings
       assert_equal 9, innings.length
@@ -231,11 +231,11 @@ class TestGame < MiniTest::Unit::TestCase
 
   def test_get_atbats
     game = nil
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
     end
 
-    mock_http CASSETTE do
+    mock_http do
       atbats = game.get_atbats
       assert atbats
       assert_equal 81, atbats.length
@@ -244,7 +244,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_hitchart
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch(GAME_ID)
       hitchart = game.get_hitchart
       assert hitchart
@@ -254,7 +254,7 @@ class TestGame < MiniTest::Unit::TestCase
 
 
   def test_get_num_innings
-    mock_http CASSETTE do
+    mock_http do
       game = Gameday::Game.fetch('2008_04_07_atlmlb_colmlb_1')
       assert_equal 9, game.get_num_innings
 

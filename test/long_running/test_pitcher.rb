@@ -1,11 +1,8 @@
-$: << File.expand_path(File.dirname(__FILE__) + "/../../../lib")
-
-require 'test/unit'
-require 'pitcher'
+require 'test_helper'
 
 class TestPitcher < MiniTest::Unit::TestCase
-  
-  
+
+
   def setup
     if !@pitcher
       @pitcher = Gameday::Pitcher.new
@@ -14,6 +11,6 @@ class TestPitcher < MiniTest::Unit::TestCase
       assert @pitcher.last_name == 'Verlander'
     end
   end
-  
-  
+
+
 end

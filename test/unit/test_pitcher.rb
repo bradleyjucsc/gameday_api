@@ -4,7 +4,7 @@ class TestPitcher < MiniTest::Unit::TestCase
 
 
   def test_load_from_id
-    mock_http CASSETTE do
+    mock_http do
       pitcher = Gameday::Pitcher.new
       pitcher.load_from_id('2010_04_13_kcamlb_detmlb_1','453286')
       assert_equal 'det', pitcher.team_abbrev
@@ -17,7 +17,7 @@ class TestPitcher < MiniTest::Unit::TestCase
 
 
   def test_get_vs_ab
-    mock_http CASSETTE do
+    mock_http do
       pitcher = Gameday::Pitcher.new
       pitcher.load_from_id('2010_04_13_kcamlb_detmlb_1','425883')
       ab = pitcher.get_vs_ab
@@ -37,7 +37,7 @@ class TestPitcher < MiniTest::Unit::TestCase
 
 
   def test_get_pitches
-    mock_http CASSETTE do
+    mock_http do
       pitcher = Gameday::Pitcher.new
       pitcher.load_from_id('2010_04_13_kcamlb_detmlb_1','425883')
       pitches = pitcher.get_pitches
@@ -57,7 +57,7 @@ class TestPitcher < MiniTest::Unit::TestCase
 
 
   def test_get_all_ids_for_game
-    mock_http CASSETTE do
+    mock_http do
       ids = Gameday::Pitcher.get_all_ids_for_game(GAME_ID)
       assert ids
       assert_equal 41, ids.length

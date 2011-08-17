@@ -4,7 +4,7 @@ class TestMedia < MiniTest::Unit::TestCase
   
   
   def test_load_from_id
-    mock_http CASSETTE do
+    mock_http do
       media = Gameday::Media.new
       media.load_from_id(GAME_ID)
       assert media.highlights

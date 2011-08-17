@@ -6,7 +6,7 @@ class TestPlayer < MiniTest::Unit::TestCase
 
   def test_load_from_id
     player = Gameday::Player.new
-    mock_http CASSETTE do
+    mock_http do
       player.load_from_id(GAME_ID, '434158')
     end
     assert_equal GAME_ID, player.gid
@@ -39,7 +39,7 @@ class TestPlayer < MiniTest::Unit::TestCase
 
   def test_get_team
     player = Gameday::Player.new
-    mock_http CASSETTE do
+    mock_http do
       player.load_from_id(GAME_ID, '434158')
     end
     team = player.get_team

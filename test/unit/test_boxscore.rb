@@ -8,7 +8,7 @@ class TestBoxScore < MiniTest::Unit::TestCase
 
 
   def test_load_from_id
-    mock_http CASSETTE do
+    mock_http do
       bs = Gameday::BoxScore.new
       bs.load_from_id(GAME_ID)
       assert_equal GAME_ID, bs.gid
@@ -51,7 +51,7 @@ class TestBoxScore < MiniTest::Unit::TestCase
 
 
   def test_get_leadoff_hitters
-    mock_http CASSETTE do
+    mock_http do
       bs = Gameday::BoxScore.new
       bs.load_from_id(GAME_ID)
       hitters = bs.get_leadoff_hitters
@@ -63,7 +63,7 @@ class TestBoxScore < MiniTest::Unit::TestCase
 
 
   def test_get_cleanup_hitters
-    mock_http CASSETTE do
+    mock_http do
       bs = Gameday::BoxScore.new
       bs.load_from_id(GAME_ID)
       hitters = bs.get_cleanup_hitters

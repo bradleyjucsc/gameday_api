@@ -20,7 +20,7 @@ VCR.config do |c|
   c.stub_with :fakeweb
 end
 
-def mock_http name, record = :new_episodes
+def mock_http name = CASSETTE, record = :new_episodes
   VCR.use_cassette(name, :record => record) do
     yield
   end

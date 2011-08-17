@@ -1,10 +1,7 @@
-$: << File.expand_path(File.dirname(__FILE__) + "/../../../lib")
-
-require 'test/unit'
-require 'player'
+require 'test_helper'
 
 class TestPlayer < MiniTest::Unit::TestCase
-  
+
 
   def setup
     if !@player
@@ -12,13 +9,13 @@ class TestPlayer < MiniTest::Unit::TestCase
       @player.load_from_id(GAME_ID, '434158')
     end
   end
-  
-  
+
+
   def test_long_running
     get_all_appearances_test
   end
-  
-  
+
+
   def get_all_appearances_test
     appearances = @player.get_all_appearances('2009')
     assert appearances

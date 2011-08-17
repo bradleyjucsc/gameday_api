@@ -4,7 +4,7 @@ class TestEventLog < MiniTest::Unit::TestCase
 
 
   def test_load_from_id
-    mock_http CASSETTE do
+    mock_http do
       log = Gameday::EventLog.new
       log.load_from_id(GAME_ID)
       assert log.gid
@@ -31,7 +31,7 @@ class TestEventLog < MiniTest::Unit::TestCase
 
 
   def test_events_by_inning
-    mock_http CASSETTE do
+    mock_http do
       log = Gameday::EventLog.new
       log.load_from_id(GAME_ID)
       events = log.events_by_inning('3')

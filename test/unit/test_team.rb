@@ -51,7 +51,7 @@ class TestTeam < MiniTest::Unit::TestCase
 
 
   def test_games_for_date
-    mock_http CASSETTE do
+    mock_http do
       games = @team.games_for_date('2009', '09', '20')
       assert_equal 1, games.length
       game = games[0]
@@ -68,7 +68,7 @@ class TestTeam < MiniTest::Unit::TestCase
 
 
   def test_get_opening_day_game
-    mock_http CASSETTE do
+    mock_http do
       game = @team.get_opening_day_game('2009')
       assert game
     end
@@ -76,7 +76,7 @@ class TestTeam < MiniTest::Unit::TestCase
 
 
   def test_opening_day_roster
-    mock_http CASSETTE do
+    mock_http do
       roster = @team.opening_day_roster('2009')
       assert roster
     end

@@ -4,7 +4,7 @@ class TestInning < MiniTest::Unit::TestCase
 
 
   def test_load_from_id
-    mock_http CASSETTE do
+    mock_http do
       inning = Gameday::Inning.new
       inning.load_from_id(GAME_ID, 3)
       assert_equal GAME_ID, inning.gid
