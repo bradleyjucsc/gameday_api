@@ -42,40 +42,38 @@ module Gameday
         set_weather
       end
     end
-  
-  
+
+
     # Returns a 2 element array of leadoff hitters for this game.
     #     [0] = visitor's leadoff hitter
     #     [1] = home's leadoff hitter
     def get_leadoff_hitters
       find_hitters("batter")
     end
-  
-  
+
+
     # Returns a 2 element array of cleanup hitters for this game.
     #     [0] = visitor's cleanup hitter
     #     [1] = home's cleanup hitter
     def get_cleanup_hitters
       find_hitters("batter[@bo='400']")
     end
-  
-  
+
+
     def find_hitters(search_string)
       results = []
+
       away = @xml_doc.elements["boxscore/batting[@team_flag='away']/#{search_string}"]
-      away_batter = BattingAppearance.new
-      away_batter.init(away)
-      results << away_batter
+      results << BattingAppearance.new_from_xml(away)
       home = @xml_doc.elements["boxscore/batting[@team_flag='home']/#{search_string}"]
-      home_batter = BattingAppearance.new
-      home_batter.init(home)
-      results << home_batter
+      results << BattingAppearance.new_from_xml(home)
+
       results
     end
-  
-  
+
+
     private
-  
+
     # Retrieves basic game data from the XML root element and sets in object
     def set_basic_info
       @game_id = @xml_doc.root.attributes["game_id"]
@@ -151,14 +149,10 @@ module Gameday
     def set_batters
       @batters, away_batters, home_batters = [], [], []
       @xml_doc.elements.each("boxscore/batting[@team_flag='away']/batter") { |element| 
-        batter = BattingAppearance.new
-        batter.init(element)
-        away_batters.push batter
+        away_batters.push BattingAppearance.new_from_xml(element)
       }
       @xml_doc.elements.each("boxscore/batting[@team_flag='home']/batter") { |element| 
-        batter = BattingAppearance.new
-        batter.init(element)
-        home_batters.push batter
+        home_batters.push BattingAppearance.new_from_xml(element)
       }
       @batters << away_batters
       @batters << home_batters

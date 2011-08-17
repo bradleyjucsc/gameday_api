@@ -7,6 +7,7 @@ module Gameday
       res.raw_attrs = hash
 
       hash.each do |k,v|
+        next if 'id' == k.to_s
         meth = "#{k}=".to_sym
         res.send(meth, v) if res.respond_to? meth
       end
