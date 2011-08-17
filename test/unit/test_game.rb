@@ -29,10 +29,10 @@ class TestGame < MiniTest::Unit::TestCase
 
   def test_find_by_date
     mock_http CASSETTE do
-      games = Gameday::Game.find_by_date('2009', '9', '20')
+      games = Gameday::Game.find_by_date('2009', '8', '20')
 
       assert games
-      assert_equal 15, games.length
+      assert_equal 12, games.length
     end
   end
 

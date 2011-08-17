@@ -235,7 +235,8 @@ class TestGamedayFetcher < MiniTest::Unit::TestCase
     mock_http CASSETTE do
       result = Gameday::GamedayFetcher.fetch_onbase_linescore(GAME_ID)
       assert result
-      assert result.include?('<away i1="0" i2="0" i3="0" i4="1" i5="3" i6="0" i7="0" i8="2" i9="0"/>')
+
+      assert result.include?('away_inning_runs')
     end
   end
 

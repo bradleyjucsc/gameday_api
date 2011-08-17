@@ -190,8 +190,8 @@ module Gameday
               begin
                 game = Game.fetch(gid)
                 games.push game
-              rescue
-                puts "Could not create game object for #{year}, #{month}, #{day} - #{gid}"
+              rescue => e
+                puts "Could not create game object for #{year}, #{month}, #{day} - #{gid}:\n#{e}"
               end
             end
           end

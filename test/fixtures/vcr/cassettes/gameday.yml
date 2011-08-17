@@ -10636,3 +10636,530 @@
       - text/html; charset=iso-8859-1
     body: GameDay - 404 Not Found
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_08/day_20/
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Wed, 17 Aug 2011 03:08:15 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      expires: 
+      - Wed, 17 Aug 2011 03:08:30 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-length: 
+      - "2559"
+      content-type: 
+      - text/html;charset=ISO-8859-1
+    body: |
+      <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+      <html>
+       <head>
+        <title>Index of /components/game/mlb/year_2009/month_08/day_20</title>
+       </head>
+       <body>
+      <h1>Index of /components/game/mlb/year_2009/month_08/day_20</h1>
+      <ul><li><a href="/components/game/mlb/year_2009/month_08/"> Parent Directory</a></li>
+      <li><a href="batters/"> batters/</a></li>
+      <li><a href="epg.xml"> epg.xml</a></li>
+      <li><a href="gid_2009_08_20_anamlb_clemlb_1/"> gid_2009_08_20_anamlb_clemlb_1/</a></li>
+      <li><a href="gid_2009_08_20_arimlb_phimlb_1/"> gid_2009_08_20_arimlb_phimlb_1/</a></li>
+      <li><a href="gid_2009_08_20_atlmlb_nynmlb_1/"> gid_2009_08_20_atlmlb_nynmlb_1/</a></li>
+      <li><a href="gid_2009_08_20_balmlb_tbamlb_1/"> gid_2009_08_20_balmlb_tbamlb_1/</a></li>
+      <li><a href="gid_2009_08_20_bosmlb_tormlb_1/"> gid_2009_08_20_bosmlb_tormlb_1/</a></li>
+      <li><a href="gid_2009_08_20_chnmlb_lanmlb_1/"> gid_2009_08_20_chnmlb_lanmlb_1/</a></li>
+      <li><a href="gid_2009_08_20_colmlb_wasmlb_1/"> gid_2009_08_20_colmlb_wasmlb_1/</a></li>
+      <li><a href="gid_2009_08_20_flomlb_houmlb_1/"> gid_2009_08_20_flomlb_houmlb_1/</a></li>
+      <li><a href="gid_2009_08_20_minmlb_texmlb_1/"> gid_2009_08_20_minmlb_texmlb_1/</a></li>
+      <li><a href="gid_2009_08_20_seamlb_detmlb_1/"> gid_2009_08_20_seamlb_detmlb_1/</a></li>
+      <li><a href="gid_2009_08_20_sfnmlb_cinmlb_1/"> gid_2009_08_20_sfnmlb_cinmlb_1/</a></li>
+      <li><a href="gid_2009_08_20_slnmlb_sdnmlb_1/"> gid_2009_08_20_slnmlb_sdnmlb_1/</a></li>
+      <li><a href="grid.json"> grid.json</a></li>
+      <li><a href="grid.xml"> grid.xml</a></li>
+      <li><a href="master_scoreboard.json"> master_scoreboard.json</a></li>
+      <li><a href="master_scoreboard.xml"> master_scoreboard.xml</a></li>
+      <li><a href="media/"> media/</a></li>
+      <li><a href="miniscoreboard.json"> miniscoreboard.json</a></li>
+      <li><a href="miniscoreboard.xml"> miniscoreboard.xml</a></li>
+      <li><a href="mlbtv_japan.xml"> mlbtv_japan.xml</a></li>
+      <li><a href="mobile_epg.xml"> mobile_epg.xml</a></li>
+      <li><a href="multi_angle_epg.json"> multi_angle_epg.json</a></li>
+      <li><a href="multi_angle_epg.xml"> multi_angle_epg.xml</a></li>
+      <li><a href="pitchers/"> pitchers/</a></li>
+      <li><a href="pitching_staff/"> pitching_staff/</a></li>
+      <li><a href="playertracker.xml"> playertracker.xml</a></li>
+      <li><a href="scoreboard.plist"> scoreboard.plist</a></li>
+      <li><a href="scoreboard.xml"> scoreboard.xml</a></li>
+      <li><a href="scoreboard_iphone.xml"> scoreboard_iphone.xml</a></li>
+      <li><a href="top_shelf.plist"> top_shelf.plist</a></li>
+      <li><a href="uber_scoreboard.xml"> uber_scoreboard.xml</a></li>
+      </ul>
+      </body></html>
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_08/day_20/gid_2009_08_20_anamlb_clemlb_1/game.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Wed, 17 Aug 2011 03:08:16 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Fri, 21 Aug 2009 11:48:29 GMT
+      etag: 
+      - "\"2d6-725bbd40\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "726"
+      expires: 
+      - Wed, 17 Aug 2011 03:08:31 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: |-
+      <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><game type="R" local_game_time="19:05" gameday_sw="E">
+      	<team type="home" code="cle" file_code="cle" abbrev="CLE" id="114" name="Cleveland" name_full="Cleveland Indians" name_brief="Indians" w="52" l="68" division_id="202" league_id="103" league="AL"/>
+      	<team type="away" code="ana" file_code="ana" abbrev="LAA" id="108" name="LA Angels" name_full="Los Angeles Angels" name_brief="Angels" w="73" l="46" division_id="200" league_id="103" league="AL"/>
+      	<stadium id="5" name="Progressive Field" venue_w_chan_loc="USOH0195" location="Cleveland, OH"/>
+      </game>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_08/day_20/gid_2009_08_20_arimlb_phimlb_1/game.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Wed, 17 Aug 2011 03:08:16 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Fri, 21 Aug 2009 06:44:30 GMT
+      etag: 
+      - "\"2eb-333aaf80\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "747"
+      expires: 
+      - Wed, 17 Aug 2011 03:08:31 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: |-
+      <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><game type="R" local_game_time="19:05" gameday_sw="E">
+      	<team type="home" code="phi" file_code="phi" abbrev="PHI" id="143" name="Philadelphia" name_full="Philadelphia Phillies" name_brief="Phillies" w="69" l="49" division_id="204" league_id="104" league="NL"/>
+      	<team type="away" code="ari" file_code="ari" abbrev="ARI" id="109" name="Arizona" name_full="Arizona Diamondbacks" name_brief="Diamondbacks" w="54" l="68" division_id="203" league_id="104" league="NL"/>
+      	<stadium id="2681" name="Citizens Bank Park" venue_w_chan_loc="USPA1276" location="Philadelphia, PA"/>
+      </game>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_08/day_20/gid_2009_08_20_atlmlb_nynmlb_1/game.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Wed, 17 Aug 2011 03:08:16 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Fri, 21 Aug 2009 08:07:30 GMT
+      etag: 
+      - "\"2c2-5c0f7480\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "706"
+      expires: 
+      - Wed, 17 Aug 2011 03:08:31 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: |-
+      <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><game type="R" local_game_time="19:10" gameday_sw="E">
+      	<team type="home" code="nyn" file_code="nym" abbrev="NYM" id="121" name="NY Mets" name_full="New York Mets" name_brief="Mets" w="56" l="65" division_id="204" league_id="104" league="NL"/>
+      	<team type="away" code="atl" file_code="atl" abbrev="ATL" id="144" name="Atlanta" name_full="Atlanta Braves" name_brief="Braves" w="64" l="57" division_id="204" league_id="104" league="NL"/>
+      	<stadium id="3289" name="Citi Field" venue_w_chan_loc="USNY0504" location="Flushing, NY"/>
+      </game>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_08/day_20/gid_2009_08_20_balmlb_tbamlb_1/game.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Wed, 17 Aug 2011 03:08:16 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 24 Aug 2009 11:13:46 GMT
+      etag: 
+      - "\"2d2-4fb9ce80\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "722"
+      expires: 
+      - Wed, 17 Aug 2011 03:08:31 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: |-
+      <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><game type="R" local_game_time="19:08" gameday_sw="E">
+      	<team type="home" code="tba" file_code="tb" abbrev="TB" id="139" name="Tampa Bay" name_full="Tampa Bay Rays" name_brief="Rays" w="65" l="55" division_id="201" league_id="103" league="AL"/>
+      	<team type="away" code="bal" file_code="bal" abbrev="BAL" id="110" name="Baltimore" name_full="Baltimore Orioles" name_brief="Orioles" w="49" l="72" division_id="201" league_id="103" league="AL"/>
+      	<stadium id="12" name="Tropicana Field" venue_w_chan_loc="USFL0438" location="St. Petersburg, FL"/>
+      </game>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_08/day_20/gid_2009_08_20_bosmlb_tormlb_1/game.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Wed, 17 Aug 2011 03:08:16 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Fri, 21 Aug 2009 07:36:16 GMT
+      etag: 
+      - "\"2cb-ec5c7c00\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "715"
+      expires: 
+      - Wed, 17 Aug 2011 03:08:31 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: |-
+      <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><game type="R" local_game_time="19:07" gameday_sw="E">
+      	<team type="home" code="tor" file_code="tor" abbrev="TOR" id="141" name="Toronto" name_full="Toronto Blue Jays" name_brief="Blue Jays" w="55" l="64" division_id="201" league_id="103" league="AL"/>
+      	<team type="away" code="bos" file_code="bos" abbrev="BOS" id="111" name="Boston" name_full="Boston Red Sox" name_brief="Red Sox" w="69" l="51" division_id="201" league_id="103" league="AL"/>
+      	<stadium id="14" name="Rogers Centre" venue_w_chan_loc="CAXX0504" location="Toronto, ON"/>
+      </game>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_08/day_20/gid_2009_08_20_chnmlb_lanmlb_1/game.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Wed, 17 Aug 2011 03:08:17 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Fri, 28 Aug 2009 14:47:50 GMT
+      etag: 
+      - "\"2cf-c4a73180\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "719"
+      expires: 
+      - Wed, 17 Aug 2011 03:08:32 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: |-
+      <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><game type="R" local_game_time="19:10" gameday_sw="E">
+      	<team type="home" code="lan" file_code="la" abbrev="LAD" id="119" name="LA Dodgers" name_full="Los Angeles Dodgers" name_brief="Dodgers" w="72" l="50" division_id="203" league_id="104" league="NL"/>
+      	<team type="away" code="chn" file_code="chc" abbrev="CHC" id="112" name="Chi Cubs" name_full="Chicago Cubs" name_brief="Cubs" w="61" l="58" division_id="205" league_id="104" league="NL"/>
+      	<stadium id="22" name="Dodger Stadium" venue_w_chan_loc="USCA0638" location="Los Angeles, CA"/>
+      </game>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_08/day_20/gid_2009_08_20_colmlb_wasmlb_1/game.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Wed, 17 Aug 2011 03:08:17 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 24 Aug 2009 11:25:42 GMT
+      etag: 
+      - "\"2db-7a671980\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "731"
+      expires: 
+      - Wed, 17 Aug 2011 03:08:32 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: |-
+      <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><game type="R" local_game_time="19:05" gameday_sw="E">
+      	<team type="home" code="was" file_code="was" abbrev="WSH" id="120" name="Washington" name_full="Washington Nationals" name_brief="Nationals" w="43" l="78" division_id="204" league_id="104" league="NL"/>
+      	<team type="away" code="col" file_code="col" abbrev="COL" id="115" name="Colorado" name_full="Colorado Rockies" name_brief="Rockies" w="68" l="53" division_id="203" league_id="104" league="NL"/>
+      	<stadium id="3309" name="Nationals Park" venue_w_chan_loc="USDC0001" location="Washington, DC"/>
+      </game>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_08/day_20/gid_2009_08_20_flomlb_houmlb_1/game.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Wed, 17 Aug 2011 03:08:17 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Tue, 25 Aug 2009 18:15:10 GMT
+      etag: 
+      - "\"2cc-509c6780\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "716"
+      expires: 
+      - Wed, 17 Aug 2011 03:08:32 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: |-
+      <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><game type="R" local_game_time="19:05" gameday_sw="E">
+      	<team type="home" code="hou" file_code="hou" abbrev="HOU" id="117" name="Houston" name_full="Houston Astros" name_brief="Astros" w="59" l="62" division_id="205" league_id="104" league="NL"/>
+      	<team type="away" code="flo" file_code="fla" abbrev="FLA" id="146" name="Florida" name_full="Florida Marlins" name_brief="Marlins" w="64" l="57" division_id="204" league_id="104" league="NL"/>
+      	<stadium id="2392" name="Minute Maid Park" venue_w_chan_loc="USTX0617" location="Houston, TX"/>
+      </game>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_08/day_20/gid_2009_08_20_minmlb_texmlb_1/game.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Wed, 17 Aug 2011 03:08:17 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Fri, 21 Aug 2009 14:39:54 GMT
+      etag: 
+      - "\"2d7-d7646280\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "727"
+      expires: 
+      - Wed, 17 Aug 2011 03:08:32 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: |-
+      <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><game type="R" local_game_time="19:05" gameday_sw="E">
+      	<team type="home" code="tex" file_code="tex" abbrev="TEX" id="140" name="Texas" name_full="Texas Rangers" name_brief="Rangers" w="68" l="52" division_id="200" league_id="103" league="AL"/>
+      	<team type="away" code="min" file_code="min" abbrev="MIN" id="142" name="Minnesota" name_full="Minnesota Twins" name_brief="Twins" w="58" l="63" division_id="202" league_id="103" league="AL"/>
+      	<stadium id="13" name="Rangers Ballpark in Arlington" venue_w_chan_loc="USTX0045" location="Arlington, TX"/>
+      </game>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_08/day_20/gid_2009_08_20_seamlb_detmlb_1/game.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Wed, 17 Aug 2011 03:08:17 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Fri, 21 Aug 2009 00:48:59 GMT
+      etag: 
+      - "\"2cb-3bcd74c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "715"
+      expires: 
+      - Wed, 17 Aug 2011 03:08:32 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: |-
+      <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><game type="R" local_game_time="13:05" gameday_sw="E">
+      	<team type="home" code="det" file_code="det" abbrev="DET" id="116" name="Detroit" name_full="Detroit Tigers" name_brief="Tigers" w="64" l="56" division_id="202" league_id="103" league="AL"/>
+      	<team type="away" code="sea" file_code="sea" abbrev="SEA" id="136" name="Seattle" name_full="Seattle Mariners" name_brief="Mariners" w="62" l="59" division_id="200" league_id="103" league="AL"/>
+      	<stadium id="2394" name="Comerica Park" venue_w_chan_loc="USMI0229" location="Detroit, MI"/>
+      </game>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_08/day_20/gid_2009_08_20_sfnmlb_cinmlb_1/game.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Wed, 17 Aug 2011 03:08:17 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Fri, 21 Aug 2009 05:34:23 GMT
+      etag: 
+      - "\"2e1-3878f5c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "737"
+      expires: 
+      - Wed, 17 Aug 2011 03:08:32 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: |-
+      <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><game type="R" local_game_time="12:35" gameday_sw="E">
+      	<team type="home" code="cin" file_code="cin" abbrev="CIN" id="113" name="Cincinnati" name_full="Cincinnati Reds" name_brief="Reds" w="51" l="69" division_id="205" league_id="104" league="NL"/>
+      	<team type="away" code="sfn" file_code="sf" abbrev="SF" id="137" name="San Francisco" name_full="San Francisco Giants" name_brief="Giants" w="66" l="55" division_id="203" league_id="104" league="NL"/>
+      	<stadium id="2602" name="Great American Ball Park" venue_w_chan_loc="USOH0188" location="Cincinnati, OH"/>
+      </game>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_08/day_20/gid_2009_08_20_slnmlb_sdnmlb_1/game.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Wed, 17 Aug 2011 03:08:18 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 24 Aug 2009 11:01:45 GMT
+      etag: 
+      - "\"2d2-24c03840\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "722"
+      expires: 
+      - Wed, 17 Aug 2011 03:08:33 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: |-
+      <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><game type="R" local_game_time="19:05" gameday_sw="E">
+      	<team type="home" code="sdn" file_code="sd" abbrev="SD" id="135" name="San Diego" name_full="San Diego Padres" name_brief="Padres" w="51" l="72" division_id="203" league_id="104" league="NL"/>
+      	<team type="away" code="sln" file_code="stl" abbrev="STL" id="138" name="St. Louis" name_full="St. Louis Cardinals" name_brief="Cardinals" w="70" l="53" division_id="205" league_id="104" league="NL"/>
+      	<stadium id="2680" name="PETCO Park" venue_w_chan_loc="USCA0982" location="San Diego, CA"/>
+      </game>
+    http_version: "1.1"
