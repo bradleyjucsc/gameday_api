@@ -49,8 +49,7 @@ module Gameday
 
     def set_coaches(element)
       element.elements.each("coach") { |element|
-        coach = Coach.new
-        coach.init(element)
+        coach = Coach.new_from_xml element
         self.coaches << coach
       }
     end
