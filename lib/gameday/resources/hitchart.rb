@@ -15,7 +15,7 @@ module Gameday
       @xml_doc = REXML::Document.new(@xml_data)
       if @xml_doc.root
         @xml_doc.elements.each("hitchart/hip") do |element| 
-          hip = Hip.new(element)
+          hip = Hip.new_from_xml element
           @hips << hip
         end
       end
