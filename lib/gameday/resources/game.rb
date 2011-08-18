@@ -414,8 +414,7 @@ module Gameday
 
     def get_hitchart
       if !@hitchart
-        @hitchart = Hitchart.new
-        @hitchart.load_from_gid(@gid)
+        @hitchart = Hitchart.fetch_by @gid
       end
       @hitchart
     end

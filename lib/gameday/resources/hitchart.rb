@@ -1,26 +1,23 @@
 module Gameday
-  class Hitchart
-  
+  class Hitchart < Resource
+
     attr_accessor :hips, :gid
-  
-  
-    def initialize
-      @hips = []
-    end
-  
-  
-    def load_from_gid(gid)
-      @gid = gid
-      @xml_data = GamedayFetcher.fetch_inning_hit(gid)
-      @xml_doc = REXML::Document.new(@xml_data)
-      if @xml_doc.root
-        @xml_doc.elements.each("hitchart/hip") do |element| 
-          hip = Hip.new_from_xml element
-          @hips << hip
-        end
+
+    def self.fetch_by gid
+      h = self.new
+      h.gid = gid
+
+      xml_data = GamedayFetcher.fetch_inning_hit gid
+      xml_doc = REXML::Document.new xml_data
+      if xml_doc.root
+        h.hips = xml_doc.elements.each("hitchart/hip") do |element|
+                   Hip.new_from_xml element
+                 end
       end
+
+      h
     end
-  
-  
+
+
   end
 end
