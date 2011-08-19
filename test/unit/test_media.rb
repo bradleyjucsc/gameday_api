@@ -1,12 +1,12 @@
 require 'test_helper'
 
 class TestMedia < MiniTest::Unit::TestCase
-  
-  
+
+
   def test_load_from_id
     mock_http do
-      media = Gameday::Media.new
-      media.load_from_id(GAME_ID)
+      media = Gameday::Media.fetch_by GAME_ID
+
       assert media.highlights
       assert media.mobile
       assert_equal 6, media.highlights.length
@@ -18,6 +18,6 @@ class TestMedia < MiniTest::Unit::TestCase
       assert_equal "http://mediadownloads.mlb.com/mlbam/2009/09/20/mlbtv_detmin_6751897_800K.mp4", media.highlights[0].res_800_url
     end
   end
-  
-  
+
+
 end

@@ -364,8 +364,7 @@ module Gameday
 
     def get_media
       if !@media
-        @media = Media.new
-        @media.load_from_id(@gid)
+        @media = Media.fetch_by @gid
       end
       @media
     end
