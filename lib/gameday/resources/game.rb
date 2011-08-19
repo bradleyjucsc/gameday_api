@@ -385,13 +385,11 @@ module Gameday
     # Returns an array of Inning objects that represent each inning of the game
     def get_innings
       if @innings.length == 0
-        inn_count = get_num_innings
-        (1..get_num_innings).each do |inn|
-          inning = Inning.new
-          inning.load_from_id(@gid, inn)
-          @innings << inning
-        end
+        @innings = (1..get_num_innings).map do |inn|
+                     Inning.fetch_by @gid, inn
+                   end
       end
+
       @innings
     end
 

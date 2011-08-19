@@ -5,8 +5,7 @@ class TestInning < MiniTest::Unit::TestCase
 
   def test_load_from_id
     mock_http do
-      inning = Gameday::Inning.new
-      inning.load_from_id(GAME_ID, 3)
+      inning = Gameday::Inning.fetch_by GAME_ID, 3
       assert_equal GAME_ID, inning.gid
       assert_equal '3', inning.num
       assert_equal 'det', inning.away_team
