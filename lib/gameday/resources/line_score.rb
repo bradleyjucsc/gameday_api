@@ -35,31 +35,20 @@ module Gameday
 
     # Initialize this instance from an XML element containing linescore data.
     def init(element)
-      @xml_doc = element
-      self.away_team_runs = element.attributes["away_team_runs"]
-      self.away_team_hits = element.attributes["away_team_hits"]
-      self.away_team_errors = element.attributes["away_team_errors"]
-
-      self.home_team_runs = element.attributes["home_team_runs"]
-      self.home_team_hits = element.attributes["home_team_hits"]
-      self.home_team_errors = element.attributes["home_team_errors"]
-
+      init_from_xml element
       # Set score by innings
-      set_innings
+      self.innings = get_innings element
     end
 
+    private
 
-    def set_innings
-      @innings = []
-      @xml_doc.elements.each("inning_line_score") do |element|
-        score = []
-        score.push element.attributes["away"]
-        score.push element.attributes["home"]
-        @innings.push score
+    def get_innings xml_doc
+      inns = []
+      xml_doc.elements.each("inning_line_score") do |element|
+        inns.push([element.attributes["away"], element.attributes["home"]])
+      end
+      inns
     end
-    end
-
-
 
   end
 end
