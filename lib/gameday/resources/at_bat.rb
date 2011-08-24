@@ -21,8 +21,7 @@ module Gameday
     def set_pitches(element)
       @pitches = []
       element.elements.each("pitch") do |element|
-        pitch = Pitch.new
-        pitch.init(element)
+        pitch = Pitch.new_from_xml element
         @pitches << pitch
       end
     end
