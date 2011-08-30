@@ -40,9 +40,7 @@ module Gameday
 
     def set_players(element)
       element.elements.each("player") { |element|
-        player = Player.new
-        player.init(element, gid)
-        @players << player
+        @players << Player.new_from_xml(element, gid)
       }
     end
 

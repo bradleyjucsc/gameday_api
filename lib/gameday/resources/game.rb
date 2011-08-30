@@ -131,13 +131,7 @@ module Gameday
     def set_homeruns(element)
       @homeruns = []
       element.elements.each("home_runs/player") do |hr|
-        player = Player.new
-        player.last = hr.attributes['last']
-        player.first = hr.attributes['first']
-        player.hr = hr.attributes['hr']
-        player.std_hr = hr.attributes['std_hr']
-        player.team_code = hr.attributes['team_code']
-        @homeruns << player
+        @homeruns << Player.new_from_xml(hr)
       end
     end
 
@@ -145,18 +139,13 @@ module Gameday
     # Sets the pitchers of record (win, lose, save) from data in the master_scoreboard.xml file
     def set_pitchers(element)
       element.elements.each("winning_pitcher") do |wp|
-        @winning_pitcher = Player.new
-        @winning_pitcher.init_pitcher_from_scoreboard(wp)
+        @winning_pitcher = Player.new_from_xml wp
       end
       element.elements.each("losing_pitcher") do |lp|
-        @losing_pitcher = Player.new
-        @losing_pitcher.init_pitcher_from_scoreboard(lp)
+        @losing_pitcher = Player.new_from_xml lp
       end
       element.elements.each("save_pitcher") do |sp|
-        @save_pitcher = Player.new
-        @save_pitcher.first = sp.attributes['first']
-        @save_pitcher.last = sp.attributes['last']
-        @save_pitcher.saves = sp.attributes['saves']
+        @save_pitcher = Player.new_from_xml sp
       end
     end
 

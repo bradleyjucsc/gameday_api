@@ -136,3 +136,2153 @@
       - application/xml
     body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="434158" pos="CF" type="batter" first_name="Curtis" last_name="Granderson" jersey_number="28" height="6-1" weight="185" bats="L" throws="R" dob="03/16/1981"><season avg=".248" ab="569" hr="27" rbi="63" ops=".782"/><career avg=".273" ab="2517" hr="99" rbi="291" ops=".829"/><month des="Sept." avg=".191" ab="68" hr="2" rbi="4" ops=".629"/><Team des="Away" avg=".263" ab="289" hr="19" rbi="32" ops=".867"/><Empty avg=".247" ab="360" hr="18" rbi="18" ops=".783"/><Men_On avg=".249" ab="209" hr="9" rbi="45" ops=".780"/><RISP avg=".224" ab="116" hr="5" rbi="36" ops=".766"/><Loaded avg=".200" ab="5" hr="0" rbi="6" ops="1.100"/><vs_LHP avg=".178" ab="163" hr="2" rbi="8" ops=".485"/><vs_RHP avg=".276" ab="406" hr="25" rbi="55" ops=".900"/><vs_P des="Keppel" avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><vs_P5 des="Keppel" avg=".000" ab="2" hr="0" rbi="0" ops=".000"/><Pitch loves="FA" hates="SI"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/game.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:28 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:35 GMT
+      etag: 
+      - "\"2d9-422528c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "729"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:43 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: |-
+      <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><game type="R" local_game_time="13:10" gameday_sw="E">
+      	<team type="home" code="min" file_code="min" abbrev="MIN" id="142" name="Minnesota" name_full="Minnesota Twins" name_brief="Twins" w="76" l="73" division_id="202" league_id="103" league="AL"/>
+      	<team type="away" code="det" file_code="det" abbrev="DET" id="116" name="Detroit" name_full="Detroit Tigers" name_brief="Tigers" w="79" l="70" division_id="202" league_id="103" league="AL"/>
+      	<stadium id="8" name="Hubert H. Humphrey Metrodome" venue_w_chan_loc="USMN0503" location="Minneapolis, MN"/>
+      </game>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/120044.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:28 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"4d3-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1235"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:43 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="120044" pos="RF" type="batter" first_name="Magglio" last_name="Ordonez" jersey_number="30" height="6-0" weight="215" bats="R" throws="R" dob="01/28/1974"><season avg=".290" ab="424" hr="7" rbi="41" ops=".753"/><career avg=".311" ab="6285" hr="275" rbi="1136" ops=".881"/><month des="Sept." avg=".386" ab="57" hr="0" rbi="2" ops=".857"/><Team des="Away" avg=".279" ab="233" hr="2" rbi="17" ops=".707"/><Empty avg=".262" ab="233" hr="3" rbi="3" ops=".690"/><Men_On avg=".325" ab="191" hr="4" rbi="38" ops=".828"/><RISP avg=".280" ab="107" hr="4" rbi="37" ops=".769"/><Loaded avg=".250" ab="8" hr="1" rbi="7" ops=".875"/><vs_LHP avg=".324" ab="136" hr="4" rbi="17" ops=".854"/><vs_RHP avg=".274" ab="288" hr="3" rbi="24" ops=".706"/><vs_P des="Keppel" avg=".500" ab="2" hr="0" rbi="0" ops="1.000"/><vs_P5 des="Keppel" avg=".500" ab="2" hr="0" rbi="0" ops="1.000"/><Pitch loves="CH" hates="CU"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/132220.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:28 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"433-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1075"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:43 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="132220" pos="P" type="pitcher" first_name="Jarrod" last_name="Washburn" jersey_number="53" height="6-1" weight="195" bats="L" throws="L" dob="08/13/1974"><season avg=".243" ab="658" hr="23" bb="49" so="100" w="9" l="9" sv="0"/><career avg=".251" ab="7150" hr="240" bb="569" so="1103" w="107" l="109" sv="1"/><Month des="Sept." avg=".370" ab="27" hr="1" bb="5" so="3"/><Team des="Away" avg=".264" ab="269" hr="8" bb="20" so="35"/><Empty avg=".240" ab="416" hr="13" bb="24" so="67"/><Men_On avg=".248" ab="242" hr="10" bb="25" so="33"/><RISP avg=".203" ab="123" hr="3" bb="17" so="17"/><Loaded avg=".182" ab="11" hr="0" bb="0" so="3"/><vs_LHB avg=".178" ab="180" hr="6" bb="8" so="47"/><vs_RHB avg=".268" ab="478" hr="17" bb="41" so="53"/><vs_B des="Punto" avg=".333" ab="3" hr="0" bb="0" so="0"/><vs_B5 des="Punto" avg=".188" ab="16" hr="0" bb="0" so="2"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/136722.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:29 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"4cf-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1231"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:44 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="136722" pos="DH" type="batter" first_name="Carlos" last_name="Guillen" jersey_number="9" height="6-1" weight="215" bats="S" throws="R" dob="09/30/1975"><season avg=".238" ab="240" hr="9" rbi="34" ops=".729"/><career avg=".287" ab="4288" hr="113" rbi="606" ops=".803"/><month des="Sept." avg=".171" ab="35" hr="1" rbi="5" ops=".726"/><Team des="Away" avg=".219" ab="114" hr="3" rbi="16" ops=".670"/><Empty avg=".194" ab="129" hr="4" rbi="4" ops=".603"/><Men_On avg=".288" ab="111" hr="5" rbi="30" ops=".872"/><RISP avg=".231" ab="52" hr="1" rbi="20" ops=".690"/><Loaded avg=".333" ab="3" hr="0" rbi="5" ops="1.067"/><vs_LHP avg=".158" ab="38" hr="0" rbi="4" ops=".440"/><vs_RHP avg=".252" ab="202" hr="9" rbi="30" ops=".783"/><vs_P des="Keppel" avg="1.000" ab="1" hr="0" rbi="0" ops="2.000"/><vs_P5 des="Keppel" avg=".667" ab="3" hr="0" rbi="0" ops="1.667"/><Pitch loves="FC" hates="SI"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/150144.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:29 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"417-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1047"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:44 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="150144" pos="P" type="pitcher" first_name="Bobby" last_name="Seay" jersey_number="44" height="6-2" weight="235" bats="L" throws="L" dob="06/20/1978"><season avg=".229" ab="175" hr="3" bb="16" so="37" w="6" l="3" sv="0"/><career avg=".253" ab="829" hr="17" bb="89" so="190" w="11" l="6" sv="1"/><Month des="Sept." avg=".304" ab="23" hr="0" bb="1" so="5"/><Team des="Away" avg=".227" ab="88" hr="0" bb="7" so="21"/><Empty avg=".232" ab="95" hr="2" bb="4" so="18"/><Men_On avg=".225" ab="80" hr="1" bb="12" so="19"/><RISP avg=".244" ab="41" hr="0" bb="7" so="13"/><Loaded avg=".000" ab="2" hr="0" bb="1" so="0"/><vs_LHB avg=".236" ab="106" hr="1" bb="8" so="23"/><vs_RHB avg=".217" ab="69" hr="2" bb="8" so="14"/><vs_B des="Punto" avg=".000" ab="0" hr="0" bb="0" so="0"/><vs_B5 des="Punto" avg=".200" ab="5" hr="0" bb="0" so="1"/><Pitch out="CU"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/333492.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:29 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"4d2-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1234"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:44 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="333492" pos="1B" type="batter" first_name="Aubrey" last_name="Huff" jersey_number="19" height="6-4" weight="235" bats="L" throws="R" dob="12/20/1976"><season avg=".245" ab="511" hr="15" rbi="84" ops=".703"/><career avg=".282" ab="4911" hr="203" rbi="751" ops=".814"/><month des="Sept." avg=".277" ab="47" hr="2" rbi="11" ops=".795"/><Team des="Away" avg=".219" ab="251" hr="4" rbi="31" ops=".597"/><Empty avg=".194" ab="268" hr="5" rbi="5" ops=".554"/><Men_On avg=".300" ab="243" hr="10" rbi="79" ops=".864"/><RISP avg=".312" ab="128" hr="4" rbi="64" ops=".896"/><Loaded avg=".429" ab="14" hr="0" rbi="18" ops=".996"/><vs_LHP avg=".232" ab="177" hr="4" rbi="28" ops=".643"/><vs_RHP avg=".251" ab="334" hr="11" rbi="56" ops=".734"/><vs_P des="Keppel" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_P5 des="Keppel" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><Pitch loves="SI" hates="SL"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/407801.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:29 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"4cd-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1229"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:44 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="407801" pos="DH" type="batter" first_name="Marcus" last_name="Thames" jersey_number="33" height="6-2" weight="220" bats="R" throws="R" dob="03/06/1977"><season avg=".254" ab="248" hr="13" rbi="35" ops=".780"/><career avg=".243" ab="1539" hr="101" rbi="260" ops=".797"/><month des="Sept." avg=".333" ab="33" hr="0" rbi="5" ops=".793"/><Team des="Away" avg=".274" ab="124" hr="7" rbi="17" ops=".862"/><Empty avg=".272" ab="125" hr="8" rbi="8" ops=".888"/><Men_On avg=".236" ab="123" hr="5" rbi="27" ops=".672"/><RISP avg=".206" ab="68" hr="3" rbi="22" ops=".633"/><Loaded avg=".500" ab="4" hr="0" rbi="5" ops=".786"/><vs_LHP avg=".263" ab="99" hr="4" rbi="14" ops=".820"/><vs_RHP avg=".248" ab="149" hr="9" rbi="21" ops=".753"/><vs_P des="Keppel" avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><vs_P5 des="Keppel" avg=".000" ab="2" hr="0" rbi="0" ops=".000"/><Pitch loves="FA" hates="FC"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/408042.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:29 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"4c7-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1223"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:44 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="408042" pos="C" type="batter" first_name="Gerald" last_name="Laird" jersey_number="8" height="6-1" weight="225" bats="R" throws="R" dob="11/13/1979"><season avg=".227" ab="370" hr="4" rbi="31" ops=".636"/><career avg=".248" ab="1595" hr="29" rbi="165" ops=".677"/><month des="Sept." avg=".244" ab="45" hr="0" rbi="4" ops=".625"/><Team des="Away" avg=".189" ab="185" hr="3" rbi="15" ops=".561"/><Empty avg=".211" ab="227" hr="2" rbi="2" ops=".592"/><Men_On avg=".252" ab="143" hr="2" rbi="29" ops=".705"/><RISP avg=".231" ab="78" hr="0" rbi="23" ops=".672"/><Loaded avg=".167" ab="6" hr="0" rbi="4" ops=".583"/><vs_LHP avg=".250" ab="92" hr="2" rbi="9" ops=".732"/><vs_RHP avg=".219" ab="278" hr="2" rbi="22" ops=".603"/><vs_P des="Keppel" avg=".000" ab="2" hr="0" rbi="0" ops=".000"/><vs_P5 des="Keppel" avg=".000" ab="3" hr="0" rbi="0" ops=".000"/><Pitch loves="CH" hates="SI"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/421124.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:29 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"4e1-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1249"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:44 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="421124" pos="SS" type="batter" first_name="Ramon" last_name="Santiago" jersey_number="39" height="5-11" weight="175" bats="S" throws="R" dob="08/31/1979"><season avg=".263" ab="228" hr="7" rbi="30" ops=".718"/><career avg=".242" ab="1211" hr="17" rbi="109" ops=".650"/><month des="Sept." avg=".296" ab="27" hr="0" rbi="0" ops=".720"/><Team des="Away" avg=".221" ab="122" hr="3" rbi="14" ops=".599"/><Empty avg=".263" ab="133" hr="4" rbi="4" ops=".712"/><Men_On avg=".263" ab="95" hr="3" rbi="26" ops=".726"/><RISP avg=".250" ab="56" hr="3" rbi="25" ops=".808"/><Loaded avg=".250" ab="8" hr="0" rbi="5" ops=".625"/><vs_LHP avg=".250" ab="32" hr="1" rbi="4" ops=".594"/><vs_RHP avg=".265" ab="196" hr="6" rbi="26" ops=".737"/><vs_P des="Keppel" avg="1.000" ab="1" hr="0" rbi="0" ops="2.000"/><vs_P5 des="Keppel" avg="1.000" ab="1" hr="0" rbi="0" ops="2.000"/><Pitch loves="SI" hates="CU"/><faced><pitch type="FS"/><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/425827.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:30 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"416-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1046"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:45 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="425827" pos="P" type="pitcher" first_name="Jeremy" last_name="Bonderman" jersey_number="38" height="6-2" weight="220" bats="R" throws="R" dob="10/28/1982"><season avg=".366" ab="41" hr="4" bb="6" so="5" w="0" l="1" sv="0"/><career avg=".269" ab="3923" hr="122" bb="342" so="817" w="59" l="67" sv="0"/><Month des="Sept." avg=".318" ab="22" hr="1" bb="3" so="4"/><Team des="Away" avg=".385" ab="26" hr="3" bb="5" so="3"/><Empty avg=".333" ab="27" hr="2" bb="3" so="3"/><Men_On avg=".429" ab="14" hr="2" bb="3" so="2"/><RISP avg=".375" ab="8" hr="1" bb="3" so="2"/><Loaded avg=".250" ab="4" hr="0" bb="0" so="1"/><vs_LHB avg=".278" ab="18" hr="2" bb="1" so="1"/><vs_RHB avg=".435" ab="23" hr="2" bb="5" so="4"/><vs_B des="Punto" avg=".000" ab="0" hr="0" bb="0" so="0"/><vs_B5 des="Punto" avg=".263" ab="19" hr="0" bb="1" so="5"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/451482.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:30 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"433-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1075"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:45 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="451482" pos="P" type="pitcher" first_name="Armando" last_name="Galarraga" jersey_number="58" height="6-4" weight="180" bats="R" throws="R" dob="01/15/1982"><season avg=".288" ab="546" hr="24" bb="64" so="93" w="6" l="10" sv="0"/><career avg=".253" ab="1251" hr="54" bb="132" so="225" w="19" l="17" sv="0"/><Month des="Sept." avg=".455" ab="22" hr="3" bb="5" so="5"/><Team des="Away" avg=".297" ab="259" hr="13" bb="34" so="42"/><Empty avg=".282" ab="323" hr="13" bb="34" so="65"/><Men_On avg=".296" ab="223" hr="11" bb="30" so="28"/><RISP avg=".330" ab="112" hr="7" bb="19" so="12"/><Loaded avg=".300" ab="10" hr="0" bb="0" so="0"/><vs_LHB avg=".314" ab="280" hr="12" bb="46" so="45"/><vs_RHB avg=".259" ab="266" hr="12" bb="18" so="48"/><vs_B des="Punto" avg=".000" ab="4" hr="0" bb="2" so="2"/><vs_B5 des="Punto" avg=".222" ab="9" hr="0" bb="4" so="2"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/448767.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:30 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"438-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1080"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:45 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="448767" pos="C" type="batter" first_name="Dusty" last_name="Ryan" jersey_number="55" height="6-4" weight="220" bats="R" throws="R" dob="09/02/1984"><season avg=".154" ab="26" hr="0" rbi="4" ops=".459"/><career avg=".257" ab="70" hr="2" rbi="11" ops=".723"/><month des="Sept." avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><Team des="Away" avg=".071" ab="14" hr="0" rbi="2" ops=".307"/><Empty avg=".059" ab="17" hr="0" rbi="0" ops=".118"/><Men_On avg=".333" ab="9" hr="0" rbi="4" ops=".983"/><RISP avg=".400" ab="5" hr="0" rbi="3" ops="1.025"/><Loaded avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><vs_LHP avg=".083" ab="12" hr="0" rbi="0" ops=".350"/><vs_RHP avg=".214" ab="14" hr="0" rbi="4" ops=".552"/><vs_P des="Keppel" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_P5 des="Keppel" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><Pitch loves="--" hates="--"/><faced></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/444382.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:30 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"40d-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1037"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:45 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="444382" pos="P" type="pitcher" first_name="Eddie" last_name="Bonine" jersey_number="49" height="6-5" weight="220" bats="R" throws="R" dob="06/06/1981"><season avg=".348" ab="89" hr="6" bb="6" so="13" w="0" l="0" sv="0"/><career avg=".340" ab="197" hr="9" bb="11" so="22" w="2" l="1" sv="0"/><Month des="Sept." avg=".276" ab="29" hr="1" bb="2" so="4"/><Team des="Away" avg=".375" ab="32" hr="2" bb="2" so="3"/><Empty avg=".370" ab="46" hr="4" bb="3" so="7"/><Men_On avg=".326" ab="43" hr="2" bb="3" so="6"/><RISP avg=".333" ab="24" hr="2" bb="3" so="5"/><Loaded avg=".500" ab="2" hr="0" bb="0" so="0"/><vs_LHB avg=".333" ab="45" hr="3" bb="3" so="6"/><vs_RHB avg=".364" ab="44" hr="3" bb="3" so="7"/><vs_B des="Punto" avg=".000" ab="0" hr="0" bb="0" so="0"/><vs_B5 des="Punto" avg="1.000" ab="1" hr="0" bb="1" so="0"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/435261.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:30 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"426-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1062"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:45 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="435261" pos="P" type="pitcher" first_name="Zach" last_name="Miner" jersey_number="31" height="6-3" weight="200" bats="R" throws="R" dob="03/12/1982"><season avg=".278" ab="331" hr="10" bb="42" so="57" w="7" l="5" sv="1"/><career avg=".272" ab="1348" hr="34" bb="142" so="212" w="25" l="20" sv="1"/><Month des="Sept." avg=".268" ab="41" hr="2" bb="2" so="7"/><Team des="Away" avg=".278" ab="180" hr="5" bb="18" so="26"/><Empty avg=".284" ab="190" hr="8" bb="16" so="34"/><Men_On avg=".270" ab="141" hr="2" bb="26" so="23"/><RISP avg=".316" ab="79" hr="1" bb="16" so="10"/><Loaded avg=".385" ab="13" hr="0" bb="1" so="4"/><vs_LHB avg=".255" ab="145" hr="1" bb="18" so="30"/><vs_RHB avg=".296" ab="186" hr="9" bb="24" so="27"/><vs_B des="Punto" avg=".000" ab="3" hr="0" bb="1" so="1"/><vs_B5 des="Punto" avg=".231" ab="13" hr="0" bb="1" so="2"/><Pitch out="SL"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/434378.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:30 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"436-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1078"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:45 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="434378" pos="P" type="pitcher" first_name="Justin" last_name="Verlander" jersey_number="35" height="6-5" weight="225" bats="R" throws="R" dob="02/20/1983"><season avg=".242" ab="817" hr="20" bb="59" so="245" w="16" l="9" sv="0"/><career avg=".249" ab="3113" hr="80" bb="278" so="722" w="62" l="43" sv="0"/><Month des="Sept." avg=".269" ab="108" hr="3" bb="6" so="30"/><Team des="Away" avg=".263" ab="452" hr="9" bb="29" so="134"/><Empty avg=".230" ab="500" hr="12" bb="27" so="150"/><Men_On avg=".262" ab="317" hr="8" bb="32" so="95"/><RISP avg=".256" ab="180" hr="4" bb="23" so="62"/><Loaded avg=".316" ab="19" hr="0" bb="0" so="5"/><vs_LHB avg=".249" ab="465" hr="14" bb="36" so="148"/><vs_RHB avg=".233" ab="352" hr="6" bb="23" so="97"/><vs_B des="Punto" avg=".000" ab="6" hr="0" bb="2" so="4"/><vs_B5 des="Punto" avg=".190" ab="21" hr="0" bb="3" so="8"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/430605.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:30 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"4cb-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1227"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:45 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="430605" pos="LF" type="batter" first_name="Ryan" last_name="Raburn" jersey_number="25" height="6-0" weight="185" bats="R" throws="R" dob="04/17/1981"><season avg=".276" ab="239" hr="13" rbi="40" ops=".838"/><career avg=".264" ab="587" hr="21" rbi="88" ops=".765"/><month des="Sept." avg=".300" ab="40" hr="3" rbi="6" ops=".916"/><Team des="Away" avg=".303" ab="119" hr="6" rbi="14" ops=".857"/><Empty avg=".270" ab="141" hr="10" rbi="10" ops=".841"/><Men_On avg=".286" ab="98" hr="3" rbi="30" ops=".831"/><RISP avg=".238" ab="63" hr="2" rbi="26" ops=".735"/><Loaded avg=".143" ab="7" hr="1" rbi="6" ops=".905"/><vs_LHP avg=".268" ab="123" hr="10" rbi="25" ops=".925"/><vs_RHP avg=".284" ab="116" hr="3" rbi="15" ops=".742"/><vs_P des="Keppel" avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><vs_P5 des="Keppel" avg=".000" ab="2" hr="0" rbi="0" ops=".000"/><Pitch loves="SI" hates="FC"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/430603.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:31 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"439-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1081"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:46 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="430603" pos="CF" type="batter" first_name="Don" last_name="Kelly" jersey_number="32" height="6-4" weight="190" bats="L" throws="R" dob="02/15/1980"><season avg=".241" ab="54" hr="0" rbi="3" ops=".626"/><career avg=".210" ab="81" hr="0" rbi="3" ops=".560"/><month des="Sept." avg=".167" ab="6" hr="0" rbi="0" ops=".333"/><Team des="Away" avg=".188" ab="32" hr="0" rbi="2" ops=".548"/><Empty avg=".219" ab="32" hr="0" rbi="0" ops=".629"/><Men_On avg=".273" ab="22" hr="0" rbi="3" ops=".623"/><RISP avg=".308" ab="13" hr="0" rbi="3" ops=".615"/><Loaded avg="1.000" ab="1" hr="0" rbi="2" ops="2.000"/><vs_LHP avg=".125" ab="8" hr="0" rbi="0" ops=".375"/><vs_RHP avg=".261" ab="46" hr="0" rbi="3" ops=".668"/><vs_P des="Keppel" avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><vs_P5 des="Keppel" avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><Pitch loves="--" hates="--"/><faced></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/429719.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:31 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"431-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1073"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:46 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="429719" pos="P" type="pitcher" first_name="Edwin" last_name="Jackson" jersey_number="36" height="6-3" weight="210" bats="R" throws="R" dob="09/09/1983"><season avg=".243" ab="737" hr="25" bb="63" so="151" w="12" l="7" sv="0"/><career avg=".274" ab="2532" hr="80" bb="292" so="462" w="37" l="37" sv="0"/><Month des="Sept." avg=".287" ab="101" hr="5" bb="7" so="20"/><Team des="Away" avg=".248" ab="383" hr="13" bb="33" so="78"/><Empty avg=".247" ab="449" hr="16" bb="33" so="85"/><Men_On avg=".236" ab="288" hr="9" bb="30" so="66"/><RISP avg=".209" ab="158" hr="4" bb="20" so="39"/><Loaded avg=".062" ab="16" hr="0" bb="2" so="4"/><vs_LHB avg=".240" ab="417" hr="8" bb="39" so="89"/><vs_RHB avg=".247" ab="320" hr="17" bb="24" so="62"/><vs_B des="Punto" avg=".250" ab="4" hr="0" bb="1" so="3"/><vs_B5 des="Punto" avg=".300" ab="10" hr="0" bb="1" so="4"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/547820.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:31 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"410-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1040"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:46 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="547820" pos="P" type="pitcher" first_name="Fu-Te" last_name="Ni" jersey_number="59" height="6-0" weight="170" bats="L" throws="L" dob="11/14/1982"><season avg=".200" ab="100" hr="3" bb="11" so="20" w="0" l="0" sv="0"/><career avg=".200" ab="100" hr="3" bb="11" so="20" w="0" l="0" sv="0"/><Month des="Sept." avg=".294" ab="17" hr="0" bb="4" so="2"/><Team des="Away" avg=".204" ab="54" hr="2" bb="10" so="16"/><Empty avg=".250" ab="44" hr="3" bb="8" so="8"/><Men_On avg=".161" ab="56" hr="0" bb="3" so="12"/><RISP avg=".167" ab="30" hr="0" bb="3" so="8"/><Loaded avg=".000" ab="4" hr="0" bb="0" so="1"/><vs_LHB avg=".127" ab="55" hr="2" bb="7" so="12"/><vs_RHB avg=".289" ab="45" hr="1" bb="4" so="8"/><vs_B des="Punto" avg="1.000" ab="1" hr="0" bb="1" so="0"/><vs_B5 des="Punto" avg="1.000" ab="1" hr="0" bb="1" so="0"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/543634.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:31 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"41b-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1051"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:46 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="543634" pos="P" type="pitcher" first_name="Ryan" last_name="Perry" jersey_number="45" height="6-4" weight="200" bats="R" throws="R" dob="02/13/1987"><season avg=".257" ab="206" hr="7" bb="32" so="53" w="0" l="1" sv="0"/><career avg=".257" ab="206" hr="7" bb="32" so="53" w="0" l="1" sv="0"/><Month des="Sept." avg=".318" ab="22" hr="1" bb="2" so="5"/><Team des="Away" avg=".274" ab="95" hr="6" bb="14" so="25"/><Empty avg=".260" ab="104" hr="4" bb="16" so="27"/><Men_On avg=".255" ab="102" hr="3" bb="16" so="26"/><RISP avg=".254" ab="63" hr="2" bb="12" so="19"/><Loaded avg=".286" ab="7" hr="0" bb="1" so="1"/><vs_LHB avg=".311" ab="90" hr="4" bb="16" so="15"/><vs_RHB avg=".216" ab="116" hr="3" bb="16" so="38"/><vs_B des="Punto" avg=".000" ab="3" hr="0" bb="0" so="0"/><vs_B5 des="Punto" avg=".000" ab="3" hr="0" bb="0" so="0"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/519144.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:31 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"42a-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1066"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:46 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="519144" pos="P" type="pitcher" first_name="Rick" last_name="Porcello" jersey_number="48" height="6-5" weight="200" bats="R" throws="R" dob="12/27/1988"><season avg=".267" ab="595" hr="22" bb="46" so="79" w="13" l="9" sv="0"/><career avg=".267" ab="595" hr="22" bb="46" so="79" w="13" l="9" sv="0"/><Month des="Sept." avg=".255" ab="94" hr="2" bb="4" so="8"/><Team des="Away" avg=".283" ab="300" hr="11" bb="17" so="38"/><Empty avg=".258" ab="365" hr="12" bb="23" so="47"/><Men_On avg=".283" ab="230" hr="10" bb="23" so="32"/><RISP avg=".270" ab="126" hr="4" bb="14" so="24"/><Loaded avg=".167" ab="6" hr="0" bb="0" so="1"/><vs_LHB avg=".282" ab="337" hr="12" bb="24" so="43"/><vs_RHB avg=".248" ab="258" hr="10" bb="22" so="36"/><vs_B des="Punto" avg=".000" ab="5" hr="0" bb="1" so="0"/><vs_B5 des="Punto" avg=".000" ab="5" hr="0" bb="1" so="0"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/502272.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:31 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"405-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1029"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:46 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="502272" pos="P" type="pitcher" first_name="Casey" last_name="Fien" jersey_number="41" height="6-2" weight="195" bats="R" throws="R" dob="10/21/1983"><season avg=".323" ab="31" hr="2" bb="5" so="6" w="0" l="1" sv="0"/><career avg=".323" ab="31" hr="2" bb="5" so="6" w="0" l="1" sv="0"/><Month des="Sept." avg=".308" ab="13" hr="1" bb="2" so="0"/><Team des="Away" avg=".500" ab="14" hr="1" bb="2" so="4"/><Empty avg=".312" ab="16" hr="1" bb="3" so="4"/><Men_On avg=".333" ab="15" hr="1" bb="2" so="2"/><RISP avg=".500" ab="8" hr="1" bb="2" so="0"/><Loaded avg=".333" ab="3" hr="0" bb="0" so="0"/><vs_LHB avg=".154" ab="13" hr="1" bb="3" so="4"/><vs_RHB avg=".444" ab="18" hr="1" bb="2" so="2"/><vs_B des="Punto" avg=".000" ab="0" hr="0" bb="0" so="0"/><vs_B5 des="Punto" avg=".000" ab="0" hr="0" bb="0" so="0"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/488671.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:32 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"440-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1088"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:47 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="488671" pos="C" type="batter" first_name="Alex" last_name="Avila" jersey_number="13" height="5-11" weight="210" bats="L" throws="R" dob="01/29/1987"><season avg=".286" ab="56" hr="5" rbi="14" ops=".994"/><career avg=".286" ab="56" hr="5" rbi="14" ops=".994"/><month des="Sept." avg=".211" ab="19" hr="2" rbi="5" ops=".831"/><Team des="Away" avg=".143" ab="21" hr="1" rbi="3" ops=".650"/><Empty avg=".290" ab="31" hr="2" rbi="2" ops=".969"/><Men_On avg=".280" ab="25" hr="3" rbi="12" ops="1.016"/><RISP avg=".182" ab="11" hr="0" rbi="5" ops=".503"/><Loaded avg=".000" ab="0" hr="0" rbi="1" ops=".000"/><vs_LHP avg=".400" ab="10" hr="1" rbi="3" ops="1.255"/><vs_RHP avg=".261" ab="46" hr="4" rbi="11" ops=".939"/><vs_P des="Keppel" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_P5 des="Keppel" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><Pitch loves="--" hates="--"/><faced></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/460004.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:32 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"4cb-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1227"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:47 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="460004" pos="RF" type="batter" first_name="Clete" last_name="Thomas" jersey_number="34" height="5-11" weight="195" bats="L" throws="R" dob="11/14/1983"><season avg=".244" ab="254" hr="7" rbi="38" ops=".725"/><career avg=".257" ab="370" hr="8" rbi="47" ops=".739"/><month des="Sept." avg=".182" ab="22" hr="0" rbi="2" ops=".652"/><Team des="Away" avg=".233" ab="120" hr="3" rbi="14" ops=".651"/><Empty avg=".234" ab="145" hr="5" rbi="5" ops=".701"/><Men_On avg=".257" ab="109" hr="2" rbi="33" ops=".756"/><RISP avg=".293" ab="58" hr="2" rbi="31" ops=".862"/><Loaded avg=".500" ab="8" hr="1" rbi="11" ops="1.431"/><vs_LHP avg=".244" ab="45" hr="0" rbi="7" ops=".644"/><vs_RHP avg=".244" ab="209" hr="7" rbi="31" ops=".742"/><vs_P des="Keppel" avg=".500" ab="2" hr="0" rbi="0" ops="1.000"/><vs_P5 des="Keppel" avg=".667" ab="3" hr="0" rbi="0" ops="1.333"/><Pitch loves="FC" hates="CU"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/459438.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:32 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"434-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1076"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:47 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="459438" pos="SS" type="batter" first_name="Brent" last_name="Dlugach" jersey_number="27" height="6-4" weight="195" bats="R" throws="R" dob="03/03/1983"><season avg=".000" ab="3" hr="0" rbi="0" ops=".000"/><career avg=".000" ab="3" hr="0" rbi="0" ops=".000"/><month des="Sept." avg=".000" ab="3" hr="0" rbi="0" ops=".000"/><Team des="Away" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><Empty avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><Men_On avg=".000" ab="2" hr="0" rbi="0" ops=".000"/><RISP avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><Loaded avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_LHP avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><vs_RHP avg=".000" ab="2" hr="0" rbi="0" ops=".000"/><vs_P des="Keppel" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_P5 des="Keppel" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><Pitch loves="--" hates="--"/><faced></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/457133.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:32 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"43e-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1086"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:47 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="457133" pos="LF" type="batter" first_name="Wilkin" last_name="Ramirez" jersey_number="60" height="6-2" weight="190" bats="R" throws="R" dob="10/25/1985"><season avg=".364" ab="11" hr="1" rbi="3" ops="1.203"/><career avg=".364" ab="11" hr="1" rbi="3" ops="1.203"/><month des="Sept." avg=".600" ab="5" hr="0" rbi="2" ops="1.571"/><Team des="Away" avg=".667" ab="3" hr="0" rbi="1" ops="2.000"/><Empty avg=".500" ab="6" hr="1" rbi="1" ops="1.905"/><Men_On avg=".200" ab="5" hr="0" rbi="2" ops=".367"/><RISP avg=".500" ab="2" hr="0" rbi="2" ops=".833"/><Loaded avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_LHP avg=".333" ab="9" hr="1" rbi="2" ops="1.253"/><vs_RHP avg=".500" ab="2" hr="0" rbi="1" ops="1.000"/><vs_P des="Keppel" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_P5 des="Keppel" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><Pitch loves="--" hates="--"/><faced></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/451628.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:32 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"40c-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1036"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:47 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="451628" pos="P" type="pitcher" first_name="Alfredo" last_name="Figaro" jersey_number="43" height="6-0" weight="175" bats="R" throws="R" dob="07/07/1984"><season avg=".339" ab="56" hr="2" bb="8" so="13" w="1" l="1" sv="0"/><career avg=".339" ab="56" hr="2" bb="8" so="13" w="1" l="1" sv="0"/><Month des="Sept." avg=".143" ab="7" hr="0" bb="4" so="1"/><Team des="Away" avg=".385" ab="26" hr="1" bb="2" so="5"/><Empty avg=".417" ab="24" hr="1" bb="3" so="5"/><Men_On avg=".281" ab="32" hr="1" bb="5" so="8"/><RISP avg=".304" ab="23" hr="1" bb="3" so="6"/><Loaded avg=".000" ab="1" hr="0" bb="0" so="0"/><vs_LHB avg=".455" ab="22" hr="1" bb="5" so="1"/><vs_RHB avg=".265" ab="34" hr="1" bb="3" so="12"/><vs_B des="Punto" avg=".000" ab="0" hr="0" bb="0" so="0"/><vs_B5 des="Punto" avg=".000" ab="0" hr="0" bb="0" so="0"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/425146.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:32 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"426-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1062"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:47 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="425146" pos="P" type="pitcher" first_name="Nate" last_name="Robertson" jersey_number="29" height="6-2" weight="225" bats="R" throws="L" dob="09/03/1977"><season avg=".272" ab="162" hr="2" bb="25" so="31" w="1" l="2" sv="0"/><career avg=".280" ab="4099" hr="146" bb="375" so="708" w="50" l="68" sv="1"/><Month des="Sept." avg=".263" ab="57" hr="0" bb="10" so="10"/><Team des="Away" avg=".297" ab="64" hr="2" bb="10" so="17"/><Empty avg=".254" ab="67" hr="1" bb="10" so="12"/><Men_On avg=".284" ab="95" hr="1" bb="15" so="19"/><RISP avg=".262" ab="61" hr="1" bb="10" so="10"/><Loaded avg=".333" ab="6" hr="1" bb="1" so="0"/><vs_LHB avg=".294" ab="68" hr="1" bb="7" so="17"/><vs_RHB avg=".255" ab="94" hr="1" bb="18" so="14"/><vs_B des="Punto" avg="1.000" ab="1" hr="0" bb="1" so="0"/><vs_B5 des="Punto" avg=".333" ab="27" hr="0" bb="3" so="2"/><Pitch out="CU"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/408234.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:32 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"4da-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1242"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:47 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="408234" pos="1B" type="batter" first_name="Miguel" last_name="Cabrera" jersey_number="24" height="6-4" weight="240" bats="R" throws="R" dob="04/18/1983"><season avg=".332" ab="555" hr="30" rbi="92" ops=".952"/><career avg=".312" ab="3865" hr="205" rbi="742" ops=".926"/><month des="Sept." avg=".304" ab="69" hr="3" rbi="10" ops=".880"/><Team des="Away" avg=".302" ab="288" hr="12" rbi="34" ops=".853"/><Empty avg=".344" ab="299" hr="15" rbi="15" ops=".962"/><Men_On avg=".316" ab="256" hr="15" rbi="77" ops=".941"/><RISP avg=".295" ab="132" hr="7" rbi="60" ops=".908"/><Loaded avg=".500" ab="10" hr="1" rbi="12" ops="1.545"/><vs_LHP avg=".331" ab="133" hr="6" rbi="16" ops=".981"/><vs_RHP avg=".332" ab="422" hr="24" rbi="76" ops=".941"/><vs_P des="Keppel" avg=".333" ab="3" hr="0" rbi="0" ops="1.000"/><vs_P5 des="Keppel" avg=".250" ab="4" hr="0" rbi="0" ops=".750"/><Pitch loves="SI" hates="FA"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/407845.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:33 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"42a-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1066"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:48 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="407845" pos="P" type="pitcher" first_name="Fernando" last_name="Rodney" jersey_number="56" height="5-11" weight="220" bats="R" throws="R" dob="03/18/1977"><season avg=".229" ab="240" hr="6" bb="35" so="59" w="2" l="4" sv="33"/><career avg=".237" ab="1204" hr="29" bb="164" so="312" w="15" l="29" sv="66"/><Month des="Sept." avg=".267" ab="30" hr="1" bb="8" so="5"/><Team des="Away" avg=".250" ab="96" hr="2" bb="19" so="18"/><Empty avg=".248" ab="125" hr="4" bb="16" so="29"/><Men_On avg=".209" ab="115" hr="2" bb="19" so="30"/><RISP avg=".162" ab="68" hr="1" bb="13" so="23"/><Loaded avg=".000" ab="4" hr="0" bb="0" so="0"/><vs_LHB avg=".252" ab="139" hr="2" bb="18" so="39"/><vs_RHB avg=".198" ab="101" hr="4" bb="17" so="20"/><vs_B des="Punto" avg=".000" ab="1" hr="0" bb="0" so="0"/><vs_B5 des="Punto" avg=".167" ab="6" hr="0" bb="2" so="1"/><Pitch out="CH"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/407193.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:33 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"424-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1060"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:48 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="407193" pos="P" type="pitcher" first_name="Brandon" last_name="Lyon" jersey_number="37" height="6-1" weight="195" bats="R" throws="R" dob="08/10/1979"><season avg=".203" ab="246" hr="7" bb="24" so="52" w="6" l="4" sv="3"/><career avg=".274" ab="1904" hr="55" bb="144" so="314" w="27" l="33" sv="54"/><Month des="Sept." avg=".120" ab="25" hr="1" bb="1" so="7"/><Team des="Away" avg=".237" ab="135" hr="5" bb="16" so="29"/><Empty avg=".196" ab="143" hr="2" bb="9" so="31"/><Men_On avg=".214" ab="103" hr="5" bb="15" so="21"/><RISP avg=".197" ab="66" hr="5" bb="13" so="14"/><Loaded avg=".375" ab="8" hr="2" bb="3" so="1"/><vs_LHB avg=".198" ab="101" hr="1" bb="17" so="16"/><vs_RHB avg=".207" ab="145" hr="6" bb="7" so="36"/><vs_B des="Punto" avg=".250" ab="4" hr="0" bb="0" so="0"/><vs_B5 des="Punto" avg=".250" ab="4" hr="0" bb="0" so="0"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/276361.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:33 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"450-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1104"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:48 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="276361" pos="SS" type="batter" first_name="Adam" last_name="Everett" jersey_number="4" height="6-0" weight="180" bats="R" throws="R" dob="02/05/1977"><season avg=".239" ab="322" hr="3" rbi="43" ops=".620"/><career avg=".245" ab="2594" hr="40" rbi="277" ops=".649"/><month des="Sept." avg=".214" ab="42" hr="0" rbi="5" ops=".598"/><Team des="Away" avg=".214" ab="168" hr="2" rbi="19" ops=".545"/><Empty avg=".240" ab="175" hr="1" rbi="1" ops=".622"/><Men_On avg=".238" ab="147" hr="2" rbi="42" ops=".617"/><RISP avg=".274" ab="95" hr="2" rbi="42" ops=".715"/><Loaded avg=".385" ab="13" hr="1" rbi="15" ops=".949"/><vs_LHP avg=".275" ab="120" hr="3" rbi="24" ops=".735"/><vs_RHP avg=".218" ab="202" hr="0" rbi="19" ops=".552"/><vs_P des="Keppel" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_P5 des="Keppel" avg="1.000" ab="2" hr="0" rbi="1" ops="2.000"/><Pitch loves="--" hates="--"/><faced></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/276346.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:33 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"4e9-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1257"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:48 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="276346" pos="3B" type="batter" first_name="Brandon" last_name="Inge" jersey_number="15" height="5-11" weight="190" bats="R" throws="R" dob="05/19/1977"><season avg=".234" ab="505" hr="27" rbi="76" ops=".745"/><career avg=".236" ab="3766" hr="123" rbi="486" ops=".702"/><month des="Sept." avg=".200" ab="65" hr="2" rbi="8" ops=".614"/><Team des="Away" avg=".241" ab="266" hr="13" rbi="37" ops=".728"/><Empty avg=".221" ab="272" hr="14" rbi="14" ops=".703"/><Men_On avg=".249" ab="233" hr="13" rbi="62" ops=".791"/><RISP avg=".245" ab="143" hr="6" rbi="48" ops=".742"/><Loaded avg=".538" ab="13" hr="2" rbi="20" ops="1.500"/><vs_LHP avg=".256" ab="129" hr="9" rbi="16" ops=".896"/><vs_RHP avg=".226" ab="376" hr="18" rbi="60" ops=".692"/><vs_P des="Keppel" avg=".000" ab="2" hr="0" rbi="0" ops=".500"/><vs_P5 des="Keppel" avg=".000" ab="3" hr="0" rbi="0" ops=".500"/><Pitch loves="SI" hates="FS"/><faced><pitch type="FS"/><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/135784.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:33 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"4d4-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1236"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:48 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="det" id="135784" pos="2B" type="batter" first_name="Placido" last_name="Polanco" jersey_number="14" height="5-10" weight="195" bats="R" throws="R" dob="10/10/1975"><season avg=".283" ab="561" hr="10" rbi="68" ops=".733"/><career avg=".303" ab="5454" hr="90" rbi="575" ops=".762"/><month des="Sept." avg=".371" ab="70" hr="2" rbi="10" ops=".934"/><Team des="Away" avg=".266" ab="290" hr="5" rbi="34" ops=".689"/><Empty avg=".256" ab="355" hr="5" rbi="5" ops=".663"/><Men_On avg=".330" ab="206" hr="5" rbi="63" ops=".853"/><RISP avg=".321" ab="109" hr="2" rbi="51" ops=".841"/><Loaded avg=".375" ab="8" hr="0" rbi="11" ops=".833"/><vs_LHP avg=".272" ab="162" hr="4" rbi="17" ops=".759"/><vs_RHP avg=".288" ab="399" hr="6" rbi="51" ops=".722"/><vs_P des="Keppel" avg=".500" ab="2" hr="0" rbi="0" ops="1.000"/><vs_P5 des="Keppel" avg=".333" ab="3" hr="0" rbi="0" ops=".667"/><Pitch loves="FF" hates="SI"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/111851.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:33 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"4cf-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1231"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:48 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="111851" pos="SS" type="batter" first_name="Orlando" last_name="Cabrera" jersey_number="18" height="5-9" weight="185" bats="R" throws="R" dob="11/02/1974"><season avg=".269" ab="590" hr="7" rbi="61" ops=".672"/><career avg=".273" ab="6552" hr="112" rbi="745" ops=".717"/><month des="Sept." avg=".219" ab="64" hr="2" rbi="7" ops=".627"/><Team des="Home" avg=".269" ab="279" hr="2" rbi="31" ops=".658"/><Empty avg=".251" ab="350" hr="7" rbi="7" ops=".652"/><Men_On avg=".296" ab="240" hr="0" rbi="54" ops=".701"/><RISP avg=".246" ab="134" hr="0" rbi="52" ops=".620"/><Loaded avg=".222" ab="9" hr="0" rbi="8" ops=".564"/><vs_LHP avg=".253" ab="186" hr="1" rbi="9" ops=".640"/><vs_RHP avg=".277" ab="404" hr="6" rbi="52" ops=".687"/><vs_P des="Rodney" avg=".000" ab="2" hr="0" rbi="0" ops=".000"/><vs_P5 des="Rodney" avg=".000" ab="6" hr="0" rbi="1" ops=".143"/><Pitch loves="FC" hates="SI"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/488846.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:34 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"426-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1062"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:49 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="488846" pos="P" type="pitcher" first_name="Brian" last_name="Duensing" jersey_number="52" height="5-11" weight="195" bats="L" throws="L" dob="02/22/1983"><season avg=".249" ab="273" hr="5" bb="27" so="49" w="4" l="1" sv="0"/><career avg=".249" ab="273" hr="5" bb="27" so="49" w="4" l="1" sv="0"/><Month des="Sept." avg=".250" ab="92" hr="0" bb="8" so="16"/><Team des="Home" avg=".233" ab="176" hr="4" bb="19" so="33"/><Empty avg=".266" ab="154" hr="4" bb="12" so="22"/><Men_On avg=".227" ab="119" hr="1" bb="15" so="27"/><RISP avg=".182" ab="77" hr="0" bb="7" so="19"/><Loaded avg=".333" ab="9" hr="0" bb="1" so="2"/><vs_LHB avg=".240" ab="75" hr="0" bb="6" so="19"/><vs_RHB avg=".253" ab="198" hr="5" bb="21" so="30"/><vs_B des="Santiago" avg=".000" ab="2" hr="0" bb="0" so="0"/><vs_B5 des="Santiago" avg=".000" ab="2" hr="0" bb="0" so="0"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/471803.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:34 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"40c-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1036"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:49 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="471803" pos="P" type="pitcher" first_name="Armando" last_name="Gabino" jersey_number="63" height="6-3" weight="210" bats="R" throws="R" dob="08/31/1983"><season avg=".450" ab="20" hr="1" bb="5" so="2" w="0" l="0" sv="0"/><career avg=".450" ab="20" hr="1" bb="5" so="2" w="0" l="0" sv="0"/><Month des="Sept." avg=".571" ab="7" hr="1" bb="2" so="1"/><Team des="Home" avg=".450" ab="20" hr="1" bb="5" so="2"/><Empty avg=".444" ab="9" hr="0" bb="1" so="1"/><Men_On avg=".455" ab="11" hr="1" bb="4" so="1"/><RISP avg=".375" ab="8" hr="1" bb="4" so="1"/><Loaded avg=".000" ab="1" hr="0" bb="1" so="1"/><vs_LHB avg=".400" ab="15" hr="0" bb="3" so="1"/><vs_RHB avg=".600" ab="5" hr="1" bb="2" so="1"/><vs_B des="Santiago" avg=".000" ab="0" hr="0" bb="0" so="0"/><vs_B5 des="Santiago" avg=".000" ab="0" hr="0" bb="0" so="0"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/467726.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:34 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"423-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1059"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:49 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="467726" pos="P" type="pitcher" first_name="Jose" last_name="Mijares" jersey_number="50" height="6-0" weight="230" bats="L" throws="L" dob="10/29/1984"><season avg=".211" ab="209" hr="6" bb="22" so="54" w="2" l="2" sv="0"/><career avg=".193" ab="243" hr="6" bb="22" so="59" w="2" l="3" sv="0"/><Month des="Sept." avg=".185" ab="27" hr="0" bb="2" so="9"/><Team des="Home" avg=".200" ab="115" hr="5" bb="10" so="34"/><Empty avg=".248" ab="105" hr="4" bb="12" so="29"/><Men_On avg=".173" ab="104" hr="2" bb="10" so="25"/><RISP avg=".204" ab="54" hr="1" bb="9" so="13"/><Loaded avg=".125" ab="8" hr="0" bb="3" so="3"/><vs_LHB avg=".128" ab="94" hr="2" bb="10" so="30"/><vs_RHB avg=".278" ab="115" hr="4" bb="12" so="24"/><vs_B des="Santiago" avg=".000" ab="1" hr="0" bb="0" so="0"/><vs_B5 des="Santiago" avg=".000" ab="1" hr="0" bb="0" so="0"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/460576.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:34 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"44d-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1101"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:49 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="460576" pos="CF" type="batter" first_name="Carlos" last_name="Gomez" jersey_number="22" height="6-4" weight="215" bats="R" throws="R" dob="12/04/1985"><season avg=".235" ab="298" hr="3" rbi="27" ops=".637"/><career avg=".248" ab="1000" hr="12" rbi="98" ops=".643"/><month des="Sept." avg=".167" ab="18" hr="0" rbi="0" ops=".472"/><Team des="Home" avg=".192" ab="151" hr="1" rbi="11" ops=".539"/><Empty avg=".236" ab="174" hr="1" rbi="1" ops=".647"/><Men_On avg=".234" ab="124" hr="2" rbi="26" ops=".622"/><RISP avg=".258" ab="66" hr="2" rbi="26" ops=".739"/><Loaded avg=".500" ab="4" hr="0" rbi="5" ops="1.100"/><vs_LHP avg=".212" ab="104" hr="2" rbi="14" ops=".624"/><vs_RHP avg=".247" ab="194" hr="1" rbi="13" ops=".643"/><vs_P des="Rodney" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_P5 des="Rodney" avg=".000" ab="2" hr="0" rbi="0" ops=".000"/><Pitch loves="--" hates="--"/><faced></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/458643.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:34 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"4bf-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1215"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:49 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="458643" pos="C" type="batter" first_name="Jose" last_name="Morales" jersey_number="58" height="5-11" weight="195" bats="S" throws="R" dob="02/20/1983"><season avg=".367" ab="90" hr="0" rbi="7" ops=".853"/><career avg=".387" ab="93" hr="0" rbi="7" ops=".899"/><month des="Sept." avg=".435" ab="23" hr="0" rbi="3" ops="1.003"/><Team des="Home" avg=".345" ab="58" hr="0" rbi="6" ops=".785"/><Empty avg=".449" ab="49" hr="0" rbi="0" ops="1.071"/><Men_On avg=".268" ab="41" hr="0" rbi="7" ops=".594"/><RISP avg=".450" ab="20" hr="0" rbi="7" ops=".950"/><Loaded avg=".500" ab="2" hr="0" rbi="2" ops="1.000"/><vs_LHP avg=".438" ab="16" hr="0" rbi="0" ops="1.125"/><vs_RHP avg=".351" ab="74" hr="0" rbi="7" ops=".794"/><vs_P des="Rodney" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_P5 des="Rodney" avg=".000" ab="0" hr="0" rbi="0" ops="1.000"/><Pitch loves="FA" hates="SI"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/458210.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:34 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"448-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1096"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:49 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="458210" pos="2B" type="batter" first_name="Alexi" last_name="Casilla" jersey_number="25" height="5-9" weight="180" bats="S" throws="R" dob="07/20/1984"><season avg=".196" ab="225" hr="0" rbi="16" ops=".524"/><career avg=".243" ab="803" hr="7" rbi="75" ops=".611"/><month des="Sept." avg=".214" ab="14" hr="0" rbi="1" ops=".429"/><Team des="Home" avg=".176" ab="108" hr="0" rbi="7" ops=".502"/><Empty avg=".188" ab="117" hr="0" rbi="0" ops=".523"/><Men_On avg=".204" ab="108" hr="0" rbi="16" ops=".525"/><RISP avg=".221" ab="68" hr="0" rbi="16" ops=".584"/><Loaded avg=".286" ab="7" hr="0" rbi="4" ops=".571"/><vs_LHP avg=".182" ab="66" hr="0" rbi="7" ops=".488"/><vs_RHP avg=".201" ab="159" hr="0" rbi="9" ops=".539"/><vs_P des="Rodney" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_P5 des="Rodney" avg=".600" ab="5" hr="0" rbi="0" ops="1.200"/><Pitch loves="--" hates="--"/><faced></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/453249.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:34 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"412-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1042"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:49 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="453249" pos="P" type="pitcher" first_name="Jeff" last_name="Manship" jersey_number="49" height="6-2" weight="200" bats="R" throws="R" dob="01/16/1985"><season avg=".291" ab="79" hr="2" bb="10" so="12" w="0" l="1" sv="0"/><career avg=".291" ab="79" hr="2" bb="10" so="12" w="0" l="1" sv="0"/><Month des="Sept." avg=".275" ab="51" hr="2" bb="7" so="9"/><Team des="Home" avg=".196" ab="46" hr="1" bb="8" so="7"/><Empty avg=".300" ab="40" hr="2" bb="7" so="6"/><Men_On avg=".282" ab="39" hr="0" bb="3" so="6"/><RISP avg=".217" ab="23" hr="0" bb="3" so="3"/><Loaded avg=".000" ab="0" hr="0" bb="0" so="0"/><vs_LHB avg=".325" ab="40" hr="0" bb="5" so="6"/><vs_RHB avg=".256" ab="39" hr="2" bb="5" so="6"/><vs_B des="Santiago" avg=".000" ab="0" hr="0" bb="0" so="0"/><vs_B5 des="Santiago" avg=".000" ab="0" hr="0" bb="0" so="0"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/452655.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:35 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"4cd-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1229"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:50 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="452655" pos="LF" type="batter" first_name="Denard" last_name="Span" jersey_number="2" height="6-0" weight="205" bats="L" throws="L" dob="02/27/1984"><season avg=".306" ab="529" hr="8" rbi="59" ops=".797"/><career avg=".301" ab="876" hr="14" rbi="106" ops=".806"/><month des="Sept." avg=".282" ab="71" hr="2" rbi="7" ops=".756"/><Team des="Home" avg=".333" ab="273" hr="5" rbi="35" ops=".867"/><Empty avg=".315" ab="333" hr="6" rbi="6" ops=".809"/><Men_On avg=".291" ab="196" hr="2" rbi="53" ops=".777"/><RISP avg=".303" ab="132" hr="2" rbi="52" ops=".844"/><Loaded avg=".636" ab="11" hr="0" rbi="18" ops="1.571"/><vs_LHP avg=".324" ab="173" hr="3" rbi="18" ops=".845"/><vs_RHP avg=".298" ab="356" hr="5" rbi="41" ops=".774"/><vs_P des="Rodney" avg=".500" ab="2" hr="0" rbi="0" ops="1.000"/><vs_P5 des="Rodney" avg=".400" ab="5" hr="0" rbi="0" ops=".800"/><Pitch loves="SL" hates="SI"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/448147.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:35 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"434-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1076"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:50 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="448147" pos="P" type="pitcher" first_name="Nick" last_name="Blackburn" jersey_number="53" height="6-4" weight="225" bats="R" throws="R" dob="02/24/1982"><season avg=".296" ab="749" hr="24" bb="40" so="83" w="10" l="11" sv="0"/><career avg=".296" ab="1569" hr="49" bb="81" so="187" w="21" l="24" sv="0"/><Month des="Sept." avg=".318" ab="66" hr="4" bb="2" so="8"/><Team des="Home" avg=".304" ab="369" hr="10" bb="17" so="49"/><Empty avg=".300" ab="443" hr="14" bb="20" so="50"/><Men_On avg=".291" ab="306" hr="10" bb="20" so="33"/><RISP avg=".244" ab="164" hr="4" bb="12" so="19"/><Loaded avg=".167" ab="6" hr="0" bb="0" so="1"/><vs_LHB avg=".305" ab="420" hr="16" bb="25" so="43"/><vs_RHB avg=".286" ab="329" hr="8" bb="15" so="40"/><vs_B des="Santiago" avg=".167" ab="6" hr="0" bb="0" so="2"/><vs_B5 des="Santiago" avg=".222" ab="9" hr="0" bb="0" so="3"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/445196.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:35 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"4c2-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1218"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:50 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="445196" pos="2B" type="batter" first_name="Matt" last_name="Tolbert" jersey_number="20" height="6-0" weight="185" bats="S" throws="R" dob="05/04/1982"><season avg=".215" ab="149" hr="1" rbi="14" ops=".559"/><career avg=".244" ab="262" hr="1" rbi="20" ops=".625"/><month des="Sept." avg=".450" ab="20" hr="0" rbi="2" ops=".976"/><Team des="Home" avg=".215" ab="79" hr="0" rbi="6" ops=".545"/><Empty avg=".186" ab="86" hr="0" rbi="0" ops=".448"/><Men_On avg=".254" ab="63" hr="1" rbi="14" ops=".702"/><RISP avg=".258" ab="31" hr="1" rbi="14" ops=".739"/><Loaded avg=".500" ab="6" hr="0" rbi="7" ops="1.125"/><vs_LHP avg=".279" ab="43" hr="1" rbi="7" ops=".752"/><vs_RHP avg=".189" ab="106" hr="0" rbi="7" ops=".481"/><vs_P des="Rodney" avg=".000" ab="2" hr="0" rbi="0" ops=".000"/><vs_P5 des="Rodney" avg=".000" ab="3" hr="0" rbi="0" ops=".000"/><Pitch loves="SI" hates="CU"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/435044.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:35 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"434-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1076"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:50 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="435044" pos="P" type="pitcher" first_name="Scott" last_name="Baker" jersey_number="30" height="6-4" weight="220" bats="R" throws="R" dob="09/19/1981"><season avg=".246" ab="703" hr="25" bb="42" so="152" w="13" l="8" sv="0"/><career avg=".266" ab="2471" hr="82" bb="143" so="489" w="41" l="32" sv="0"/><Month des="Sept." avg=".244" ab="86" hr="2" bb="11" so="21"/><Team des="Home" avg=".240" ab="379" hr="11" bb="15" so="85"/><Empty avg=".230" ab="443" hr="12" bb="26" so="99"/><Men_On avg=".273" ab="260" hr="13" bb="16" so="53"/><RISP avg=".245" ab="143" hr="4" bb="9" so="31"/><Loaded avg=".250" ab="4" hr="0" bb="0" so="1"/><vs_LHB avg=".221" ab="344" hr="4" bb="25" so="74"/><vs_RHB avg=".270" ab="359" hr="21" bb="17" so="78"/><vs_B des="Santiago" avg=".571" ab="7" hr="0" bb="0" so="0"/><vs_B5 des="Santiago" avg=".571" ab="14" hr="0" bb="1" so="2"/><Pitch out="CU"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/434538.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:35 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"438-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1080"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:50 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="434538" pos="P" type="pitcher" first_name="Francisco" last_name="Liriano" jersey_number="47" height="6-2" weight="225" bats="L" throws="L" dob="10/26/1983"><season avg=".279" ab="506" hr="20" bb="59" so="120" w="5" l="12" sv="0"/><career avg=".245" ab="1317" hr="40" bb="130" so="364" w="24" l="21" sv="1"/><Month des="Sept." avg=".286" ab="14" hr="1" bb="1" so="5"/><Team des="Home" avg=".273" ab="227" hr="9" bb="12" so="54"/><Empty avg=".243" ab="292" hr="10" bb="30" so="68"/><Men_On avg=".327" ab="214" hr="10" bb="29" so="52"/><RISP avg=".302" ab="126" hr="6" bb="24" so="36"/><Loaded avg=".353" ab="17" hr="1" bb="3" so="3"/><vs_LHB avg=".260" ab="127" hr="1" bb="13" so="30"/><vs_RHB avg=".285" ab="379" hr="19" bb="46" so="90"/><vs_B des="Santiago" avg=".000" ab="0" hr="0" bb="0" so="0"/><vs_B5 des="Santiago" avg=".000" ab="0" hr="0" bb="0" so="0"/><Pitch out="FA"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/430927.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:35 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"444-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1092"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:50 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="430927" pos="1B" type="batter" first_name="Brian" last_name="Buscher" jersey_number="32" height="6-0" weight="220" bats="L" throws="R" dob="04/18/1981"><season avg=".235" ab="136" hr="2" rbi="12" ops=".676"/><career avg=".267" ab="435" hr="8" rbi="69" ops=".699"/><month des="Sept." avg=".294" ab="17" hr="0" rbi="1" ops=".782"/><Team des="Home" avg=".208" ab="77" hr="2" rbi="8" ops=".654"/><Empty avg=".205" ab="73" hr="0" rbi="0" ops=".551"/><Men_On avg=".270" ab="63" hr="2" rbi="12" ops=".818"/><RISP avg=".312" ab="32" hr="1" rbi="9" ops=".908"/><Loaded avg=".000" ab="2" hr="0" rbi="1" ops=".333"/><vs_LHP avg=".200" ab="15" hr="0" rbi="1" ops=".667"/><vs_RHP avg=".240" ab="121" hr="2" rbi="11" ops=".677"/><vs_P des="Rodney" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_P5 des="Rodney" avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><Pitch loves="--" hates="--"/><faced></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/430884.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:36 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"426-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1062"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:51 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="430884" pos="P" type="pitcher" first_name="Jesse" last_name="Crain" jersey_number="28" height="6-1" weight="215" bats="R" throws="R" dob="07/05/1981"><season avg=".260" ab="169" hr="3" bb="23" so="38" w="6" l="4" sv="0"/><career avg=".245" ab="1151" hr="27" bb="110" so="197" w="31" l="20" sv="2"/><Month des="Sept." avg=".143" ab="28" hr="0" bb="4" so="6"/><Team des="Home" avg=".260" ab="100" hr="1" bb="14" so="19"/><Empty avg=".269" ab="93" hr="3" bb="5" so="20"/><Men_On avg=".250" ab="76" hr="0" bb="18" so="18"/><RISP avg=".298" ab="47" hr="0" bb="14" so="13"/><Loaded avg=".500" ab="10" hr="0" bb="0" so="1"/><vs_LHB avg=".313" ab="67" hr="3" bb="14" so="20"/><vs_RHB avg=".225" ab="102" hr="0" bb="9" so="18"/><vs_B des="Santiago" avg=".333" ab="3" hr="1" bb="0" so="0"/><vs_B5 des="Santiago" avg=".200" ab="5" hr="1" bb="0" so="0"/><Pitch out="SL"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/430670.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:36 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"41d-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1053"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:51 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="430670" pos="P" type="pitcher" first_name="Bob" last_name="Keppel" jersey_number="44" height="6-5" weight="215" bats="R" throws="R" dob="06/11/1982"><season avg=".286" ab="175" hr="3" bb="18" so="28" w="0" l="1" sv="0"/><career avg=".306" ab="330" hr="10" bb="36" so="49" w="0" l="5" sv="0"/><Month des="Sept." avg=".240" ab="25" hr="0" bb="2" so="3"/><Team des="Home" avg=".312" ab="80" hr="2" bb="8" so="10"/><Empty avg=".310" ab="87" hr="2" bb="6" so="12"/><Men_On avg=".261" ab="88" hr="1" bb="12" so="16"/><RISP avg=".250" ab="56" hr="1" bb="8" so="10"/><Loaded avg=".333" ab="6" hr="1" bb="0" so="2"/><vs_LHB avg=".310" ab="87" hr="1" bb="10" so="10"/><vs_RHB avg=".261" ab="88" hr="2" bb="8" so="18"/><vs_B des="Santiago" avg="1.000" ab="1" hr="0" bb="0" so="0"/><vs_B5 des="Santiago" avg="1.000" ab="1" hr="0" bb="0" so="0"/><Pitch out="CH"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/430593.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:36 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"4cc-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1228"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:51 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="430593" pos="SS" type="batter" first_name="Brendan" last_name="Harris" jersey_number="23" height="6-1" weight="210" bats="R" throws="R" dob="08/26/1980"><season avg=".261" ab="394" hr="6" rbi="34" ops=".670"/><career avg=".267" ab="1459" hr="28" rbi="151" ops=".719"/><month des="Sept." avg=".206" ab="34" hr="0" rbi="2" ops=".535"/><Team des="Home" avg=".314" ab="207" hr="5" rbi="19" ops=".808"/><Empty avg=".278" ab="223" hr="4" rbi="4" ops=".741"/><Men_On avg=".240" ab="171" hr="2" rbi="30" ops=".578"/><RISP avg=".261" ab="88" hr="1" rbi="28" ops=".636"/><Loaded avg=".143" ab="7" hr="0" rbi="3" ops=".286"/><vs_LHP avg=".297" ab="138" hr="2" rbi="9" ops=".740"/><vs_RHP avg=".242" ab="256" hr="4" rbi="25" ops=".633"/><vs_P des="Rodney" avg=".000" ab="3" hr="0" rbi="0" ops=".000"/><vs_P5 des="Rodney" avg=".000" ab="5" hr="0" rbi="0" ops=".000"/><Pitch loves="FF" hates="SI"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/430585.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:36 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"4d4-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1236"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:51 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="430585" pos="DH" type="batter" first_name="Jason" last_name="Kubel" jersey_number="16" height="6-0" weight="220" bats="L" throws="R" dob="05/25/1982"><season avg=".301" ab="462" hr="23" rbi="87" ops=".897"/><career avg=".277" ab="1623" hr="66" rbi="263" ops=".807"/><month des="Sept." avg=".286" ab="56" hr="1" rbi="10" ops=".796"/><Team des="Home" avg=".315" ab="232" hr="11" rbi="49" ops=".910"/><Empty avg=".329" ab="234" hr="9" rbi="9" ops=".926"/><Men_On avg=".272" ab="228" hr="14" rbi="78" ops=".867"/><RISP avg=".286" ab="133" hr="10" rbi="67" ops=".946"/><Loaded avg=".467" ab="15" hr="1" rbi="18" ops="1.278"/><vs_LHP avg=".248" ab="133" hr="2" rbi="18" ops=".660"/><vs_RHP avg=".322" ab="329" hr="21" rbi="69" ops=".992"/><vs_P des="Rodney" avg=".000" ab="2" hr="0" rbi="0" ops=".333"/><vs_P5 des="Rodney" avg=".167" ab="6" hr="0" rbi="1" ops=".452"/><Pitch loves="FF" hates="CU"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/430321.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:36 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"4cb-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1227"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:51 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="430321" pos="LF" type="batter" first_name="Delmon" last_name="Young" jersey_number="21" height="6-3" weight="200" bats="R" throws="R" dob="09/14/1985"><season avg=".268" ab="336" hr="8" rbi="44" ops=".678"/><career avg=".287" ab="1682" hr="34" rbi="216" ops=".727"/><month des="Sept." avg=".295" ab="44" hr="0" rbi="2" ops=".720"/><Team des="Home" avg=".256" ab="180" hr="4" rbi="20" ops=".643"/><Empty avg=".290" ab="186" hr="6" rbi="6" ops=".734"/><Men_On avg=".240" ab="150" hr="2" rbi="38" ops=".609"/><RISP avg=".302" ab="86" hr="1" rbi="36" ops=".760"/><Loaded avg=".333" ab="6" hr="0" rbi="6" ops=".708"/><vs_LHP avg=".299" ab="117" hr="6" rbi="13" ops=".810"/><vs_RHP avg=".251" ab="219" hr="2" rbi="31" ops=".607"/><vs_P des="Rodney" avg=".250" ab="4" hr="0" rbi="1" ops=".500"/><vs_P5 des="Rodney" avg=".143" ab="7" hr="0" rbi="2" ops=".286"/><Pitch loves="SI" hates="FA"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/408311.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:36 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"43c-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1084"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:51 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="408311" pos="1B" type="batter" first_name="Justin" last_name="Huber" jersey_number="19" height="6-2" weight="205" bats="R" throws="R" dob="07/01/1982"><season avg=".500" ab="2" hr="0" rbi="0" ops="1.000"/><career avg=".224" ab="161" hr="2" rbi="15" ops=".580"/><month des="Sept." avg=".500" ab="2" hr="0" rbi="0" ops="1.000"/><Team des="Home" avg=".500" ab="2" hr="0" rbi="0" ops="1.000"/><Empty avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><Men_On avg=".500" ab="2" hr="0" rbi="0" ops="1.000"/><RISP avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><Loaded avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_LHP avg="1.000" ab="1" hr="0" rbi="0" ops="2.000"/><vs_RHP avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><vs_P des="Rodney" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><vs_P5 des="Rodney" avg=".000" ab="0" hr="0" rbi="0" ops=".000"/><Pitch loves="--" hates="--"/><faced></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/408047.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:37 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"45e-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1118"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:52 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="408047" pos="1B" type="batter" first_name="Justin" last_name="Morneau" jersey_number="33" height="6-4" weight="235" bats="L" throws="R" dob="05/15/1981"><season avg=".274" ab="508" hr="30" rbi="100" ops=".878"/><career avg=".280" ab="3189" hr="163" rbi="623" ops=".851"/><month des="Sept." avg=".077" ab="39" hr="1" rbi="4" ops=".357"/><Team des="Home" avg=".288" ab="260" hr="14" rbi="51" ops=".914"/><Empty avg=".264" ab="250" hr="17" rbi="17" ops=".874"/><Men_On avg=".283" ab="258" hr="13" rbi="83" ops=".882"/><RISP avg=".294" ab="126" hr="6" rbi="63" ops=".915"/><Loaded avg=".429" ab="14" hr="2" rbi="21" ops="1.278"/><vs_LHP avg=".277" ab="206" hr="10" rbi="44" ops=".836"/><vs_RHP avg=".272" ab="302" hr="20" rbi="56" ops=".906"/><vs_P des="Rodney" avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><vs_P5 des="Rodney" avg=".364" ab="11" hr="1" rbi="2" ops="1.318"/><Pitch loves="--" hates="--"/><faced></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/408045.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:37 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:28 GMT
+      etag: 
+      - "\"4d5-41ba5900\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1237"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:52 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="408045" pos="C" type="batter" first_name="Joe" last_name="Mauer" jersey_number="7" height="6-5" weight="225" bats="L" throws="R" dob="04/19/1983"><season avg=".374" ab="471" hr="28" rbi="88" ops="1.054"/><career avg=".328" ab="2530" hr="72" rbi="389" ops=".893"/><month des="Sept." avg=".410" ab="61" hr="2" rbi="8" ops="1.076"/><Team des="Home" avg=".394" ab="231" hr="16" rbi="52" ops="1.126"/><Empty avg=".365" ab="274" hr="20" rbi="20" ops="1.068"/><Men_On avg=".386" ab="197" hr="8" rbi="68" ops="1.033"/><RISP avg=".381" ab="105" hr="6" rbi="61" ops="1.101"/><Loaded avg=".429" ab="7" hr="1" rbi="9" ops="1.286"/><vs_LHP avg=".337" ab="184" hr="7" rbi="28" ops=".893"/><vs_RHP avg=".397" ab="287" hr="21" rbi="60" ops="1.156"/><vs_P des="Rodney" avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><vs_P5 des="Rodney" avg=".200" ab="10" hr="1" rbi="1" ops=".773"/><Pitch loves="SI" hates="FC"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/407825.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:37 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"425-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1061"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:52 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="407825" pos="P" type="pitcher" first_name="Matt" last_name="Guerrier" jersey_number="54" height="6-3" weight="195" bats="R" throws="R" dob="08/02/1978"><season avg=".206" ab="252" hr="7" bb="12" so="45" w="5" l="1" sv="1"/><career avg=".252" ab="1500" hr="48" bb="121" so="266" w="14" l="18" sv="4"/><Month des="Sept." avg=".231" ab="26" hr="1" bb="1" so="4"/><Team des="Home" avg=".233" ab="133" hr="6" bb="6" so="23"/><Empty avg=".239" ab="138" hr="4" bb="5" so="29"/><Men_On avg=".167" ab="114" hr="3" bb="7" so="16"/><RISP avg=".197" ab="61" hr="1" bb="7" so="8"/><Loaded avg=".125" ab="8" hr="0" bb="1" so="0"/><vs_LHB avg=".190" ab="100" hr="1" bb="5" so="16"/><vs_RHB avg=".217" ab="152" hr="6" bb="7" so="29"/><vs_B des="Santiago" avg=".000" ab="1" hr="0" bb="0" so="0"/><vs_B5 des="Santiago" avg=".000" ab="3" hr="0" bb="0" so="1"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/400010.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:37 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"427-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1063"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:52 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="400010" pos="P" type="pitcher" first_name="Jon" last_name="Rauch" jersey_number="60" height="6-11" weight="290" bats="R" throws="R" dob="09/27/1978"><season avg=".266" ab="248" hr="6" bb="21" so="44" w="5" l="3" sv="2"/><career avg=".243" ab="1522" hr="48" bb="130" so="331" w="29" l="26" sv="26"/><Month des="Sept." avg=".267" ab="30" hr="1" bb="4" so="7"/><Team des="Home" avg=".268" ab="153" hr="2" bb="12" so="26"/><Empty avg=".261" ab="134" hr="2" bb="9" so="22"/><Men_On avg=".272" ab="114" hr="4" bb="12" so="22"/><RISP avg=".280" ab="75" hr="4" bb="9" so="15"/><Loaded avg=".500" ab="8" hr="0" bb="0" so="1"/><vs_LHB avg=".246" ab="114" hr="2" bb="17" so="23"/><vs_RHB avg=".284" ab="134" hr="4" bb="4" so="21"/><vs_B des="Santiago" avg=".000" ab="1" hr="0" bb="0" so="0"/><vs_B5 des="Santiago" avg=".000" ab="1" hr="0" bb="0" so="0"/><Pitch out="CU"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/150317.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:37 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"44f-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1103"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:52 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="150317" pos="3B" type="batter" first_name="Joe" last_name="Crede" jersey_number="24" height="6-2" weight="230" bats="R" throws="R" dob="04/26/1978"><season avg=".225" ab="333" hr="15" rbi="48" ops=".703"/><career avg=".254" ab="3101" hr="140" rbi="470" ops=".748"/><month des="Sept." avg=".000" ab="5" hr="0" rbi="0" ops=".000"/><Team des="Home" avg=".228" ab="171" hr="10" rbi="29" ops=".729"/><Empty avg=".246" ab="183" hr="10" rbi="10" ops=".769"/><Men_On avg=".200" ab="150" hr="5" rbi="38" ops=".623"/><RISP avg=".198" ab="91" hr="4" rbi="34" ops=".654"/><Loaded avg=".308" ab="13" hr="1" rbi="12" ops=".901"/><vs_LHP avg=".202" ab="99" hr="0" rbi="7" ops=".533"/><vs_RHP avg=".235" ab="234" hr="15" rbi="41" ops=".775"/><vs_P des="Rodney" avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><vs_P5 des="Rodney" avg=".125" ab="8" hr="0" rbi="0" ops=".347"/><Pitch loves="--" hates="--"/><faced></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/150274.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:37 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"429-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1065"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:52 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="150274" pos="P" type="pitcher" first_name="Joe" last_name="Nathan" jersey_number="36" height="6-4" weight="225" bats="R" throws="R" dob="11/22/1974"><season avg=".177" ab="220" hr="6" bb="20" so="81" w="2" l="2" sv="42"/><career avg=".201" ab="2447" hr="62" bb="260" so="710" w="46" l="22" sv="242"/><Month des="Sept." avg=".194" ab="31" hr="3" bb="5" so="12"/><Team des="Home" avg=".148" ab="122" hr="4" bb="14" so="45"/><Empty avg=".187" ab="150" hr="6" bb="11" so="57"/><Men_On avg=".157" ab="70" hr="0" bb="9" so="24"/><RISP avg=".118" ab="51" hr="0" bb="4" so="20"/><Loaded avg=".167" ab="6" hr="0" bb="0" so="3"/><vs_LHB avg=".152" ab="105" hr="2" bb="12" so="37"/><vs_RHB avg=".200" ab="115" hr="4" bb="8" so="44"/><vs_B des="Santiago" avg=".000" ab="2" hr="0" bb="0" so="1"/><vs_B5 des="Santiago" avg=".000" ab="4" hr="0" bb="0" so="2"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/134321.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:37 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"435-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1077"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:52 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="134321" pos="P" type="pitcher" first_name="Carl" last_name="Pavano" jersey_number="48" height="6-5" weight="240" bats="R" throws="R" dob="01/08/1976"><season avg=".291" ab="729" hr="23" bb="35" so="131" w="12" l="11" sv="0"/><career avg=".256" ab="4947" hr="141" bb="336" so="823" w="78" l="77" sv="0"/><Month des="Sept." avg=".290" ab="107" hr="2" bb="5" so="19"/><Team des="Home" avg=".298" ab="332" hr="10" bb="13" so="53"/><Empty avg=".280" ab="428" hr="14" bb="22" so="81"/><Men_On avg=".306" ab="301" hr="9" bb="13" so="50"/><RISP avg=".314" ab="175" hr="5" bb="9" so="31"/><Loaded avg=".214" ab="14" hr="1" bb="0" so="4"/><vs_LHB avg=".268" ab="370" hr="9" bb="22" so="81"/><vs_RHB avg=".315" ab="359" hr="14" bb="13" so="50"/><vs_B des="Santiago" avg=".000" ab="2" hr="0" bb="0" so="1"/><vs_B5 des="Santiago" avg=".000" ab="2" hr="0" bb="0" so="1"/><Pitch out="--"/></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/346857.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:38 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"4c7-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1223"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:53 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="346857" pos="SS" type="batter" first_name="Nick" last_name="Punto" jersey_number="8" height="5-9" weight="190" bats="S" throws="R" dob="11/08/1977"><season avg=".227" ab="317" hr="1" rbi="33" ops=".609"/><career avg=".248" ab="2174" hr="12" rbi="173" ops=".645"/><month des="Sept." avg=".311" ab="45" hr="0" rbi="4" ops=".792"/><Team des="Home" avg=".221" ab="163" hr="0" rbi="16" ops=".615"/><Empty avg=".208" ab="178" hr="1" rbi="1" ops=".574"/><Men_On avg=".252" ab="139" hr="0" rbi="32" ops=".648"/><RISP avg=".282" ab="85" hr="0" rbi="32" ops=".715"/><Loaded avg=".375" ab="8" hr="0" rbi="9" ops=".708"/><vs_LHP avg=".227" ab="97" hr="1" rbi="10" ops=".611"/><vs_RHP avg=".227" ab="220" hr="0" rbi="23" ops=".608"/><vs_P des="Rodney" avg=".000" ab="1" hr="0" rbi="1" ops=".000"/><vs_P5 des="Rodney" avg=".167" ab="6" hr="0" rbi="1" ops=".500"/><Pitch loves="FC" hates="CH"/><faced><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/133226.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:38 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"441-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1089"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:53 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="133226" pos="C" type="batter" first_name="Mike" last_name="Redmond" jersey_number="55" height="5-11" weight="200" bats="R" throws="R" dob="05/05/1971"><season avg=".238" ab="130" hr="0" rbi="7" ops=".595"/><career avg=".289" ab="2196" hr="13" rbi="238" ops=".706"/><month des="Sept." avg=".000" ab="9" hr="0" rbi="0" ops=".000"/><Team des="Home" avg=".215" ab="65" hr="0" rbi="4" ops=".584"/><Empty avg=".254" ab="67" hr="0" rbi="0" ops=".643"/><Men_On avg=".222" ab="63" hr="0" rbi="7" ops=".544"/><RISP avg=".176" ab="34" hr="0" rbi="5" ops=".440"/><Loaded avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><vs_LHP avg=".319" ab="47" hr="0" rbi="5" ops=".768"/><vs_RHP avg=".193" ab="83" hr="0" rbi="2" ops=".497"/><vs_P des="Rodney" avg=".000" ab="1" hr="0" rbi="0" ops=".000"/><vs_P5 des="Rodney" avg=".000" ab="2" hr="0" rbi="0" ops=".000"/><Pitch loves="--" hates="--"/><faced></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/batters/150212.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:38 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"4ec-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1260"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:53 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="150212" pos="RF" type="batter" first_name="Michael" last_name="Cuddyer" jersey_number="5" height="6-2" weight="215" bats="R" throws="R" dob="03/27/1979"><season avg=".272" ab="533" hr="28" rbi="83" ops=".847"/><career avg=".269" ab="2879" hr="103" rbi="418" ops=".797"/><month des="Sept." avg=".254" ab="67" hr="6" rbi="18" ops=".847"/><Team des="Home" avg=".283" ab="269" hr="16" rbi="49" ops=".894"/><Empty avg=".300" ab="270" hr="19" rbi="19" ops=".954"/><Men_On avg=".243" ab="263" hr="9" rbi="64" ops=".738"/><RISP avg=".247" ab="150" hr="5" rbi="54" ops=".756"/><Loaded avg=".154" ab="13" hr="0" rbi="6" ops=".466"/><vs_LHP avg=".279" ab="154" hr="13" rbi="29" ops=".941"/><vs_RHP avg=".269" ab="379" hr="15" rbi="54" ops=".809"/><vs_P des="Rodney" avg="1.000" ab="2" hr="1" rbi="1" ops="3.500"/><vs_P5 des="Rodney" avg=".182" ab="11" hr="1" rbi="2" ops=".705"/><Pitch loves="SI" hates="FA"/><faced><pitch type="FS"/><pitch type="FA"/><pitch type="CH"/><pitch type="CU"/><pitch type="SI"/><pitch type="FC"/><pitch type="SL"/><pitch type="FF"/></faced></Player>
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://gd2.mlb.com:80/components/game/mlb/year_2009/month_09/day_20/gid_2009_09_20_detmlb_minmlb_1/pitchers/118158.xml
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      date: 
+      - Tue, 30 Aug 2011 04:39:38 GMT
+      server: 
+      - Sun-ONE-Web-Server/6.1
+      last-modified: 
+      - Mon, 28 Sep 2009 15:50:27 GMT
+      etag: 
+      - "\"425-41ab16c0\""
+      accept-ranges: 
+      - bytes
+      content-length: 
+      - "1061"
+      expires: 
+      - Tue, 30 Aug 2011 04:39:53 GMT
+      edge-control: 
+      - max-age=15
+      cache-control: 
+      - max-age=15
+      content-type: 
+      - application/xml
+    body: <!--Copyright 2009 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt--><Player team="min" id="118158" pos="P" type="pitcher" first_name="Ron" last_name="Mahay" jersey_number="37" height="6-2" weight="195" bats="L" throws="L" dob="06/28/1971"><season avg=".309" ab="194" hr="10" bb="20" so="39" w="2" l="1" sv="0"/><career avg=".230" ab="2020" hr="70" bb="256" so="442" w="26" l="11" sv="4"/><Month des="Sept." avg=".267" ab="15" hr="1" bb="1" so="4"/><Team des="Home" avg=".346" ab="107" hr="3" bb="11" so="26"/><Empty avg=".311" ab="103" hr="5" bb="7" so="22"/><Men_On avg=".308" ab="91" hr="5" bb="13" so="17"/><RISP avg=".339" ab="56" hr="2" bb="10" so="13"/><Loaded avg=".143" ab="7" hr="0" bb="1" so="1"/><vs_LHB avg=".286" ab="91" hr="4" bb="4" so="17"/><vs_RHB avg=".330" ab="103" hr="6" bb="16" so="22"/><vs_B des="Santiago" avg=".500" ab="2" hr="0" bb="0" so="0"/><vs_B5 des="Santiago" avg=".500" ab="4" hr="0" bb="0" so="0"/><Pitch out="SL"/></Player>
+    http_version: "1.1"
