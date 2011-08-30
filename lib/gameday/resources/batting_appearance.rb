@@ -15,23 +15,5 @@ module Gameday
       ba
     end
 
-
-    # Looks up the player record using the players.xml file for the player in this appearance
-    def get_player
-      if !self.player
-        # retrieve player object
-        player = Player.new
-        player.init()
-        self.player = player
-      end
-      self.player
-    end
-  
-  
-    # get the atbats associated with this appearance
-    def get_atbats
-    
-    end
-  
   end
 end
