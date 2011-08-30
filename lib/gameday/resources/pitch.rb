@@ -24,7 +24,7 @@ module Gameday
       'KN' => 'Knuckle',
       'KC' => 'Knuckle Curve',
     }
-    
+
     def self.new_from_xml element
       pitch = super element
       pitch.pitch_id = element.attributes["id"]
@@ -35,7 +35,7 @@ module Gameday
     def self.get_pitch_name(code)
       PITCHES[code] || code
     end
-  
+
   end
 
 end

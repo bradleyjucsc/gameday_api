@@ -127,15 +127,13 @@ module Gameday
       @pitchers, away_pitchers, home_pitchers = [], [], []
       count = 1
       @xml_doc.elements.each("boxscore/pitching[@team_flag='away']/pitcher") { |element| 
-        pitcher = PitchingAppearance.new
-        pitcher.init(@gid, element, count)
+        pitcher = PitchingAppearance.new_from_xml @gid, element, count
         count += 1
         away_pitchers.push pitcher
       }   
       count = 1
       @xml_doc.elements.each("boxscore/pitching[@team_flag='home']/pitcher") { |element| 
-        pitcher = PitchingAppearance.new
-        pitcher.init(@gid, element, count)
+        pitcher = PitchingAppearance.new_from_xml @gid, element, count
         count += 1
         home_pitchers.push pitcher
       }   
